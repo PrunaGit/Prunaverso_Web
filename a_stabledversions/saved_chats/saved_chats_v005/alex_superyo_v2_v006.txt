@@ -1,0 +1,5 @@
+Nombre del chat: Super Yo v2
+Núcleo: PrunaversoGPT
+Operador humano: Alex Pruna
+
+(Extracto de stable_pv_v006)

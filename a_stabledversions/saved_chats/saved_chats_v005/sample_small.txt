@@ -1,0 +1,2 @@
+Short sample text to allow dry-run to proceed.
+Line two of sample.

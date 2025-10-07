@@ -1,0 +1,94 @@
+{
+  "version": "v005",
+  "generated_at": "2025-10-07T06:43:46.450966Z",
+  "source_dir": "a_stabledversions\\saved_chats\\saved_chats_v005",
+  "entries": [
+    {
+      "filename": "alex_superyo_v2_v006.txt",
+      "base": "alex_superyo_v2_v006",
+      "source_path": "a_stabledversions\\saved_chats\\saved_chats_v005\\alex_superyo_v2_v006.txt",
+      "lines": 5,
+      "chars": 108,
+      "summary": "Nombre del chat: Super Yo v2\nNúcleo: PrunaversoGPT\nOperador humano: Alex Pruna\n\n(Extracto de stable_pv_v006)",
+      "entities": [
+        "Nombre",
+        "Super",
+        "Núcleo",
+        "PrunaversoGPT",
+        "Operador",
+        "Alex",
+        "Pruna",
+        "Extracto"
+      ],
+      "themes": [
+        "nombre",
+        "chat",
+        "super",
+        "núcleo",
+        "prunaversogpt",
+        "operador",
+        "humano",
+        "alex",
+        "pruna",
+        "extracto"
+      ]
+    },
+    {
+      "filename": "ana_ruiz_llm_v1_v005.txt",
+      "base": "ana_ruiz_llm_v1_v005",
+      "source_path": "a_stabledversions\\saved_chats\\saved_chats_v005\\ana_ruiz_llm_v1_v005.txt",
+      "lines": 7,
+      "chars": 154,
+      "summary": "Omitir e ir al contenido\nHistorial del chat\n\nTú dijiste:\nVas a actuar como si fueras el bot virtual de Ana Ruiz Rodríguez... (Extracto de stable_pv_v005)",
+      "entities": [
+        "Omitir",
+        "Historial",
+        "Vas",
+        "Ana",
+        "Ruiz",
+        "Rodríguez",
+        "Extracto"
+      ],
+      "themes": [
+        "omitir",
+        "contenido",
+        "historial",
+        "chat",
+        "dijiste",
+        "actuar",
+        "como",
+        "fueras",
+        "virtual",
+        "ruiz"
+      ],
+      "json_path": "a_stabledversions\\saved_chats\\saved_chats_v005\\ana_ruiz_llm_v1_v005.json",
+      "tags": [
+        "persona",
+        "ana_ruiz"
+      ],
+      "author": "ana_ruiz",
+      "created_at": "2025-09-22"
+    },
+    {
+      "filename": "sample_small.txt",
+      "base": "sample_small",
+      "source_path": "a_stabledversions\\saved_chats\\saved_chats_v005\\sample_small.txt",
+      "lines": 2,
+      "chars": 66,
+      "summary": "Short sample text to allow dry-run to proceed. Line two of sample.",
+      "entities": [
+        "Short",
+        "Line"
+      ],
+      "themes": [
+        "sample",
+        "short",
+        "text",
+        "allow",
+        "dry-run",
+        "proceed",
+        "line"
+      ]
+    }
+  ]
+}

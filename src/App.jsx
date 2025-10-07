@@ -1,7 +1,5 @@
-import PrunaversoPanel from "./PrunaversoPanel";
+import Router from './router'
 
-function App() {
-  return <PrunaversoPanel />;
+export default function App() {
+  return <Router />
 }
-
-export default App;

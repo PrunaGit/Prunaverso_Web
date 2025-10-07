@@ -1,0 +1,24 @@
+# Prunaverso stable v005 - generated: 2025-10-07T06:43:46.450966Z
+# Source: a_stabledversions\saved_chats\saved_chats_v005
+
+--- FILE: alex_superyo_v2_v006.txt ---
+Nombre del chat: Super Yo v2
+Núcleo: PrunaversoGPT
+Operador humano: Alex Pruna
+
+(Extracto of stable_pv_v006)
+
+--- FILE: ana_ruiz_llm_v1_v005.txt ---
+Omitir e ir al contenido
+Historial del chat
+
+Tú dijiste:
+Vas a actuar como si fueras el bot virtual de Ana Ruiz Rodríguez...
+
+(Extracto of stable_pv_v005)
+--- EMBEDDED JSON: ana_ruiz_llm_v1_v005.json ---
+{"tags": ["persona", "ana_ruiz"], "author": "ana_ruiz", "created_at": "2025-09-22"}
+
+--- FILE: sample_small.txt ---
+Short sample text to allow dry-run to proceed.
+Line two of sample.

@@ -21,13 +21,22 @@ function findHandshakeFiles(dir) {
 (async function main() {
   try {
     const ajv = new Ajv({ allErrors: true, verbose: true });
-    const schema = loadJson(schemaPath);
+  const schema = loadJson(schemaPath);
+  // Load execution policy and helper
+  const { loadPolicy, isPathAllowed } = require('./load_execution_policy.cjs');
+  const policy = loadPolicy();
     const validate = ajv.compile(schema);
 
     const files = findHandshakeFiles(syncDir);
     const results = [];
 
     for (const fp of files) {
+      // Check allowed paths according to execution policy
+      const rel = path.relative(root, fp).replace(/\\/g, '/');
+      if (!isPathAllowed(policy, rel)) {
+        results.push({ file: path.relative(root, fp), valid: false, errors: ['path_not_allowed_by_policy'] });
+        continue;
+      }
       const instance = loadJson(fp);
       const valid = validate(instance);
       let sigMismatch = false;
