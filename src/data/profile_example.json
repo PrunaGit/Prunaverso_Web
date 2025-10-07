@@ -1,0 +1,8 @@
+{
+  "nombre": "Alejandro Pruna",
+  "rol": "Arquitecto Cognitivo del Prunaverso",
+  "version": "v0.06",
+  "estado_actual": "En modo Dev, fase de manifestación visual",
+  "proposito": "Traducir el mundo interno en estructuras visibles y comprensibles."
+}import perfil from "./data/profile_example.json";
+

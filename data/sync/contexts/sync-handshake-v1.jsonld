@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://prunaverso.org/vocab#",
+
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "actor": { "@id": "schema:agent", "@type": "@id" },
+    "intent": { "@id": "schema:about", "@type": "@id" },
+    "methodology": { "@id": "https://prunaverso.org/vocab#methodology" },
+
+    "agreement": { "@id": "https://prunaverso.org/vocab#agreement", "@type": "@id" },
+    "input_output_contract": { "@id": "https://prunaverso.org/vocab#inputOutputContract", "@type": "xsd:boolean" },
+    "error_modes": { "@id": "https://prunaverso.org/vocab#errorModes", "@container": "@list" },
+    "success_criteria": { "@id": "https://prunaverso.org/vocab#successCriteria" },
+
+    "next_action": { "@id": "https://prunaverso.org/vocab#nextAction" },
+    "schema_version": { "@id": "dcterms:hasVersion" },
+
+    "metadata": { "@id": "prov:Entity", "@type": "@id" },
+    "author": { "@id": "dcterms:creator", "@type": "@id" },
+    "created_at": { "@id": "dcterms:created", "@type": "xsd:dateTime" },
+
+    "transform_version": { "@id": "https://prunaverso.org/vocab#transformVersion" },
+    "trace_id": { "@id": "https://prunaverso.org/vocab#traceId" },
+    "agent_signature": { "@id": "https://prunaverso.org/vocab#agentSignature" }
+  }
+}

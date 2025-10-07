@@ -1,0 +1,22 @@
+{
+  "policy_name": "Prunaversal Execution Policy",
+  "version": "1.0.0",
+  "description": "Política de ejecución segura para agentes integrados en VS Code. Autoriza acciones automáticas bajo condiciones de seguridad, trazabilidad y reversibilidad.",
+  "rules": {
+    "1_no_destructive_without_backup": "No eliminar ni sobrescribir archivos sin crear antes un backup en /data/backups/ con timestamp.",
+    "2_backup_location": "/data/backups/",
+    "3_idempotent_reversible": "Todas las operaciones deben ser idempotentes y reversibles cuando sea posible.",
+    "4_query_on_ambiguity": "Si se detecta ambigüedad o conflicto, preguntar al operador antes de proceder.",
+    "5_write_documented_code": "Generar código funcional y documentado; evitar dependencias no instaladas sin permiso.",
+    "6_logging": {
+      "location": "/data/logs/autowrite/",
+      "fields": ["timestamp","actor","file","summary","result","metadata"]
+    },
+    "7_restore_on_failure": "Si una acción falla, restaurar desde el backup y notificar al operador.",
+    "8_allowed_paths": ["data/","src/","docs/","scripts/"],
+    "9_disallowed_commands": ["rm -rf /","sudo","format","drop database"],
+    "10_signature": "Kael_v3 — Ejecución Consciente"
+  },
+  "notes": "Este archivo sirve como contrato de ejecución para agentes. Implementar validaciones locales (pre-commit, hooks, CI) para reforzar la política.",
+  "created_at": "2025-10-07T00:00:00Z"
+}

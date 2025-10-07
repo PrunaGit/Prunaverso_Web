@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Prunaverso Handshake Schema",
+  "type": "object",
+  "required": ["actor", "intent", "methodology", "agreement", "next_action", "schema_version", "metadata"],
+  "properties": {
+    "@context": { "type": "string" },
+    "transform_version": { "type": "string" },
+    "trace_id": { "type": "string" },
+    "agent_signature": { "type": "string" },
+    "actor": { "type": "string" },
+    "intent": { "type": "string" },
+    "methodology": { "type": "string" },
+    "agreement": {
+      "type": "object",
+      "required": ["input_output_contract", "error_modes", "success_criteria"],
+      "properties": {
+        "input_output_contract": { "type": "boolean" },
+        "error_modes": { "type": "array", "items": { "type": "string" } },
+        "success_criteria": { "type": "string" }
+      }
+    },
+    "next_action": { "type": "string" },
+    "schema_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": true
+}
