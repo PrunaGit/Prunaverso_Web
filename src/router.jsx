@@ -80,15 +80,9 @@ const router = createBrowserRouter([
   {
     path: "/public", 
     element: React.createElement(PublicPortal)
-  },
-  {
-    path: "/gdd",
-    element: React.createElement(GDDInteractive)
-  },
-  {
-    path: "/gdd/:sectionId",
-    element: React.createElement(GDDInteractive)
   }
-])
+], {
+  basename: "/Prunaverso_Web"
+})
 
 export default router
