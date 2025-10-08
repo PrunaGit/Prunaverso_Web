@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useVisitorProfile from '../../hooks/useVisitorProfile';
+import useInteractionSystem from '../../hooks/useInteractionSystem';
 import GameControls from '../../components/GameControls';
+import SystemFeedback from '../../components/SystemFeedback';
+import { SmartButton, SmartInput, SmartGamepadButton } from '../../components/SmartInteractives';
 
 /**
  * 🛰️ PORTAL DEV - KERNEL PRUNAVERSAL
@@ -11,6 +14,7 @@ import GameControls from '../../components/GameControls';
  */
 const DevPortal = () => {
   const { profile } = useVisitorProfile();
+  const { systemState, registerInteraction, getContextualResponse } = useInteractionSystem();
   const [activeModule, setActiveModule] = useState('console');
   const [systemStats, setSystemStats] = useState({
     modules: 5,
@@ -18,6 +22,12 @@ const DevPortal = () => {
     cognitive_depth: 3,
     uptime: '00:42:13'
   });
+  const [consoleOutput, setConsoleOutput] = useState([
+    '🌌 Prunaverso Dev Terminal initialized',
+    '🔗 All systems operational',
+    '🧠 Cognitive patterns monitoring active'
+  ]);
+  const [commandHistory, setCommandHistory] = useState([]);
 
   // Simular datos del sistema en tiempo real
   useEffect(() => {
@@ -25,12 +35,78 @@ const DevPortal = () => {
       setSystemStats(prev => ({
         ...prev,
         uptime: calculateUptime(),
-        connections: prev.connections + Math.floor(Math.random() * 3 - 1)
+        connections: prev.connections + Math.floor(Math.random() * 3 - 1),
+        cognitive_depth: Math.max(1, prev.cognitive_depth + (Math.random() - 0.5))
       }));
     }, 5000);
 
     return () => clearInterval(interval);
   }, []);
+
+  // Sistema de comandos inteligente
+  const executeCommand = (command) => {
+    const timestamp = new Date().toLocaleTimeString();
+    const interaction = registerInteraction('command', command, { timestamp });
+    
+    setCommandHistory(prev => [...prev.slice(-10), { command, timestamp, interaction }]);
+    
+    // Respuestas contextuales inteligentes
+    const responses = {
+      'status': () => [
+        `💫 System Status: ${systemState.alertLevel.toUpperCase()}`,
+        `🧠 Cognitive Pattern: ${systemState.cognitivePattern}`,
+        `⚡ Interactions: ${systemState.interactionCount}`,
+        `🌟 Atmosphere: ${Math.round(systemState.atmosphereIntensity * 100)}%`
+      ],
+      'users': () => [
+        `👤 Current User: ${profile.detectedType || 'Unknown'}`,
+        `📊 Session Time: ${Math.round((Date.now() - (profile.sessionStart || Date.now())) / 1000)}s`,
+        `🎯 Preferred Interaction: ${profile.preferredInteractionType || 'detecting...'}`
+      ],
+      'help': () => [
+        '📋 Available Commands:',
+        '  status    - System status report',
+        '  users     - User analytics',
+        '  monitor   - Real-time metrics',
+        '  characters - Character database',
+        '  deploy    - Deployment status',
+        '  clear     - Clear console'
+      ],
+      'monitor': () => [
+        `📈 Real-time Metrics:`,
+        `  Build: successful`,
+        `  Deploy: active`,
+        `  Health: ${systemStats.connections > 10 ? 'optimal' : 'degraded'}`,
+        `  Response: ${Math.round(Math.random() * 50 + 50)}ms`
+      ],
+      'characters': () => [
+        '👥 Character Database:',
+        `  Total Characters: ${Math.floor(Math.random() * 20 + 50)}`,
+        `  Active Profiles: ${Math.floor(Math.random() * 10 + 5)}`,
+        `  Relationships: ${Math.floor(Math.random() * 100 + 200)} mapped`
+      ],
+      'deploy': () => [
+        '🚀 Deployment Status:',
+        '  GitHub Pages: ✅ Active',
+        '  Build Time: 3.2s',
+        '  Bundle Size: 140KB',
+        '  Last Deploy: Just now'
+      ],
+      'clear': () => {
+        setConsoleOutput([]);
+        return ['Console cleared.'];
+      }
+    };
+
+    const response = responses[command.toLowerCase()] || (() => [
+      `❓ Unknown command: ${command}`,
+      `💡 Type 'help' for available commands`,
+      `🤖 AI Suggestion: ${getContextualResponse(command, 'command')}`
+    ]);
+
+    const output = response();
+    setConsoleOutput(prev => [...prev, `$ ${command}`, ...output, '']);
+  };
 
   const calculateUptime = () => {
     const start = Date.now();
@@ -103,13 +179,13 @@ const DevPortal = () => {
         >
           <h3 className="text-cyan-400 mb-4 font-bold">╔═ MODULES ═╗</h3>
           {modules.map((module, index) => (
-            <motion.div
+            <SmartButton
               key={module.id}
-              className={`p-2 mb-2 cursor-pointer border border-gray-700 rounded transition-all
+              target={`module_${module.id}`}
+              onClick={() => setActiveModule(module.id)}
+              className={`w-full p-2 mb-2 text-left border border-gray-700 rounded transition-all
                 ${activeModule === module.id ? 'bg-green-900/30 border-green-400' : 'hover:border-green-600'}
               `}
-              onClick={() => setActiveModule(module.id)}
-              whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-center justify-between">
                 <span>{module.icon} {module.name}</span>
@@ -117,7 +193,7 @@ const DevPortal = () => {
                   ● {module.status.toUpperCase()}
                 </span>
               </div>
-            </motion.div>
+            </SmartButton>
           ))}
 
           {/* Stats del sistema */}
@@ -152,14 +228,74 @@ const DevPortal = () => {
             <div className="h-full overflow-auto">
               {activeModule === 'console' && (
                 <div className="space-y-2 text-sm">
-                  <div className="text-green-400">[SYSTEM] Kernel Prunaversal initialized</div>
-                  <div className="text-blue-400">[INFO] Cognitive profiles loaded: 3</div>
-                  <div className="text-purple-400">[NEURAL] InfoOrbital network active</div>
-                  <div className="text-yellow-400">[QUANTUM] Consciousness bridges stabilized</div>
-                  <div className="text-green-400">[READY] Awaiting architect commands...</div>
-                  <div className="mt-4">
-                    <span className="text-cyan-400">prunaverso@kernel:~$ </span>
-                    <span className="animate-pulse">█</span>
+                  {/* Output del console */}
+                  <div className="bg-black/50 p-3 rounded border border-gray-700 font-mono text-xs max-h-60 overflow-auto">
+                    {consoleOutput.map((line, index) => (
+                      <div key={index} className={`
+                        ${line.startsWith('$') ? 'text-cyan-400' : 
+                          line.startsWith('✅') ? 'text-green-400' :
+                          line.startsWith('❓') ? 'text-red-400' :
+                          line.startsWith('💡') ? 'text-yellow-400' :
+                          'text-gray-300'}
+                      `}>
+                        {line}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Input inteligente del terminal */}
+                  <div className="flex items-center space-x-2">
+                    <span className="text-cyan-400 font-mono text-sm">$</span>
+                    <SmartInput
+                      target="console_command"
+                      placeholder="Type command... (help for available commands)"
+                      onInputChange={(e, interaction) => {
+                        if (e.key === 'Enter') {
+                          const command = e.target.value.trim();
+                          if (command) {
+                            executeCommand(command);
+                            e.target.value = '';
+                          }
+                        }
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          const command = e.target.value.trim();
+                          if (command) {
+                            executeCommand(command);
+                            e.target.value = '';
+                          }
+                        }
+                      }}
+                      className="flex-1"
+                    />
+                  </div>
+                  
+                  {/* Quick commands */}
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {['status', 'users', 'monitor', 'help'].map(cmd => (
+                      <SmartButton
+                        key={cmd}
+                        target={`quick_cmd_${cmd}`}
+                        onClick={() => executeCommand(cmd)}
+                        className="text-xs px-2 py-1"
+                      >
+                        {cmd}
+                      </SmartButton>
+                    ))}
+                  </div>
+                  
+                  {/* Gaming commands */}
+                  <div className="mt-4 space-y-1">
+                    <div className="text-gray-400 text-xs">🎮 Gaming Commands:</div>
+                    <div className="flex flex-wrap gap-2">
+                      <SmartGamepadButton psButton="×" pcKey="Enter" action={() => executeCommand('status')}>
+                        Status
+                      </SmartGamepadButton>
+                      <SmartGamepadButton psButton="○" pcKey="Esc" action={() => executeCommand('clear')}>
+                        Clear
+                      </SmartGamepadButton>
+                    </div>
                   </div>
                 </div>
               )}
@@ -194,6 +330,9 @@ const DevPortal = () => {
           </motion.div>
         </main>
       </div>
+
+      {/* Sistema de Feedback en Tiempo Real */}
+      <SystemFeedback />
 
       {/* Controls gaming para arquitectos */}
       <GameControls />
