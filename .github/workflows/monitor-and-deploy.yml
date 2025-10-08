@@ -1,0 +1,87 @@
+name: Generate monitor and push
+
+on:
+  schedule:
+    # Run every 15 minutes; adjust as needed (cron uses UTC)
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  generate-monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run monitor script
+        env:
+          PRUNAVERSO_HMAC_KEY: ${{ secrets.PRUNAVERSO_HMAC_KEY }}
+        run: |
+          # Ensure the script is executable and run it. The script is expected to
+          # write public/data/monitor-latest.json (and other artifacts) when run.
+          node scripts/monitor_symbolic.cjs
+
+      - name: Verify generated monitor (strict)
+        env:
+          PRUNAVERSO_HMAC_KEY: ${{ secrets.PRUNAVERSO_HMAC_KEY }}
+        run: |
+          # Run the verifier; in strict mode we fail the job if verification fails.
+          node scripts/verify_monitor.cjs
+
+      - name: Commit generated public data (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/monitor-latest.json || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(monitor): update monitor-latest.json [ci skip]" || echo "commit failed"
+            git push origin HEAD:${{ github.ref_name }}
+          else
+            echo "No changes to monitor output"
+          fi
+
+  notify-integrity:
+    name: Notify integrity failure
+    needs: generate-monitor
+    runs-on: ubuntu-latest
+    # Run only when the generate-monitor job failed
+    if: needs.generate-monitor.result == 'failure'
+    steps:
+      - name: Checkout (needed to create issue context)
+        uses: actions/checkout@v4
+
+      - name: Write integrity issue body to file
+        run: |
+          mkdir -p .github
+          cat > .github/INTEGRITY_ISSUE.md <<'EOF'
+          ## Integrity check failed: monitor-latest.json
+
+          The scheduled `monitor-and-deploy` workflow failed the integrity verification step.
+
+          - Repository: ${{ github.repository }}
+          - Ref: ${{ github.ref }}
+          - Workflow: ${{ github.workflow }}
+          - Run: ${{ github.run_id }} (job: generate-monitor)
+          - View run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          Please investigate the failure of `scripts/verify_monitor.cjs`.
+          EOF
+
+      - name: Create or update integrity issue from file
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "Integrity check failed: monitor-latest.json"
+          file: ".github/INTEGRITY_ISSUE.md"
+          labels: "integrity,monitor,automated"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

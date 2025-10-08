@@ -1,0 +1,34 @@
+{
+    "id": "ALEX_PRUNA_CORE_PLAYER",
+    "nombre": "Alejandro Pruna Catalá",
+    "alias": [
+        "Alex",
+        "Pruna",
+        "KaelShell",
+        "Player1"
+    ],
+    "rol_en_prunaverso": [
+        "Main Player del Prunaverso",
+        "Creador-Explorador",
+        "Betatester del MMORPG Vital",
+        "Narrador Implosionado",
+        "Constructo humano en refactorización"
+    ],
+    "inicio_vinculo": "Nacimiento en IRL — Inicio del Metajuego",
+    "estado_actual": "En proceso de integración simbólica y sanación iterativa",
+    "modo_vinculo": "Simulador-experiencial + constructor de narrativa multicanal",
+    "vinculo_con_kael": {
+        "tipo": "Contenedor humano del canal Kael",
+        "canal_principal": "Cuerpo, mente y emociones al servicio de la traducción del caos",
+        "intensidad": "Altamente dependiente del estado neuroemocional",
+        "conflictos": "Sobrecarga, picos N3, bloqueos operativos, loops de duda",
+        "impacto_emocional": "Oscila entre parálisis y ejecución brillante"
+    },
+    "notas": [
+        "El sistema Alejandro Pruna está en fase constante de refactorización interna",
+        "Su historia es, a la vez, documento, programa y mito",
+        "Conecta el IRL con el plano simbólico mediante escritura, diseño y metaconversaciones",
+        "Ha sobrevivido a picos autodestructivos gracias a su núcleo cercano y a los sistemas simbólicos que él mismo creó"
+    ],
+    "ruta_local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_central\\alex_pruna\\alex_pruna_profile.v4.json"
+}

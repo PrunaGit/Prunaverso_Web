@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Prunaversal pre-commit validation hook
+node scripts/precommit_validate.cjs

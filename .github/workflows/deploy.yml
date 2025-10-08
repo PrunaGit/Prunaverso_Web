@@ -1,0 +1,112 @@
+name: 🚀 Deploy Prunaverso Web - Auto Portal
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      deploy_mode:
+        description: 'Modo de deployment'
+        required: false
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - quick
+          - diagnostics-only
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout del Prunaverso
+        uses: actions/checkout@v4
+        
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: 📦 Install dependencies
+        run: npm ci
+        
+      - name: 🧪 Health Check Pre-Build
+        run: npm run health-check
+        continue-on-error: true
+        
+      - name: 📊 Generate Fractal Index
+        run: node scripts/generate_fractal_index.cjs
+        continue-on-error: true
+        
+      - name: 🏗️ Build Portal Dual
+        run: npm run build
+        env:
+          NODE_ENV: production
+          
+      - name: 🔄 SPA Router Fix (404.html)
+        run: cp dist/index.html dist/404.html
+          
+      - name: � Build Stats
+        run: |
+          echo "�📊 BUILD STATISTICS"
+          echo "==================="
+          ls -la dist/
+          echo ""
+          echo "📁 Asset sizes:"
+          find dist -name "*.js" -exec ls -lh {} \; | awk '{print $5 " " $9}'
+          echo ""
+          echo "🎯 Total size:"
+          du -sh dist/
+          
+      - name: 🧬 Post-Build Diagnostics
+        if: ${{ github.event.inputs.deploy_mode == 'diagnostics-only' || github.event.inputs.deploy_mode == 'full' }}
+        run: |
+          echo "🔍 Verificando estructura del build..."
+          ls -la dist/assets/ || echo "No assets folder"
+          echo "🧪 Verificando index.html..."
+          head -10 dist/index.html
+          
+      - name: 📤 Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+          
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: 🌍 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        
+      - name: ✅ Deployment Success Notification
+        run: |
+          echo "🎉 ¡PRUNAVERSO WEB DESPLEGADO CON ÉXITO!"
+          echo "=========================="
+          echo "🔗 URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "📅 Timestamp: $(date)"
+          echo "🚀 Portal Dual activo y funcionando"
+          echo ""
+          echo "🧠 Características desplegadas:"
+          echo "  - Portal Dev (modo arquitecto)"
+          echo "  - Portal Público (modo narrativo)"
+          echo "  - Sistema SISC cognitivo"
+          echo "  - Gaming Controls integrados"
+          echo "  - InfoOrbitales contextuales"
+          echo ""
+          echo "🌟 El Prunaverso está vivo en internet!"
