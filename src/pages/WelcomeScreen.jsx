@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import InfoOrb from '../components/InfoOrb'
 
 export default function WelcomeScreen() {
   const navigate = useNavigate()
@@ -51,19 +52,19 @@ export default function WelcomeScreen() {
   }, [])
 
   const handleNewPlayer = () => {
-    // Opción 1: Setup completo desde cero
+    // Opción 1: Setup completo desde cero con filtro perceptual
     localStorage.removeItem('prunaverso_cognitive_lenses')
     localStorage.removeItem('prunaverso_academic_degree')
     localStorage.removeItem('prunaverso_user_profile')
     localStorage.removeItem('prunaverso_active_profile')
     
-    // Navegar al setup de nuevo jugador
-    window.location.href = '/cognitive-sciences'
+    // Navegar al setup de nuevo jugador con configuración cognitiva
+    navigate('/cognitive-setup')
   }
 
   const handleCharacterSelector = () => {
-    // Opción 2: Elegir réplica cognitiva existente
-    window.location.href = '/characters'
+    // Opción 2: Elegir réplica cognitiva existente con filtros preconfigurados
+    navigate('/cognitive-setup')
   }
 
   const handleExistingPlayer = (profile) => {
@@ -80,13 +81,15 @@ export default function WelcomeScreen() {
     }
     localStorage.setItem(`prunaverso_profile_${profile.id}`, JSON.stringify(updatedProfile))
     
-    // Navegar al portal principal
-    window.location.href = '/portal'
+    // Navegar al portal principal con filtros perceptuales activos
+    navigate('/portal')
   }
 
   const handleGuestMode = () => {
-    // Modo invitado sin guardar nada
-    window.location.href = '/portal'
+    // Modo invitado con filtros básicos por defecto
+    localStorage.setItem('prunaverso_cognitive_lenses', JSON.stringify(['philosophy']))
+    localStorage.setItem('prunaverso_academic_degree', 'general')
+    navigate('/portal')
   }
 
   return (
@@ -124,6 +127,7 @@ export default function WelcomeScreen() {
         >
           <h1 className="text-6xl md:text-8xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             PRUNAVERSO
+            <InfoOrb topic="que-es-el-prunaverso" size={24} style={{marginLeft: '12px', verticalAlign: 'top'}} />
           </h1>
           <motion.div
             initial={{ width: 0 }}

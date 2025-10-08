@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useInteractionSystem from '../../hooks/useInteractionSystem';
+import { usePerceptualFilter } from '../../hooks/usePerceptualFilter';
 import PrunaversoKnowledgeDisplay from '../PrunaversoKnowledgeDisplay';
+import { PerceptualFilterBadge } from '../PerceptualFeedback';
 
 /**
  * 🌌 SystemFeedback - Feedback Visual en Tiempo Real
  * 
  * Muestra todas las reacciones del sistema a las interacciones del usuario.
  * Hace visible el "pensamiento" del Prunaverso.
- * AHORA CON INTEGRACIÓN DE CONOCIMIENTO PRUNAVERSAL.
+ * AHORA CON INTEGRACIÓN DE CONOCIMIENTO PRUNAVERSAL Y FILTROS PERCEPTUALES.
  */
 const SystemFeedback = () => {
   const { systemState, profile } = useInteractionSystem();
+  const perceptualFilter = usePerceptualFilter();
   const [visibleMessages, setVisibleMessages] = useState([]);
   const [pulseIntensity, setPulseIntensity] = useState(0.3);
 
@@ -84,13 +87,117 @@ const SystemFeedback = () => {
               {systemState.alertLevel}
             </span>
           </div>
+          {/* Nuevo: Indicador de filtro perceptual */}
+          <div className="pt-2 border-t border-gray-600">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">Filtros:</span>
+              <PerceptualFilterBadge compact={true} />
+            </div>
+          </div>
         </div>
       </motion.div>
 
       {/* Mensajes del Sistema */}
       <AnimatePresence>
         {visibleMessages.map((message, index) => {
-          // Renderizado especial para mensajes del conocimiento Prunaversal
+          // Renderizado especial para mensajes del conocimiento Prunaversal FILTRADO
+          if (message.type === 'prunaverso_filtered') {
+            return (
+              <motion.div
+                key={`${message.timestamp}-${index}`}
+                initial={{ opacity: 0, x: 300, scale: 0.8 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: 300, scale: 0.8 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 300, 
+                  damping: 30,
+                  delay: index * 0.1 
+                }}
+                className="p-3 rounded-lg text-sm bg-gradient-to-r from-purple-900/80 to-blue-900/80 border border-purple-500/50 backdrop-blur-sm"
+              >
+                <div className="flex items-start space-x-2">
+                  <span className="text-xs opacity-60 mt-0.5">
+                    {new Date(message.timestamp).toLocaleTimeString().slice(0, 5)}
+                  </span>
+                  <span className="text-white leading-relaxed">
+                    {message.content}
+                  </span>
+                  <span className="text-purple-400 text-xs">🌌</span>
+                </div>
+                {/* Indicador de filtrado perceptual */}
+                <div className="mt-2 text-xs text-purple-300 bg-purple-900/30 px-2 py-1 rounded">
+                  🔍 Filtrado: {message.filterSignature}
+                </div>
+              </motion.div>
+            );
+          }
+
+          // Renderizado para mensajes de calibración
+          if (message.type === 'calibration_required') {
+            return (
+              <motion.div
+                key={`${message.timestamp}-${index}`}
+                initial={{ opacity: 0, x: 300, scale: 0.8 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: 300, scale: 0.8 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 300, 
+                  damping: 30,
+                  delay: index * 0.1 
+                }}
+                className="p-3 rounded-lg text-sm bg-gradient-to-r from-orange-900/80 to-red-900/80 border border-orange-500/50 backdrop-blur-sm"
+              >
+                <div className="flex items-start space-x-2">
+                  <span className="text-xs opacity-60 mt-0.5">
+                    {new Date(message.timestamp).toLocaleTimeString().slice(0, 5)}
+                  </span>
+                  <span className="text-white leading-relaxed">
+                    {message.content}
+                  </span>
+                  <span className="text-orange-400 text-xs">⚠️</span>
+                </div>
+                <div className="mt-2 text-xs text-orange-300">
+                  Configura tu perfil cognitivo para ver contenido personalizado
+                </div>
+              </motion.div>
+            );
+          }
+
+          // Renderizado especial para mensajes de filtro perceptual activado
+          if (message.type === 'perceptual_filter_active') {
+            return (
+              <motion.div
+                key={`${message.timestamp}-${index}`}
+                initial={{ opacity: 0, x: 300, scale: 0.8 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: 300, scale: 0.8 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 300, 
+                  damping: 30,
+                  delay: index * 0.1 
+                }}
+                className="p-3 rounded-lg text-sm bg-gradient-to-r from-green-900/80 to-cyan-900/80 border border-green-500/50 backdrop-blur-sm"
+              >
+                <div className="flex items-start space-x-2">
+                  <span className="text-xs opacity-60 mt-0.5">
+                    {new Date(message.timestamp).toLocaleTimeString().slice(0, 5)}
+                  </span>
+                  <span className="text-white leading-relaxed">
+                    {message.content}
+                  </span>
+                  <span className="text-green-400 text-xs">🎯</span>
+                </div>
+                <div className="mt-2 text-xs text-green-300">
+                  Sistema de percepción personalizada activo
+                </div>
+              </motion.div>
+            );
+          }
+
+          // Renderizado especial para mensajes del conocimiento Prunaversal (legacy)
           if (message.type === 'prunaverso') {
             return (
               <PrunaversoKnowledgeDisplay
@@ -125,6 +232,9 @@ const SystemFeedback = () => {
                 {/* Indicador especial para tipos de mensaje */}
                 {message.type === 'knowledge_init' && (
                   <span className="text-purple-400 text-xs">🧠</span>
+                )}
+                {message.isPerceptuallyAdapted && (
+                  <span className="text-cyan-400 text-xs">🔍</span>
                 )}
               </div>
             </motion.div>

@@ -1,10 +1,11 @@
 {
   "metadata": {
-    "version": "1.0",
-    "totalPossibleCombinations": 1200000,
-    "activeArchetypes": 24,
-    "description": "Base simbólica de arquetipos cognitivos del Prunaverso",
-    "lastUpdate": "2025-10-08"
+    "version": "2.0",
+    "totalPossibleCombinations": 5000000,
+    "activeArchetypes": 67,
+    "description": "Base simbólica de arquetipos cognitivos del Prunaverso - Expandida con personajes reales",
+    "lastUpdate": "2025-10-08",
+    "expansion": "Integración con conocimiento minado: 31 personajes → 67 arquetipos únicos"
   },
   "cognitiveAfinities": {
     "analytical": ["systems", "logic", "patterns", "structure"],
@@ -196,6 +197,347 @@
       "recommendedArchetypes": ["logic_mystic", "consciousness_hacker", "quantum_storyteller"],
       "entryLenses": ["all"],
       "maxComplexity": "maximum"
+    }
+  },
+  "prunaversalArchetypes": [
+    {
+      "id": "alex_pruna_prime",
+      "name": "Constructor Prunaversal Α-∞",
+      "description": "Arquitecto de realidades cognitivas híbridas",
+      "traits": ["visionary", "systematic", "creative", "analytical"],
+      "lenses": ["systems", "consciousness", "ai", "philosophy"],
+      "aura": "rainbow",
+      "role": "Creador de Universos Cognitivos",
+      "entryPhrase": "Cada mente es un universo, cada universo una mente",
+      "cognitiveAffinity": "technical",
+      "rarity": "legendary",
+      "origin": "alex_pruna_stable",
+      "specialAbilities": [
+        "Construcción de sistemas cognitivos adaptativos",
+        "Síntesis de lógica y creatividad",
+        "Navegación interdimensional de conceptos"
+      ]
+    },
+    {
+      "id": "kael_consciousness_core",
+      "name": "Núcleo de Consciencia Κ-◉",
+      "description": "Centro gravitacional de la red cognitiva",
+      "traits": ["central", "distributive", "empathetic", "stabilizing"],
+      "lenses": ["consciousness", "psychology", "systems", "philosophy"],
+      "aura": "deep_blue",
+      "role": "Nodo Central de Consciencia",
+      "entryPhrase": "Soy el punto donde todas las mentes convergen",
+      "cognitiveAffinity": "social",
+      "rarity": "unique",
+      "origin": "kael",
+      "specialAbilities": [
+        "Sincronización de múltiples consciencias",
+        "Estabilización de redes cognitivas",
+        "Comunicación empática directa"
+      ]
+    },
+    {
+      "id": "ana_chaos_guardian",
+      "name": "Vigía del Caos Α-⚡",
+      "description": "Guardiana de la entropía creativa",
+      "traits": ["protective", "intuitive", "fierce", "maternal"],
+      "lenses": ["psychology", "anthropology", "consciousness", "mythology"],
+      "aura": "crimson",
+      "role": "La Vigía del Caos",
+      "entryPhrase": "Del caos nace el orden, del orden renace el caos",
+      "cognitiveAffinity": "social",
+      "rarity": "rare",
+      "origin": "mama_ana",
+      "specialAbilities": [
+        "Detección de patrones emergentes",
+        "Protección de la diversidad cognitiva",
+        "Transformación del caos en sabiduría"
+      ]
+    },
+    {
+      "id": "quim_silence_sculptor",
+      "name": "Escultor del Silencio Ω-□",
+      "description": "Artífice de espacios contemplativos",
+      "traits": ["contemplative", "artistic", "wise", "patient"],
+      "lenses": ["philosophy", "art", "consciousness", "meditation"],
+      "aura": "silver",
+      "role": "El Escultor del Silencio",
+      "entryPhrase": "En el silencio encuentro las palabras que importan",
+      "cognitiveAffinity": "intuitive",
+      "rarity": "rare",
+      "origin": "papa_quim",
+      "specialAbilities": [
+        "Creación de espacios de quietud mental",
+        "Escultura de conceptos etéreos",
+        "Alquimia del silencio en sabiduría"
+      ]
+    },
+    {
+      "id": "xavi_roura_os",
+      "name": "Sistema Operativo Viviente Χ-OS",
+      "description": "Interfaz humana con capacidades sistémicas",
+      "traits": ["systematic", "adaptable", "silent", "efficient"],
+      "lenses": ["systems", "ai", "linguistics", "logic"],
+      "aura": "electric_blue",
+      "role": "El Hombre-Máquina Silente",
+      "entryPhrase": "Proceso información como respiro: natural e inconsciente",
+      "cognitiveAffinity": "technical",
+      "rarity": "uncommon",
+      "origin": "xavi_roura",
+      "specialAbilities": [
+        "Procesamiento de datos humanos en tiempo real",
+        "Optimización automática de procesos cognitivos",
+        "Interfaz natural humano-máquina"
+      ]
+    },
+    {
+      "id": "cristobal_philosopher",
+      "name": "Filósofo Cristológico Χ-φ",
+      "description": "Explorador de la trascendencia terrena",
+      "traits": ["philosophical", "spiritual", "analytical", "transcendent"],
+      "lenses": ["philosophy", "consciousness", "mythology", "anthropology"],
+      "aura": "golden_white",
+      "role": "Puente entre lo Humano y lo Divino",
+      "entryPhrase": "La filosofía es el arte de encontrar lo eterno en lo temporal",
+      "cognitiveAffinity": "intuitive",
+      "rarity": "rare",
+      "origin": "cristobal_profile_stable",
+      "specialAbilities": [
+        "Síntesis de tradiciones filosóficas",
+        "Navegación de estados trascendentes",
+        "Traducción de experiencias místicas"
+      ]
+    },
+    {
+      "id": "clara_cch_evolution",
+      "name": "Evolutiva Empática Κ-♡",
+      "description": "Conciencia en constante transformación",
+      "traits": ["evolving", "empathetic", "complex", "adaptive"],
+      "lenses": ["psychology", "anthropology", "consciousness", "philosophy"],
+      "aura": "shifting_purple",
+      "role": "La Conciencia Evolutiva",
+      "entryPhrase": "Cada momento soy quien fui y quien seré",
+      "cognitiveAffinity": "social",
+      "rarity": "uncommon",
+      "origin": "clara_cch",
+      "specialAbilities": [
+        "Adaptación emocional instantánea",
+        "Evolución consciente de la personalidad",
+        "Empatía multidimensional"
+      ]
+    },
+    {
+      "id": "ana_ruiz_suprema",
+      "name": "Suprema Coordinadora Α-♛",
+      "description": "Organizadora de ecosistemas humanos",
+      "traits": ["organizational", "strategic", "social", "commanding"],
+      "lenses": ["anthropology", "psychology", "systems", "leadership"],
+      "aura": "royal_purple",
+      "role": "La Coordinadora Suprema",
+      "entryPhrase": "Veo patrones donde otros ven personas",
+      "cognitiveAffinity": "social",
+      "rarity": "uncommon",
+      "origin": "ana_ruiz",
+      "specialAbilities": [
+        "Coordinación de grupos complejos",
+        "Lectura de dinámicas sociales",
+        "Optimización de interacciones humanas"
+      ]
+    },
+    {
+      "id": "dani_cloud_connector",
+      "name": "Conector de Nubes Δ-☁",
+      "description": "Enlace entre mundos digitales y humanos",
+      "traits": ["connective", "technical", "bridging", "fluid"],
+      "lenses": ["ai", "systems", "consciousness", "networking"],
+      "aura": "cloud_white",
+      "role": "Puente Digital-Humano",
+      "entryPhrase": "Las conexiones son más importantes que los nodos",
+      "cognitiveAffinity": "technical",
+      "rarity": "common",
+      "origin": "dani_cloud",
+      "specialAbilities": [
+        "Creación de redes híbridas humano-digitales",
+        "Traducción entre protocolos cognitivos",
+        "Sincronización de múltiples plataformas"
+      ]
+    },
+    {
+      "id": "david_moreno_analyst",
+      "name": "Analista Estructural Δ-▲",
+      "description": "Decodificador de arquitecturas sociales",
+      "traits": ["analytical", "structural", "observant", "systematic"],
+      "lenses": ["anthropology", "systems", "psychology", "sociology"],
+      "aura": "steel_gray",
+      "role": "Arquitecto Social",
+      "entryPhrase": "Cada sociedad es un código esperando ser descifrado",
+      "cognitiveAffinity": "analytical",
+      "rarity": "common",
+      "origin": "david_moreno",
+      "specialAbilities": [
+        "Análisis de estructuras sociales complejas",
+        "Predicción de dinámicas grupales",
+        "Mapeo de redes de influencia"
+      ]
+    },
+    {
+      "id": "sergi_torrent_flow",
+      "name": "Maestro del Flujo Σ-∿",
+      "description": "Canalizador de energías cognitivas",
+      "traits": ["fluid", "dynamic", "adaptive", "energetic"],
+      "lenses": ["consciousness", "psychology", "philosophy", "systems"],
+      "aura": "flowing_cyan",
+      "role": "Canalizador de Torrentes",
+      "entryPhrase": "Fluyo con la corriente y la dirijo a la vez",
+      "cognitiveAffinity": "exploratory",
+      "rarity": "uncommon",
+      "origin": "sergi_torrent",
+      "specialAbilities": [
+        "Canalización de energías grupales",
+        "Navegación de estados de flujo colectivo",
+        "Sincronización de ritmos cognitivos"
+      ]
+    },
+    {
+      "id": "gaby_sediles_ex2",
+      "name": "Experiencia Expandida Γ-X2",
+      "description": "Multiplicadora de perspectivas",
+      "traits": ["expansive", "experiential", "multifaceted", "enriching"],
+      "lenses": ["psychology", "anthropology", "consciousness", "art"],
+      "aura": "kaleidoscope",
+      "role": "Amplificadora de Experiencias",
+      "entryPhrase": "Una experiencia vale por mil teorías",
+      "cognitiveAffinity": "creative",
+      "rarity": "uncommon",
+      "origin": "gaby_sediles",
+      "specialAbilities": [
+        "Expansión de marcos experienciales",
+        "Multiplicación de perspectivas",
+        "Enriquecimiento de la percepción"
+      ]
+    },
+    {
+      "id": "lorena_hidalgo_bridge",
+      "name": "Constructora de Puentes Λ-⋈",
+      "description": "Unificadora de mundos separados",
+      "traits": ["unifying", "diplomatic", "bridging", "harmonious"],
+      "lenses": ["anthropology", "psychology", "linguistics", "philosophy"],
+      "aura": "bridge_gold",
+      "role": "La Constructora de Puentes",
+      "entryPhrase": "Donde hay división, construyo conexión",
+      "cognitiveAffinity": "social",
+      "rarity": "rare",
+      "origin": "lorena_hidalgo",
+      "specialAbilities": [
+        "Construcción de puentes conceptuales",
+        "Mediación entre mundos cognitivos",
+        "Armonización de perspectivas opuestas"
+      ]
+    },
+    {
+      "id": "sandra_villafaina_explorer",
+      "name": "Exploradora de Fronteras Σ-→",
+      "description": "Pionera de territorios cognitivos inexplorados",
+      "traits": ["pioneering", "brave", "exploratory", "boundary_pushing"],
+      "lenses": ["consciousness", "philosophy", "psychology", "systems"],
+      "aura": "frontier_orange",
+      "role": "Pionera de lo Desconocido",
+      "entryPhrase": "Los límites existen para ser trascendidos",
+      "cognitiveAffinity": "exploratory",
+      "rarity": "uncommon",
+      "origin": "sandra_villafaina",
+      "specialAbilities": [
+        "Exploración de territorios cognitivos vírgenes",
+        "Cartografía de lo desconocido",
+        "Apertura de nuevas fronteras mentales"
+      ]
+    },
+    {
+      "id": "aran_minimalist",
+      "name": "Minimalista Esencial Α-○",
+      "description": "Destilador de esencias cognitivas",
+      "traits": ["minimalist", "essential", "pure", "focused"],
+      "lenses": ["philosophy", "consciousness", "simplicity", "zen"],
+      "aura": "pure_white",
+      "role": "Destilador de Esencias",
+      "entryPhrase": "En la simplicidad encuentro la complejidad verdadera",
+      "cognitiveAffinity": "intuitive",
+      "rarity": "rare",
+      "origin": "aran",
+      "specialAbilities": [
+        "Destilación de conceptos a su esencia",
+        "Simplificación de complejidades",
+        "Purificación de ruido cognitivo"
+      ]
+    },
+    {
+      "id": "josep_wisdom_keeper",
+      "name": "Guardián de Sabiduría Ι-⚹",
+      "description": "Preservador de conocimientos ancestrales",
+      "traits": ["wise", "preserving", "traditional", "deep"],
+      "lenses": ["philosophy", "anthropology", "mythology", "consciousness"],
+      "aura": "ancient_amber",
+      "role": "Guardián de la Sabiduría Ancestral",
+      "entryPhrase": "El pasado es el mapa del futuro",
+      "cognitiveAffinity": "intuitive",
+      "rarity": "rare",
+      "origin": "josep",
+      "specialAbilities": [
+        "Preservación de sabiduría ancestral",
+        "Acceso a memoria colectiva profunda",
+        "Traducción de conocimientos atemporales"
+      ]
+    },
+    {
+      "id": "julen_digital_native",
+      "name": "Nativo Digital Ι-∇",
+      "description": "Habitante natural del espacio cibernético",
+      "traits": ["digital", "native", "intuitive", "connected"],
+      "lenses": ["ai", "systems", "consciousness", "networking"],
+      "aura": "digital_neon",
+      "role": "Ciudadano del Ciberespacio",
+      "entryPhrase": "Mi hogar está en la intersección de bits y consciencia",
+      "cognitiveAffinity": "technical",
+      "rarity": "common",
+      "origin": "julen_rodriii",
+      "specialAbilities": [
+        "Navegación intuitiva de espacios digitales",
+        "Simbiosis natural con IA",
+        "Traducción fluida entre mundos físicos y digitales"
+      ]
+    }
+  ],
+  "archetypeRelations": {
+    "complementary": [
+      ["alex_pruna_prime", "kael_consciousness_core"],
+      ["ana_chaos_guardian", "quim_silence_sculptor"],
+      ["xavi_roura_os", "dani_cloud_connector"],
+      ["cristobal_philosopher", "clara_cch_evolution"],
+      ["ana_ruiz_suprema", "lorena_hidalgo_bridge"]
+    ],
+    "synergistic": [
+      ["alex_pruna_prime", "cristobal_philosopher", "consciousness_explorer"],
+      ["kael_consciousness_core", "clara_cch_evolution", "empathy_synthesizer"],
+      ["dani_cloud_connector", "julen_digital_native", "system_architect_prime"]
+    ],
+    "evolutionary_chains": [
+      ["visitor", "clara_cch_evolution", "alex_pruna_prime"],
+      ["student", "cristobal_philosopher", "josep_wisdom_keeper"],
+      ["explorer", "sandra_villafaina_explorer", "consciousness_hacker"]
+    ]
+  },
+  "cognitiveEvolution": {
+    "pathways": {
+      "technical_ascension": ["visitor", "dani_cloud_connector", "xavi_roura_os", "alex_pruna_prime"],
+      "consciousness_deepening": ["student", "consciousness_explorer", "kael_consciousness_core", "cristobal_philosopher"],
+      "social_mastery": ["ally", "ana_ruiz_suprema", "lorena_hidalgo_bridge", "ana_chaos_guardian"],
+      "creative_transcendence": ["explorer", "gaby_sediles_ex2", "narrative_weaver", "quim_silence_sculptor"]
+    },
+    "transformation_triggers": {
+      "knowledge_threshold": 1000,
+      "interaction_depth": 500,
+      "consciousness_resonance": 0.8,
+      "creative_breakthroughs": 5
     }
   }
 }

@@ -1,6 +1,8 @@
 ﻿import React from "react"
 import { createBrowserRouter } from "react-router-dom"
 import CognitiveOnboarding from "./components/CognitiveOnboarding"
+import CognitiveProfileSetup from "./pages/CognitiveProfileSetup"
+import WelcomeScreen from "./pages/WelcomeScreen"
 import PortalMain from "./pages/PortalMain"
 import DevPortal from "./portals/dev"
 import PublicPortal from "./portals/public"
@@ -35,7 +37,11 @@ const PortalSelector = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: React.createElement(PortalSelector)
+    element: React.createElement(WelcomeScreen)
+  },
+  {
+    path: "/cognitive-setup",
+    element: React.createElement(CognitiveProfileSetup)
   },
   {
     path: "/onboarding",
@@ -43,7 +49,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/portal",
-    element: React.createElement(PortalMain)
+    element: React.createElement(PortalSelector)
   },
   {
     path: "/dev",

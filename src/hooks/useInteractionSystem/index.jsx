@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import useVisitorProfile from '../useVisitorProfile';
 import { usePrunaversoKnowledge } from '../usePrunaversoKnowledge';
+import { usePerceptualFilter } from '../usePerceptualFilter';
 
 /**
  * 🧠 useInteractionSystem - Sistema de Reacciones Vivas
@@ -8,10 +9,12 @@ import { usePrunaversoKnowledge } from '../usePrunaversoKnowledge';
  * Captura cada interacción del usuario y genera respuestas contextuales.
  * Cada acción tiene consecuencias visibles en el sistema.
  * AHORA CON CONOCIMIENTO COMPLETO DEL PRUNAVERSO INTEGRADO.
+ * 🌌 CON FILTRO PERCEPTUAL: EL USUARIO NUNCA VE CONTENIDO CRUDO
  */
 const useInteractionSystem = () => {
   const { profile, updateProfile } = useVisitorProfile();
   const knowledge = usePrunaversoKnowledge();
+  const perceptualFilter = usePerceptualFilter();
   const [systemState, setSystemState] = useState({
     alertLevel: 'calm',
     lastInteraction: null,
@@ -20,7 +23,8 @@ const useInteractionSystem = () => {
     atmosphereIntensity: 0.3,
     achievements: [],
     systemMessages: [],
-    knowledgeIntegrated: false
+    knowledgeIntegrated: false,
+    perceptualFilterActive: false
   });
 
   // Registrar cada interacción con contexto completo
@@ -136,26 +140,34 @@ const useInteractionSystem = () => {
   const generateSystemMessages = (interaction, pattern) => {
     const messages = [];
     
-    // 🌌 INTEGRACIÓN DEL CONOCIMIENTO PRUNAVERSAL
-    if (knowledge.isInitialized) {
-      const contextualResponse = knowledge.getContextualResponse(
+    // 🌌 INTEGRACIÓN DEL CONOCIMIENTO PRUNAVERSAL CON FILTRO PERCEPTUAL
+    if (knowledge.isInitialized && perceptualFilter.isCalibrated) {
+      // NUNCA mostrar contenido crudo - siempre filtrado por percepción del usuario
+      const filteredResponse = perceptualFilter.generateFilteredResponse(
         interaction.target || interaction.context?.element || '', 
         interaction.type
       );
       
-      if (contextualResponse) {
+      if (filteredResponse) {
         messages.push({
-          type: 'prunaverso',
-          content: contextualResponse.text,
+          type: 'prunaverso_filtered',
+          content: filteredResponse,
           timestamp: interaction.timestamp,
-          priority: contextualResponse.confidence > 0.7 ? 'success' : 'info',
-          confidence: contextualResponse.confidence,
-          sources: contextualResponse.sources || [],
-          characterData: contextualResponse.characterData,
-          conceptData: contextualResponse.conceptData,
-          isSpeculative: contextualResponse.isSpeculative || false
+          priority: 'success',
+          filterSignature: `${perceptualFilter.currentLenses.join('+')}@${perceptualFilter.academicLevel}`,
+          isPerceptuallyAdapted: true,
+          rawContentHidden: true
         });
       }
+    } else if (knowledge.isInitialized && !perceptualFilter.isCalibrated) {
+      // Modo de calibración - usuario necesita configurar su percepción
+      messages.push({
+        type: 'calibration_required',
+        content: '🔧 Sistema detectado. Configurando filtros perceptuales para tu perfil cognitivo...',
+        timestamp: interaction.timestamp,
+        priority: 'warning',
+        needsCalibration: true
+      });
     }
     
     // Mensajes de patrón cognitivo (complementarios)
@@ -199,14 +211,37 @@ const useInteractionSystem = () => {
     
     // Mensaje especial cuando el conocimiento se inicializa
     if (knowledge.isInitialized && !systemState.knowledgeIntegrated) {
+      const knowledgeStats = knowledge.knowledgeStats || {};
+      const filteredMessage = perceptualFilter.isCalibrated 
+        ? perceptualFilter.generateFilteredResponse(
+            `Sistema de conocimiento integrado: ${knowledgeStats.characters || 0} entidades, ${knowledgeStats.concepts || 0} conceptos disponibles`,
+            'system_integration'
+          )
+        : `🧠 Conocimiento Prunaversal integrado: ${knowledgeStats.characters || 0} personajes, ${knowledgeStats.concepts || 0} conceptos disponibles.`;
+      
       messages.push({
         type: 'knowledge_init',
-        content: `🧠 Conocimiento Prunaversal integrado: ${knowledge.knowledgeStats?.characters || 0} personajes, ${knowledge.knowledgeStats?.concepts || 0} conceptos disponibles.`,
+        content: filteredMessage,
         timestamp: interaction.timestamp,
-        priority: 'success'
+        priority: 'success',
+        isPerceptuallyAdapted: perceptualFilter.isCalibrated
       });
       
       setSystemState(prev => ({ ...prev, knowledgeIntegrated: true }));
+    }
+    
+    // Mensaje especial cuando el filtro perceptual se activa
+    if (perceptualFilter.isCalibrated && !systemState.perceptualFilterActive) {
+      const filterStats = perceptualFilter.getFilterStats();
+      messages.push({
+        type: 'perceptual_filter_active',
+        content: `🎯 Filtros perceptuales calibrados: ${filterStats.activeFilters.join(' + ')} | Nivel: ${filterStats.academicLevel}`,
+        timestamp: interaction.timestamp,
+        priority: 'info',
+        filterInfo: filterStats
+      });
+      
+      setSystemState(prev => ({ ...prev, perceptualFilterActive: true }));
     }
     
     return messages;
