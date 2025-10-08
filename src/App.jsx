@@ -9,6 +9,7 @@ import AchievementManager from './components/AchievementManager'
 import DevTestPanel from './components/DevTestPanel'
 import usePlayerProgression from './hooks/usePlayerProgression'
 import { initializeCognitiveSystem } from './system-core/cognitiveStateManager'
+import { preloadCriticalComponents } from './utils/lazyComponents.jsx'
 
 export default function App() {
   console.log('🚀 App component loaded - Prunaverso OS v2.0')
@@ -20,6 +21,9 @@ export default function App() {
   useEffect(() => {
     console.log('🧠 Inicializando Sistema Operativo Cognitivo...');
     initializeCognitiveSystem();
+    
+    // Precargar componentes críticos
+    preloadCriticalComponents();
   }, []);
   
   // Redirigir a awakening si es necesario

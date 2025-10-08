@@ -27,12 +27,24 @@ export default defineConfig(({ command, mode }) => {
       assetsDir: 'assets',
       sourcemap: false,
       minify: 'terser',
+      chunkSizeWarningLimit: 500,
       rollupOptions: {
         output: {
           manualChunks: {
-            vendor: ['react', 'react-dom'],
-            router: ['react-router-dom'],
-            motion: ['framer-motion']
+            // Core React
+            'react-core': ['react', 'react-dom'],
+            'react-router': ['react-router-dom'],
+            
+            // UI Libraries
+            'ui-motion': ['framer-motion'],
+            'ui-charts': ['recharts'],
+            
+            // Sistema Cognitivo - Solo archivos JS
+            'cognitive-system': [
+              './src/system-core/cognitiveStateManager.js',
+              './src/system-core/achievementSystem.js',
+              './src/system-core/prunalgoritm.js'
+            ]
           }
         }
       }

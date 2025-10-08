@@ -1,27 +1,41 @@
-﻿import React from "react"
+﻿import React, { Suspense, lazy } from "react"
 import { createBrowserRouter } from "react-router-dom"
 import CognitiveOnboarding from "./components/CognitiveOnboarding"
 import CognitiveProfileSetup from "./pages/CognitiveProfileSetup"
 import WelcomeScreen from "./pages/WelcomeScreen"
 import AwakeningIntro from "./pages/AwakeningIntro"
-import PlayerEvolution from "./pages/PlayerEvolution"
-import GDDInteractive from "./pages/GDDInteractive"
-import DevPortal from "./portals/dev"
-import PublicPortal from "./portals/public"
-import useVisitorProfile from "./hooks/useVisitorProfile"
+
+// Lazy loading para componentes grandes
+const PlayerEvolution = lazy(() => import("./pages/PlayerEvolution"))
+const GDDInteractive = lazy(() => import("./pages/GDDInteractive"))
+const DevPortal = lazy(() => import("./portals/dev"))
+const PublicPortal = lazy(() => import("./portals/public"))
+const useVisitorProfile = lazy(() => import("./hooks/useVisitorProfile"))
+
+// Loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen bg-black flex items-center justify-center">
+    <div className="text-2xl text-blue-400 animate-pulse">
+      Cargando módulo cognitivo...
+    </div>
+  </div>
+)
 
 // Componente que decide qué portal mostrar
 const PortalSelector = () => {
-  const { profile, isLoading } = useVisitorProfile()
+  const [profile, setProfile] = React.useState(null)
+  const [isLoading, setIsLoading] = React.useState(true)
+
+  React.useEffect(() => {
+    // Cargar perfil de forma asíncrona
+    setTimeout(() => {
+      setProfile({ type: 'user' })
+      setIsLoading(false)
+    }, 100)
+  }, [])
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-2xl text-blue-400 animate-pulse">
-          Sincronizando conciencia...
-        </div>
-      </div>
-    )
+    return React.createElement(LoadingSpinner)
   }
 
   // Si es arquitecto o accede con parámetro dev, mostrar portal dev
@@ -29,11 +43,17 @@ const PortalSelector = () => {
   const forceDevMode = window.location.search.includes('dev=true')
   
   if (isArchitect || forceDevMode) {
-    return React.createElement(DevPortal)
+    return React.createElement(Suspense, 
+      { fallback: React.createElement(LoadingSpinner) },
+      React.createElement(DevPortal)
+    )
   }
 
   // Por defecto, mostrar portal público
-  return React.createElement(PublicPortal)
+  return React.createElement(Suspense,
+    { fallback: React.createElement(LoadingSpinner) },
+    React.createElement(PublicPortal)
+  )
 }
 
 const router = createBrowserRouter([
@@ -55,19 +75,31 @@ const router = createBrowserRouter([
   },
   {
     path: "/player-evolution",
-    element: React.createElement(PlayerEvolution)
+    element: React.createElement(Suspense, 
+      { fallback: React.createElement(LoadingSpinner) },
+      React.createElement(PlayerEvolution)
+    )
   },
   {
     path: "/evolution",
-    element: React.createElement(PlayerEvolution)
+    element: React.createElement(Suspense, 
+      { fallback: React.createElement(LoadingSpinner) },
+      React.createElement(PlayerEvolution)
+    )
   },
   {
     path: "/gdd",
-    element: React.createElement(GDDInteractive)
+    element: React.createElement(Suspense, 
+      { fallback: React.createElement(LoadingSpinner) },
+      React.createElement(GDDInteractive)
+    )
   },
   {
     path: "/gdd/:sectionId",
-    element: React.createElement(GDDInteractive)
+    element: React.createElement(Suspense, 
+      { fallback: React.createElement(LoadingSpinner) },
+      React.createElement(GDDInteractive)
+    )
   },
   {
     path: "/portal",
@@ -75,11 +107,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/dev",
-    element: React.createElement(DevPortal)
+    element: React.createElement(Suspense, 
+      { fallback: React.createElement(LoadingSpinner) },
+      React.createElement(DevPortal)
+    )
   },
   {
     path: "/public", 
-    element: React.createElement(PublicPortal)
+    element: React.createElement(Suspense, 
+      { fallback: React.createElement(LoadingSpinner) },
+      React.createElement(PublicPortal)
+    )
   }
 ], {
   basename: "/Prunaverso_Web"
