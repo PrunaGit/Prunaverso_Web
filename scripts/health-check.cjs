@@ -77,7 +77,8 @@ class PrunaversoHealthChecker {
         
         // Verificaciones específicas por tipo de archivo
         if (file.endsWith('.jsx') || file.endsWith('.js')) {
-          if (content.includes('import') && !content.includes('export')) {
+          // main.jsx es punto de entrada, no necesita exports
+          if (file !== 'src/main.jsx' && content.includes('import') && !content.includes('export')) {
             corrupted.push(`${file}: Sin exports`)
           }
         }
