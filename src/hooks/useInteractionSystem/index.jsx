@@ -1,14 +1,17 @@
 import { useState, useEffect, useCallback } from 'react';
 import useVisitorProfile from '../useVisitorProfile';
+import { usePrunaversoKnowledge } from '../usePrunaversoKnowledge';
 
 /**
  * 🧠 useInteractionSystem - Sistema de Reacciones Vivas
  * 
  * Captura cada interacción del usuario y genera respuestas contextuales.
  * Cada acción tiene consecuencias visibles en el sistema.
+ * AHORA CON CONOCIMIENTO COMPLETO DEL PRUNAVERSO INTEGRADO.
  */
 const useInteractionSystem = () => {
   const { profile, updateProfile } = useVisitorProfile();
+  const knowledge = usePrunaversoKnowledge();
   const [systemState, setSystemState] = useState({
     alertLevel: 'calm',
     lastInteraction: null,
@@ -16,7 +19,8 @@ const useInteractionSystem = () => {
     cognitivePattern: 'exploring',
     atmosphereIntensity: 0.3,
     achievements: [],
-    systemMessages: []
+    systemMessages: [],
+    knowledgeIntegrated: false
   });
 
   // Registrar cada interacción con contexto completo
@@ -132,6 +136,29 @@ const useInteractionSystem = () => {
   const generateSystemMessages = (interaction, pattern) => {
     const messages = [];
     
+    // 🌌 INTEGRACIÓN DEL CONOCIMIENTO PRUNAVERSAL
+    if (knowledge.isInitialized) {
+      const contextualResponse = knowledge.getContextualResponse(
+        interaction.target || interaction.context?.element || '', 
+        interaction.type
+      );
+      
+      if (contextualResponse) {
+        messages.push({
+          type: 'prunaverso',
+          content: contextualResponse.text,
+          timestamp: interaction.timestamp,
+          priority: contextualResponse.confidence > 0.7 ? 'success' : 'info',
+          confidence: contextualResponse.confidence,
+          sources: contextualResponse.sources || [],
+          characterData: contextualResponse.characterData,
+          conceptData: contextualResponse.conceptData,
+          isSpeculative: contextualResponse.isSpeculative || false
+        });
+      }
+    }
+    
+    // Mensajes de patrón cognitivo (complementarios)
     switch (pattern) {
       case 'power_user':
         messages.push({
@@ -168,6 +195,18 @@ const useInteractionSystem = () => {
           priority: 'warning'
         });
         break;
+    }
+    
+    // Mensaje especial cuando el conocimiento se inicializa
+    if (knowledge.isInitialized && !systemState.knowledgeIntegrated) {
+      messages.push({
+        type: 'knowledge_init',
+        content: `🧠 Conocimiento Prunaversal integrado: ${knowledge.knowledgeStats?.characters || 0} personajes, ${knowledge.knowledgeStats?.concepts || 0} conceptos disponibles.`,
+        timestamp: interaction.timestamp,
+        priority: 'success'
+      });
+      
+      setSystemState(prev => ({ ...prev, knowledgeIntegrated: true }));
     }
     
     return messages;

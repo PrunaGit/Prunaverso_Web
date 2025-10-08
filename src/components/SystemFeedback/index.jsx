@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useInteractionSystem from '../../hooks/useInteractionSystem';
+import PrunaversoKnowledgeDisplay from '../PrunaversoKnowledgeDisplay';
 
 /**
  * 🌌 SystemFeedback - Feedback Visual en Tiempo Real
  * 
  * Muestra todas las reacciones del sistema a las interacciones del usuario.
  * Hace visible el "pensamiento" del Prunaverso.
+ * AHORA CON INTEGRACIÓN DE CONOCIMIENTO PRUNAVERSAL.
  */
 const SystemFeedback = () => {
   const { systemState, profile } = useInteractionSystem();
@@ -87,30 +89,47 @@ const SystemFeedback = () => {
 
       {/* Mensajes del Sistema */}
       <AnimatePresence>
-        {visibleMessages.map((message, index) => (
-          <motion.div
-            key={`${message.timestamp}-${index}`}
-            initial={{ opacity: 0, x: 300, scale: 0.8 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: 300, scale: 0.8 }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 300, 
-              damping: 30,
-              delay: index * 0.1 
-            }}
-            className={`p-3 rounded-lg text-sm ${patternStyles[systemState.cognitivePattern]} backdrop-blur-sm`}
-          >
-            <div className="flex items-start space-x-2">
-              <span className="text-xs opacity-60 mt-0.5">
-                {new Date(message.timestamp).toLocaleTimeString().slice(0, 5)}
-              </span>
-              <span className="text-white leading-relaxed">
-                {message.content}
-              </span>
-            </div>
-          </motion.div>
-        ))}
+        {visibleMessages.map((message, index) => {
+          // Renderizado especial para mensajes del conocimiento Prunaversal
+          if (message.type === 'prunaverso') {
+            return (
+              <PrunaversoKnowledgeDisplay
+                key={`${message.timestamp}-${index}`}
+                message={message}
+              />
+            );
+          }
+
+          // Renderizado normal para otros mensajes
+          return (
+            <motion.div
+              key={`${message.timestamp}-${index}`}
+              initial={{ opacity: 0, x: 300, scale: 0.8 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: 300, scale: 0.8 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 300, 
+                damping: 30,
+                delay: index * 0.1 
+              }}
+              className={`p-3 rounded-lg text-sm ${patternStyles[systemState.cognitivePattern]} backdrop-blur-sm`}
+            >
+              <div className="flex items-start space-x-2">
+                <span className="text-xs opacity-60 mt-0.5">
+                  {new Date(message.timestamp).toLocaleTimeString().slice(0, 5)}
+                </span>
+                <span className="text-white leading-relaxed">
+                  {message.content}
+                </span>
+                {/* Indicador especial para tipos de mensaje */}
+                {message.type === 'knowledge_init' && (
+                  <span className="text-purple-400 text-xs">🧠</span>
+                )}
+              </div>
+            </motion.div>
+          );
+        })}
       </AnimatePresence>
 
       {/* Achievements Recientes */}

@@ -1,0 +1,16 @@
+{
+  "sandra_villafaina_alex_pruna_mentioned": {
+    "from": "sandra_villafaina",
+    "to": "alex_pruna",
+    "type": "mentioned",
+    "source": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_cercano\\sandra_villafaina\\sandra_villafaina_profile_v1.json",
+    "confidence": 0.8
+  },
+  "sandra_villafaina_adri_n_mentioned": {
+    "from": "sandra_villafaina",
+    "to": "adri_n",
+    "type": "mentioned",
+    "source": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_cercano\\sandra_villafaina\\sandra_villafaina_profile_v1.json",
+    "confidence": 0.8
+  }
+}

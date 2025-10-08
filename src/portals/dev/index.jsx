@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useVisitorProfile from '../../hooks/useVisitorProfile';
 import useInteractionSystem from '../../hooks/useInteractionSystem';
+import { usePrunaversoKnowledge } from '../../hooks/usePrunaversoKnowledge';
 import GameControls from '../../components/GameControls';
 import SystemFeedback from '../../components/SystemFeedback';
+import PrunaversoKnowledgeSearch from '../../components/PrunaversoKnowledgeSearch';
 import { SmartButton, SmartInput, SmartGamepadButton } from '../../components/SmartInteractives';
 
 /**
@@ -11,10 +13,12 @@ import { SmartButton, SmartInput, SmartGamepadButton } from '../../components/Sm
  * 
  * Interfaz de control y monitoreo para arquitectos del sistema.
  * HUD avanzado con acceso directo a la estructura interna.
+ * AHORA CON BÚSQUEDA INTELIGENTE DEL CONOCIMIENTO PRUNAVERSAL.
  */
 const DevPortal = () => {
   const { profile } = useVisitorProfile();
   const { systemState, registerInteraction, getContextualResponse } = useInteractionSystem();
+  const knowledge = usePrunaversoKnowledge();
   const [activeModule, setActiveModule] = useState('console');
   const [systemStats, setSystemStats] = useState({
     modules: 5,
@@ -65,12 +69,15 @@ const DevPortal = () => {
       ],
       'help': () => [
         '📋 Available Commands:',
-        '  status    - System status report',
-        '  users     - User analytics',
-        '  monitor   - Real-time metrics',
-        '  characters - Character database',
-        '  deploy    - Deployment status',
-        '  clear     - Clear console'
+        '  status      - System status report',
+        '  users       - User analytics',
+        '  monitor     - Real-time metrics',
+        '  characters  - Character database',
+        '  knowledge   - Prunaverso knowledge stats',
+        '  find [name] - Search character by name',
+        '  concepts    - List key concepts',
+        '  deploy      - Deployment status',
+        '  clear       - Clear console'
       ],
       'monitor': () => [
         `📈 Real-time Metrics:`,
@@ -79,12 +86,51 @@ const DevPortal = () => {
         `  Health: ${systemStats.connections > 10 ? 'optimal' : 'degraded'}`,
         `  Response: ${Math.round(Math.random() * 50 + 50)}ms`
       ],
-      'characters': () => [
-        '👥 Character Database:',
-        `  Total Characters: ${Math.floor(Math.random() * 20 + 50)}`,
-        `  Active Profiles: ${Math.floor(Math.random() * 10 + 5)}`,
-        `  Relationships: ${Math.floor(Math.random() * 100 + 200)} mapped`
-      ],
+      'characters': () => {
+        if (!knowledge.isInitialized) {
+          return ['🔄 Loading Prunaverso knowledge base...'];
+        }
+        const stats = knowledge.knowledgeStats;
+        const characters = knowledge.getCharacters();
+        const coreChars = Object.values(characters).filter(char => 
+          char.category === 'nucleo_central' || char.category === 'nucleo_cercano'
+        );
+        
+        return [
+          '👥 Prunaverso Character Database:',
+          `  🌌 Total Characters: ${stats?.characters || 0}`,
+          `  ⭐ Core Characters: ${coreChars.length}`,
+          `  🔗 Relationships: ${stats?.relationships || 0} mapped`,
+          `  💫 Top Characters: ${coreChars.slice(0, 3).map(c => c.name).join(', ')}`
+        ];
+      },
+      'knowledge': () => {
+        if (!knowledge.isInitialized) {
+          return ['🔄 Initializing Prunaverso knowledge engine...'];
+        }
+        const stats = knowledge.knowledgeStats;
+        return [
+          '🧠 Prunaverso Knowledge Base Status:',
+          `  👤 Characters: ${stats?.characters || 0}`,
+          `  💭 Concepts: ${stats?.concepts || 0}`,
+          `  🔗 Relationships: ${stats?.relationships || 0}`,
+          `  📊 Total Knowledge Nodes: ${stats?.totalNodes || 0}`,
+          `  ✅ Status: ${knowledge.isInitialized ? 'LOADED' : 'LOADING'}`
+        ];
+      },
+      'concepts': () => {
+        if (!knowledge.isInitialized) {
+          return ['🔄 Loading concepts...'];
+        }
+        const concepts = knowledge.getConcepts();
+        const conceptKeys = Object.keys(concepts).slice(0, 10);
+        return [
+          '💭 Key Prunaverso Concepts:',
+          ...conceptKeys.map(key => `  • ${key}`),
+          conceptKeys.length < Object.keys(concepts).length ? 
+            `  ... and ${Object.keys(concepts).length - conceptKeys.length} more` : ''
+        ].filter(Boolean);
+      },
       'deploy': () => [
         '🚀 Deployment Status:',
         '  GitHub Pages: ✅ Active',
@@ -98,10 +144,52 @@ const DevPortal = () => {
       }
     };
 
-    const response = responses[command.toLowerCase()] || (() => [
-      `❓ Unknown command: ${command}`,
+    // Manejo especial para comandos con parámetros
+    const [baseCommand, ...params] = command.toLowerCase().split(' ');
+    const searchQuery = params.join(' ');
+
+    // Comando especial para búsqueda de personajes
+    if (baseCommand === 'find' && searchQuery) {
+      if (!knowledge.isInitialized) {
+        const output = ['🔄 Knowledge base still loading...'];
+        setConsoleOutput(prev => [...prev, `$ ${command}`, ...output, '']);
+        return;
+      }
+
+      const character = knowledge.findCharacter(searchQuery);
+      if (character) {
+        const char = character.data;
+        const output = [
+          `🎯 Character Found: ${char.name}`,
+          `  📂 Category: ${char.category || 'N/A'}`,
+          `  🏷️  Aliases: ${char.raw_data?.alias?.join(', ') || 'None'}`,
+          `  🔄 Status: ${char.raw_data?.estado || 'Unknown'}`,
+          `  📁 Source: ${character.key}`,
+          char.raw_data?.atributos ? 
+            `  ⚡ Attributes: ${Object.keys(char.raw_data.atributos).slice(0, 3).join(', ')}` : ''
+        ].filter(Boolean);
+        setConsoleOutput(prev => [...prev, `$ ${command}`, ...output, '']);
+      } else {
+        const concepts = knowledge.findConcepts(searchQuery);
+        const output = concepts.length > 0 ? [
+          `🔍 No character found for "${searchQuery}"`,
+          `💭 Found ${concepts.length} related concepts:`,
+          ...concepts.slice(0, 3).map(c => `  • ${c.key}`)
+        ] : [
+          `❌ No results found for "${searchQuery}"`,
+          `💡 Try: find alex, find kael, find clara`
+        ];
+        setConsoleOutput(prev => [...prev, `$ ${command}`, ...output, '']);
+      }
+      return;
+    }
+
+    const response = responses[baseCommand] || (() => [
+      `❓ Unknown command: ${baseCommand}`,
       `💡 Type 'help' for available commands`,
-      `🤖 AI Suggestion: ${getContextualResponse(command, 'command')}`
+      knowledge.isInitialized ? 
+        `🤖 AI Suggestion: Try 'find ${baseCommand}' to search characters` :
+        `🤖 AI Suggestion: ${getContextualResponse(command, 'command')}`
     ]);
 
     const output = response();
@@ -162,9 +250,16 @@ const DevPortal = () => {
               ARCHITECT: {profile?.name || 'UNKNOWN'} | UPTIME: {systemStats.uptime}
             </p>
           </div>
-          <div className="text-right">
-            <div className="text-xs text-gray-500">SYSTEM STATUS</div>
-            <div className="text-green-400">◉ OPERATIONAL</div>
+          
+          {/* Búsqueda de Conocimiento Integrada */}
+          <div className="flex items-center space-x-4">
+            <div className="w-80">
+              <PrunaversoKnowledgeSearch />
+            </div>
+            <div className="text-right">
+              <div className="text-xs text-gray-500">SYSTEM STATUS</div>
+              <div className="text-green-400">◉ OPERATIONAL</div>
+            </div>
           </div>
         </div>
       </motion.header>
@@ -283,6 +378,30 @@ const DevPortal = () => {
                         {cmd}
                       </SmartButton>
                     ))}
+                  </div>
+
+                  {/* Comandos de Conocimiento Prunaversal */}
+                  <div className="mt-3">
+                    <div className="text-purple-400 text-xs mb-2">🌌 Prunaverso Knowledge:</div>
+                    <div className="flex flex-wrap gap-2">
+                      {['knowledge', 'characters', 'concepts'].map(cmd => (
+                        <SmartButton
+                          key={cmd}
+                          target={`knowledge_cmd_${cmd}`}
+                          onClick={() => executeCommand(cmd)}
+                          className="text-xs px-2 py-1 bg-purple-600/20 border-purple-500/30 hover:bg-purple-600/30"
+                        >
+                          {cmd}
+                        </SmartButton>
+                      ))}
+                      <SmartButton
+                        target="find_alex"
+                        onClick={() => executeCommand('find alex')}
+                        className="text-xs px-2 py-1 bg-blue-600/20 border-blue-500/30 hover:bg-blue-600/30"
+                      >
+                        find alex
+                      </SmartButton>
+                    </div>
                   </div>
                   
                   {/* Gaming commands */}
