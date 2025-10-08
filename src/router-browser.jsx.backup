@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from "react"
-import { createHashRouter } from "react-router-dom"
+﻿import React, { Suspense, lazy } from "react"
+import { createBrowserRouter } from "react-router-dom"
 import CognitiveOnboarding from "./components/CognitiveOnboarding"
 import CognitiveProfileSetup from "./pages/CognitiveProfileSetup"
 import WelcomeScreen from "./pages/WelcomeScreen"
@@ -10,18 +10,13 @@ const PlayerEvolution = lazy(() => import("./pages/PlayerEvolution"))
 const GDDInteractive = lazy(() => import("./pages/GDDInteractive"))
 const DevPortal = lazy(() => import("./portals/dev"))
 const PublicPortal = lazy(() => import("./portals/public"))
+const useVisitorProfile = lazy(() => import("./hooks/useVisitorProfile"))
 
-// Loading component mejorado
+// Loading component
 const LoadingSpinner = () => (
-  <div className="min-h-screen bg-gradient-to-br from-black via-blue-950 to-purple-950 flex items-center justify-center">
-    <div className="text-center space-y-4">
-      <div className="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin mx-auto"></div>
-      <div className="text-xl text-blue-300 animate-pulse">
-        Cargando módulo cognitivo...
-      </div>
-      <div className="text-sm text-blue-500/70">
-        Inicializando interfaz...
-      </div>
+  <div className="min-h-screen bg-black flex items-center justify-center">
+    <div className="text-2xl text-blue-400 animate-pulse">
+      Cargando módulo cognitivo...
     </div>
   </div>
 )
@@ -45,7 +40,7 @@ const PortalSelector = () => {
 
   // Si es arquitecto o accede con parámetro dev, mostrar portal dev
   const isArchitect = profile?.type === 'architect'
-  const forceDevMode = window.location.hash.includes('dev=true')
+  const forceDevMode = window.location.search.includes('dev=true')
   
   if (isArchitect || forceDevMode) {
     return React.createElement(Suspense, 
@@ -61,8 +56,7 @@ const PortalSelector = () => {
   )
 }
 
-// USAR HASH ROUTER para GitHub Pages - más confiable
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: React.createElement(WelcomeScreen)
@@ -125,6 +119,8 @@ const router = createHashRouter([
       React.createElement(PublicPortal)
     )
   }
-])
+], {
+  basename: "/Prunaverso_Web"
+})
 
 export default router
