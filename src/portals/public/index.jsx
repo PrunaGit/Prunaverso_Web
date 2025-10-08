@@ -116,15 +116,32 @@ const PublicPortal = () => {
                 className="p-6 bg-yellow-900/20 rounded-lg border border-yellow-600/30 hover:border-yellow-400 cursor-pointer"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => setCurrentView('evolution')}
+                onClick={() => window.location.href = '/player-evolution'}
               >
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-semibold text-yellow-400 mb-3">Evolución Personal</h3>
+                <div className="text-4xl mb-4">🧬</div>
+                <h3 className="text-xl font-semibold text-yellow-400 mb-3">Panel de Evolución</h3>
                 <p className="text-gray-300 mb-4">
-                  Rastrea tu progreso cognitivo y desbloquea nuevos niveles de consciencia.
+                  Visualiza tu progreso cognitivo, logros y evolución en el Prunaverso.
                 </p>
                 <div className="text-yellow-300 text-sm font-semibold">
-                  → Ver Progreso de Evolución
+                  → Acceder al Panel Completo
+                </div>
+              </motion.div>
+
+              {/* GDD Interactivo */}
+              <motion.div
+                className="p-6 bg-indigo-900/20 rounded-lg border border-indigo-600/30 hover:border-indigo-400 cursor-pointer"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => window.location.href = '/gdd'}
+              >
+                <div className="text-4xl mb-4">📋</div>
+                <h3 className="text-xl font-semibold text-indigo-400 mb-3">GDD Interactivo</h3>
+                <p className="text-gray-300 mb-4">
+                  Explora el documento de diseño del juego de forma navegable e interactiva.
+                </p>
+                <div className="text-indigo-300 text-sm font-semibold">
+                  → Navegar Documentación
                 </div>
               </motion.div>
             </div>

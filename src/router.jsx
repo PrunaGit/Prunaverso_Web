@@ -5,6 +5,8 @@ import CognitiveProfileSetup from "./pages/CognitiveProfileSetup"
 import WelcomeScreen from "./pages/WelcomeScreen"
 import PortalMain from "./pages/PortalMain"
 import AwakeningIntro from "./pages/AwakeningIntro"
+import PlayerEvolution from "./pages/PlayerEvolution"
+import GDDInteractive from "./pages/GDDInteractive"
 import DevPortal from "./portals/dev"
 import PublicPortal from "./portals/public"
 import useVisitorProfile from "./hooks/useVisitorProfile"
@@ -53,6 +55,22 @@ const router = createBrowserRouter([
     element: React.createElement(AwakeningIntro)
   },
   {
+    path: "/player-evolution",
+    element: React.createElement(PlayerEvolution)
+  },
+  {
+    path: "/evolution",
+    element: React.createElement(PlayerEvolution)
+  },
+  {
+    path: "/gdd",
+    element: React.createElement(GDDInteractive)
+  },
+  {
+    path: "/gdd/:sectionId",
+    element: React.createElement(GDDInteractive)
+  },
+  {
     path: "/portal",
     element: React.createElement(PortalSelector)
   },
@@ -63,6 +81,14 @@ const router = createBrowserRouter([
   {
     path: "/public", 
     element: React.createElement(PublicPortal)
+  },
+  {
+    path: "/gdd",
+    element: React.createElement(GDDInteractive)
+  },
+  {
+    path: "/gdd/:sectionId",
+    element: React.createElement(GDDInteractive)
   }
 ])
 

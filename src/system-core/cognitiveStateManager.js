@@ -7,7 +7,8 @@
  * @version 1.0.0
  */
 
-import { calculateCognitiveState, COGNITIVE_CONSTANTS } from './prunalgoritm';
+import { calculateCognitiveState, getLevelName, getStateDescription } from './prunalgoritm.js';
+import { achievementSystem } from './achievementSystem.js';
 
 // 🧠 ESTADO GLOBAL DEL SISTEMA
 let globalCognitiveState = {
@@ -64,6 +65,33 @@ export const updateCognitiveState = (interactions = []) => {
   
   // Detectar cambios significativos
   detectStateTransitions(previousState, globalCognitiveState);
+  
+  // Verificar logros después de actualizar el estado
+  const newAchievements = achievementSystem.checkAchievements({
+    ...globalCognitiveState,
+    sessionTime: Math.round((now - sessionStartTime) / 1000 / 60), // en minutos
+    awakeningSeen: localStorage.getItem('awakeningSeen') === 'true',
+    portalVisits: parseInt(localStorage.getItem('portalVisits') || '0'),
+    mindModulesExplored: parseInt(localStorage.getItem('mindModulesExplored') || '0'),
+    hudActivated: localStorage.getItem('hudActivated') === 'true',
+    lensesUsed: parseInt(localStorage.getItem('lensesUsed') || '0'),
+    customArchetypeCreated: localStorage.getItem('customArchetypeCreated') === 'true'
+  });
+  
+  // Si hay nuevos logros, actualizar el XP
+  if (newAchievements.length > 0) {
+    const bonusXP = newAchievements.reduce((total, achievement) => total + achievement.xpReward, 0);
+    globalCognitiveState = {
+      ...globalCognitiveState,
+      ...calculateCognitiveState(
+        globalCognitiveState.vitalidad,
+        globalCognitiveState.eutimia, 
+        globalCognitiveState.carga,
+        globalCognitiveState.coherencia,
+        globalCognitiveState.totalXP + bonusXP
+      )
+    };
+  }
   
   // Persistir estado
   persistState();
@@ -289,4 +317,13 @@ export const initializeCognitiveSystem = () => {
   setInterval(persistState, 30000);
   
   return globalCognitiveState;
+};
+
+// 📤 EXPORTAR MANAGER PRINCIPAL
+export const cognitiveStateManager = {
+  getCurrentState,
+  updateCognitiveState,
+  getLevelProgressData,
+  getSessionReport,
+  initializeCognitiveSystem
 };
