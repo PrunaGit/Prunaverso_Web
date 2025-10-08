@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import useVisitorProfile from '../useVisitorProfile';
 import { usePrunaversoKnowledge } from '../usePrunaversoKnowledge';
 import { usePerceptualFilter } from '../usePerceptualFilter';
+import usePlayerProgression from '../usePlayerProgression';
 
 /**
  * 🧠 useInteractionSystem - Sistema de Reacciones Vivas
@@ -10,11 +11,13 @@ import { usePerceptualFilter } from '../usePerceptualFilter';
  * Cada acción tiene consecuencias visibles en el sistema.
  * AHORA CON CONOCIMIENTO COMPLETO DEL PRUNAVERSO INTEGRADO.
  * 🌌 CON FILTRO PERCEPTUAL: EL USUARIO NUNCA VE CONTENIDO CRUDO
+ * 🎮 CON SISTEMA DE PROGRESIÓN XP: CADA INTERACCIÓN GENERA EXPERIENCIA
  */
 const useInteractionSystem = () => {
   const { profile, updateProfile } = useVisitorProfile();
   const knowledge = usePrunaversoKnowledge();
   const perceptualFilter = usePerceptualFilter();
+  const { gainXP, playerActions, currentLevelInfo, playerState } = usePlayerProgression();
   const [systemState, setSystemState] = useState({
     alertLevel: 'calm',
     lastInteraction: null,
@@ -24,7 +27,8 @@ const useInteractionSystem = () => {
     achievements: [],
     systemMessages: [],
     knowledgeIntegrated: false,
-    perceptualFilterActive: false
+    perceptualFilterActive: false,
+    xpSystemActive: false
   });
 
   // Registrar cada interacción con contexto completo
@@ -69,11 +73,67 @@ const useInteractionSystem = () => {
       }].slice(-20) // Mantener solo las últimas 20
     });
 
-    // Efecto visual inmediato
-    triggerVisualFeedback(interaction);
+    // Efectos inmediatos: XP y feedback visual
+    const xpResult = handleXPGain(interaction, newPattern);
+    triggerVisualFeedback(interaction, xpResult);
     
     return interaction;
-  }, [profile, updateProfile, systemState]);
+  }, [profile, updateProfile, systemState, gainXP]);
+
+  // 🎮 Manejo de XP por interacción
+  const handleXPGain = (interaction, pattern) => {
+    const { type, target, context } = interaction;
+    
+    // Mapeo de interacciones a acciones XP
+    let xpAction = 'click_basic';
+    let xpContext = { ...context };
+    
+    switch (type) {
+      case 'click':
+        if (target.includes('character')) {
+          xpAction = 'explore_character';
+          xpContext.skillCategory = 'social';
+        } else if (target.includes('portal')) {
+          xpAction = 'visit_portal';
+          xpContext.skillCategory = 'consciousness';
+        } else if (target.includes('dev') || target.includes('console')) {
+          xpAction = 'use_dev_tools';
+          xpContext.skillCategory = 'technical';
+        } else {
+          xpAction = 'click_basic';
+        }
+        break;
+        
+      case 'hover':
+        xpAction = 'hover_element';
+        break;
+        
+      case 'keyboard':
+        if (context.shortcut) {
+          xpAction = 'keyboard_shortcut';
+          xpContext.skillCategory = 'technical';
+        }
+        break;
+        
+      case 'gamepad':
+        xpAction = 'click_basic';
+        xpContext.bonus = 1; // Bonus por usar gamepad
+        xpContext.skillCategory = 'creative';
+        break;
+        
+      case 'scroll':
+        xpAction = 'scroll_page';
+        break;
+    }
+    
+    // Bonus por patrón cognitivo
+    if (pattern === 'power_user') xpContext.bonus = (xpContext.bonus || 0) + 2;
+    if (pattern === 'rapid_explorer') xpContext.bonus = (xpContext.bonus || 0) + 1;
+    if (pattern === 'contemplative') xpContext.bonus = (xpContext.bonus || 0) + 3;
+    
+    // Ganar XP
+    return gainXP(xpAction, xpContext);
+  };
 
   // Analizar patrones cognitivos del usuario
   const analyzePattern = (interaction, state, count) => {
@@ -244,6 +304,35 @@ const useInteractionSystem = () => {
       setSystemState(prev => ({ ...prev, perceptualFilterActive: true }));
     }
     
+    // 🎮 Mensaje especial cuando el sistema XP se activa
+    if (playerState.totalXP > 0 && !systemState.xpSystemActive) {
+      messages.push({
+        type: 'xp_system_active',
+        content: `🎮 Sistema de Progresión Activo | Nivel: ${playerState.currentLevel} | XP: ${playerState.totalXP} | Madurez: ${Math.round(playerState.madurezPrunaverso)}%`,
+        timestamp: interaction.timestamp,
+        priority: 'success',
+        playerInfo: {
+          level: playerState.currentLevel,
+          xp: playerState.totalXP,
+          madurez: playerState.madurezPrunaverso,
+          title: currentLevelInfo.title
+        }
+      });
+      
+      setSystemState(prev => ({ ...prev, xpSystemActive: true }));
+    }
+    
+    // Mensajes de milestone XP
+    if (playerState.isLevelingUp) {
+      messages.push({
+        type: 'level_up',
+        content: `🚀 ¡NIVEL ${playerState.currentLevel}! Has alcanzado: ${currentLevelInfo.title}`,
+        timestamp: interaction.timestamp,
+        priority: 'epic',
+        levelInfo: currentLevelInfo
+      });
+    }
+    
     return messages;
   };
 
@@ -270,8 +359,8 @@ const useInteractionSystem = () => {
     return 'calm';
   };
 
-  // Feedback visual inmediato
-  const triggerVisualFeedback = (interaction) => {
+  // Feedback visual inmediato con información XP
+  const triggerVisualFeedback = (interaction, xpResult) => {
     // Crear efecto visual en el elemento
     const element = document.querySelector(`[data-interaction-target="${interaction.target}"]`);
     if (element) {
@@ -284,14 +373,54 @@ const useInteractionSystem = () => {
     
     // Efecto de partículas si es gamepad
     if (interaction.type === 'gamepad') {
-      createParticleEffect(interaction.target);
+      createParticleEffect(interaction.target, xpResult);
+    }
+    
+    // Mostrar XP ganado si es significativo
+    if (xpResult && xpResult.xpGained > 5) {
+      showXPFloatingText(xpResult.xpGained, interaction.target);
     }
   };
 
-  // Crear efecto de partículas
-  const createParticleEffect = (target) => {
-    // Implementación de partículas para interacciones especiales
-    console.log(`✨ Particle effect triggered for ${target}`);
+  // Crear efecto de partículas con información XP
+  const createParticleEffect = (target, xpResult) => {
+    console.log(`✨ Particle effect triggered for ${target} (+${xpResult?.xpGained || 0} XP)`);
+  };
+
+  // Mostrar texto flotante de XP
+  const showXPFloatingText = (xpAmount, target) => {
+    const element = document.querySelector(`[data-interaction-target="${target}"]`) || document.body;
+    const floatingText = document.createElement('div');
+    floatingText.innerHTML = `+${xpAmount} XP`;
+    floatingText.style.cssText = `
+      position: absolute;
+      color: #00ff88;
+      font-weight: bold;
+      font-size: 14px;
+      pointer-events: none;
+      z-index: 9999;
+      animation: floatUp 2s ease-out forwards;
+    `;
+    
+    // Agregar animación CSS si no existe
+    if (!document.querySelector('#xp-float-animation')) {
+      const style = document.createElement('style');
+      style.id = 'xp-float-animation';
+      style.textContent = `
+        @keyframes floatUp {
+          0% { opacity: 1; transform: translateY(0); }
+          100% { opacity: 0; transform: translateY(-50px); }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+    
+    const rect = element.getBoundingClientRect();
+    floatingText.style.left = `${rect.right + 10}px`;
+    floatingText.style.top = `${rect.top}px`;
+    
+    document.body.appendChild(floatingText);
+    setTimeout(() => floatingText.remove(), 2000);
   };
 
   // Determinar tipo de interacción preferido
@@ -355,12 +484,31 @@ const useInteractionSystem = () => {
     registerInteraction,
     getContextualResponse,
     profile,
+    
+    // 🎮 Sistema de Progresión XP
+    playerState,
+    currentLevelInfo,
+    xpProgress: {
+      level: playerState.currentLevel,
+      xp: playerState.totalXP,
+      madurez: playerState.madurezPrunaverso,
+      sessionXP: playerState.sessionXP
+    },
+    playerActions,
+    
     // Métodos de acción específicos
     onHover: (target, context) => registerInteraction('hover', target, context),
     onClick: (target, context) => registerInteraction('click', target, context),
     onKeyboard: (target, context) => registerInteraction('keyboard', target, context),
     onGamepad: (target, context) => registerInteraction('gamepad', target, context),
-    onScroll: (target, context) => registerInteraction('scroll', target, context)
+    onScroll: (target, context) => registerInteraction('scroll', target, context),
+    
+    // 🎮 Acciones específicas de progresión
+    onExploreCharacter: (characterId) => playerActions.exploreCharacter(characterId),
+    onVisitPortal: (portalName) => playerActions.visitPortal(portalName),
+    onChangeLens: (lensType) => playerActions.changeLens(lensType),
+    onUseDevTools: () => playerActions.useDevTools(),
+    onCompleteSession: (minutes) => playerActions.completeSession(minutes)
   };
 };
 
