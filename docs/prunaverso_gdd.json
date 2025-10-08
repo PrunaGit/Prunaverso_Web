@@ -1,0 +1,317 @@
+{
+  "gameDesignDocument": {
+    "metadata": {
+      "version": "1.0.0",
+      "codename": "Genesis Build",
+      "author": "Alex Pruna",
+      "copilot": "LLM-Dev",
+      "date": "2025-10-08",
+      "repository": {
+        "github": "https://github.com/PrunaGit/Prunaverso_Web",
+        "local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso_Web"
+      }
+    },
+    "concept": {
+      "title": "Prunaverso Web",
+      "type": "Metaverso Web Interactivo / Videojuego Cognitivo",
+      "tagline": "No estás jugando un juego. Estás jugando contigo mismo.",
+      "coreLoop": ["Explorar", "Descubrir", "Reflexionar", "Evolucionar"],
+      "playerGoal": "Despertar su percepción prunaversal, comprendiendo que la realidad digital también es una extensión de la consciencia."
+    },
+    "features": {
+      "identidadCognitiva": {
+        "description": "Cada jugador comienza con un perfil detectado",
+        "types": ["Yo", "Amigo", "Desconocido"]
+      },
+      "lentesCognitivas": {
+        "description": "Seis ciencias base",
+        "lenses": ["Psicología", "Neurociencia", "IA", "Lingüística", "Filosofía", "Antropología"]
+      },
+      "sistemaMadurez": {
+        "description": "Medición de evolución cognitiva",
+        "range": "0-100%"
+      },
+      "sistemaXP": {
+        "description": "Interacciones otorgan XP y desbloquean habilidades",
+        "implementation": "src/system-core/prunalgoritm.js"
+      },
+      "hudDinamico": {
+        "description": "Visualización en ASCII, con datos vivos del jugador",
+        "implementation": "src/components/HUDCognitivo/"
+      },
+      "infoOrbs": {
+        "description": "Ayuda contextual flotante para cada elemento interactivo",
+        "implementation": "src/components/InfoOrb/"
+      },
+      "atmosferaVisual": {
+        "description": "Cambia según las lentes activas y la energía simbólica",
+        "implementation": "src/components/AtmosphereLensManager/"
+      }
+    },
+    "experienceFlow": {
+      "phase0": {
+        "name": "Despertar",
+        "route": "/awakening",
+        "timing": {
+          "detection": "1.5s",
+          "scanning": "2.5s", 
+          "identification": "2s",
+          "protocol": "3s",
+          "systemSpeaks": "2.5s",
+          "dialogue": "infinite"
+        },
+        "implementation": "src/pages/AwakeningIntro.jsx",
+        "questions": [
+          "¿Qué es el Prunaverso?",
+          "¿Por qué tengo barras de XP?"
+        ]
+      },
+      "phase1": {
+        "name": "Portal de Ingreso",
+        "route": "/",
+        "implementation": "src/pages/WelcomeScreenNew.jsx",
+        "options": ["empezar de 0", "usar preconfiguración cognitiva"]
+      },
+      "phase2": {
+        "name": "Portal Principal", 
+        "route": "/portal",
+        "modes": {
+          "casual": "Experiencia narrativa ligera",
+          "pro": "Interactivo, con HUD y progresión XP",
+          "dev": "Lenguaje prunaversal, acceso a la terminal simbólica"
+        },
+        "implementation": "src/portals/public/index.jsx"
+      },
+      "phase3": {
+        "name": "Exploración",
+        "route": "/explore",
+        "modules": {
+          "exploreEarMind": {
+            "route": "/explore/mind",
+            "sections": [
+              "Análisis Cognitivo",
+              "Visor de Lentes",
+              "Métricas en Tiempo Real", 
+              "Evolución Personal"
+            ]
+          }
+        }
+      },
+      "phase4": {
+        "name": "Evolución",
+        "route": "/evolution",
+        "features": ["HUD madurez", "logros", "skill trees", "contenido avanzado"]
+      }
+    },
+    "mechanics": {
+      "xpCognitivo": {
+        "range": "1-100 XP",
+        "trigger": "interacción significativa",
+        "implementation": "src/system-core/prunalgoritm.js"
+      },
+      "multiplicadoresFlow": {
+        "trigger": "curiosidad activa mantenida",
+        "system": "coherencia"
+      },
+      "logrosRamificados": {
+        "triggers": ["descubrimientos", "combinaciones", "introspección"],
+        "storage": "localStorage + eventos"
+      },
+      "skillTrees": {
+        "branches": 5,
+        "implementation": "cognitiveStateManager.js"
+      },
+      "madurezPrunaversal": {
+        "phases": 7,
+        "levels": 11,
+        "range": "Llegada → Singularidad"
+      }
+    },
+    "progression": {
+      "levels": [
+        {"level": 0, "name": "Despertar", "maturity": "0%", "xp": 0, "unlocks": "Tutorial Awakening"},
+        {"level": 1, "name": "Explorador", "maturity": "9%", "xp": 100, "unlocks": "Lente secundaria"},
+        {"level": 2, "name": "Observador", "maturity": "18%", "xp": 250, "unlocks": "HUD básico"},
+        {"level": 3, "name": "Pensador", "maturity": "27%", "xp": 450, "unlocks": "Skill Tree activado"},
+        {"level": 4, "name": "Analizador", "maturity": "36%", "xp": 700, "unlocks": "Métricas avanzadas"},
+        {"level": 5, "name": "Sintetizador", "maturity": "45%", "xp": 1000, "unlocks": "HUD ampliado"},
+        {"level": 6, "name": "Visionario", "maturity": "54%", "xp": 1350, "unlocks": "Atmósfera dinámica"},
+        {"level": 7, "name": "Arquitecto", "maturity": "63%", "xp": 1750, "unlocks": "Creación de contenido"},
+        {"level": 8, "name": "Maestro", "maturity": "72%", "xp": 2200, "unlocks": "Lentes personalizadas"},
+        {"level": 9, "name": "Sabio", "maturity": "81%", "xp": 2700, "unlocks": "Acceso total"},
+        {"level": 10, "name": "Omnicon Φ∞", "maturity": "90%", "xp": 3250, "unlocks": "Control del Prunaverso"},
+        {"level": 11, "name": "Singularidad", "maturity": "100%", "xp": 4000, "unlocks": "Trascendencia completa"}
+      ]
+    },
+    "achievements": {
+      "rarities": ["Común", "Raro", "Épico", "Legendario", "Mítico", "Divino", "Φ"],
+      "examples": [
+        {"name": "Primer despertar", "description": "ver el HUD por primera vez", "rarity": "Común"},
+        {"name": "Explorador Mental", "description": "completar 'Explorar tu Mente'", "rarity": "Raro"},
+        {"name": "Cambio de Lente", "description": "usar 3 lentes diferentes", "rarity": "Raro"},
+        {"name": "Sesión Profunda", "description": "mantener coherencia >80% por 10min", "rarity": "Épico"},
+        {"name": "Desbloqueo doble lente", "description": "usar 2 lentes simultáneamente", "rarity": "Legendario"},
+        {"name": "Llegar a 100% de madurez", "description": "alcanzar Singularidad", "rarity": "Mítico"},
+        {"name": "Crear arquetipo", "description": "modo creación personal", "rarity": "Φ"}
+      ]
+    },
+    "technology": {
+      "stack": {
+        "frontend": {
+          "react": {"status": "active", "use": "Motor visual y enrutamiento"},
+          "vite": {"status": "active", "use": "Build tool y dev server"},
+          "tailwindcss": {"status": "active", "use": "Estilo y responsividad"},
+          "shadcnui": {"status": "active", "use": "Componentes de alto nivel"},
+          "framerMotion": {"status": "active", "use": "Animaciones y transiciones"},
+          "recharts": {"status": "active", "use": "Visualización de estadísticas"}
+        },
+        "backend": {
+          "expressjs": {"status": "active", "use": "Servidor SPA + API routes"},
+          "localStorage": {"status": "active", "use": "Persistencia de datos"}
+        },
+        "deployment": {
+          "githubActions": {"status": "configured", "use": "Auto-deploy continuo"},
+          "githubPages": {"status": "active", "use": "Hosting estático"}
+        },
+        "content": {
+          "markdown": {"status": "active", "use": "Contenido simbólico modular"},
+          "json": {"status": "active", "use": "Datos estructurados"},
+          "python": {"status": "active", "use": "Scripts de procesamiento"}
+        }
+      }
+    },
+    "architecture": {
+      "systemCore": {
+        "path": "src/system-core/",
+        "files": {
+          "prunalgoritm.js": "Algoritmo cognitivo central",
+          "cognitiveStateManager.js": "Gestor de estado global"
+        }
+      },
+      "components": {
+        "path": "src/components/",
+        "files": {
+          "HUDCognitivo/": "Terminal HUD con métricas",
+          "AtmosphereLensManager/": "Filtros visuales globales", 
+          "InfoOrb/": "Sistema de ayuda contextual"
+        }
+      },
+      "pages": {
+        "path": "src/pages/",
+        "files": {
+          "WelcomeScreenNew.jsx": "Portal de entrada",
+          "AwakeningIntro.jsx": "Experiencia de despertar"
+        }
+      },
+      "portals": {
+        "path": "src/portals/",
+        "files": {
+          "public/": "Portal público con exploración",
+          "private/": "Portal privado (futuro)"
+        }
+      },
+      "data": {
+        "path": "data/",
+        "structure": {
+          "config/": "Contenido markdown modular",
+          "saves/": "Estados guardados",
+          "characters/": "Arquetipos y personajes"
+        }
+      }
+    },
+    "development": {
+      "phases": [
+        {
+          "phase": "I",
+          "name": "Núcleo del sistema + Portal dual",
+          "status": "complete",
+          "date": "Oct 2025",
+          "deliverables": [
+            "Sistema Operativo Cognitivo v2.0",
+            "Prunalgoritm core (11 niveles)",
+            "HUD Cognitivo terminal-style",
+            "AtmosphereLensManager con 4 lentes",
+            "AwakeningIntro con narrativa completa",
+            "Portal Público con 'Explorar tu Mente'",
+            "InfoOrb system con contenido markdown",
+            "Express server con SPA routing",
+            "Sistema de persistencia localStorage"
+          ]
+        },
+        {
+          "phase": "II", 
+          "name": "AutoDeploy + Panel Evolutivo",
+          "status": "in_progress",
+          "date": "Oct 2025",
+          "deliverables": [
+            "GDD documentación completa",
+            "Auto-deploy pipeline refinement", 
+            "Panel de evolución avanzado",
+            "Sistema de logros expandido"
+          ]
+        },
+        {
+          "phase": "III",
+          "name": "Capas narrativas dinámicas", 
+          "status": "planned",
+          "date": "Nov 2025"
+        },
+        {
+          "phase": "IV",
+          "name": "Integración simbólica avanzada",
+          "status": "planned", 
+          "date": "Dic 2025"
+        },
+        {
+          "phase": "V",
+          "name": "Apertura pública y sandbox cognitivo",
+          "status": "future",
+          "date": "2026"
+        }
+      ]
+    },
+    "metrics": {
+      "technical": {
+        "loadTime": "< 2s",
+        "responsive": "mobile compatible",
+        "errors": "0 critical errors",
+        "build": "GitHub Actions success"
+      },
+      "experience": {
+        "awakeningCompletion": "% users completing awakening",
+        "sessionTime": "average session duration", 
+        "lensChanges": "lens changes per session",
+        "levelProgression": "cognitive level advancement"
+      },
+      "cognitive": {
+        "coherenceAverage": "average coherence maintained",
+        "explorationPatterns": "user navigation patterns",
+        "resonantContent": "most engaging content",
+        "qualitativeFeedback": "user experience feedback"
+      }
+    },
+    "references": {
+      "games": [
+        "Journey (ThatGameCompany) - Exploración contemplativa",
+        "Outer Wilds - Descubrimiento cíclico y revelación", 
+        "The Stanley Parable - Narrativa metacognitiva",
+        "The Witness - Puzzles como metáfora de comprensión",
+        "Control - Realidad alterada y documentos internos"
+      ],
+      "aesthetics": [
+        "Ghost in the Shell - Interfaces retro-futuristas",
+        "Matrix - Realidad digital y consciencia",
+        "Terminal aesthetics - Monospace y ASCII art"
+      ],
+      "tone": "Introspectivo, poético, experimental, pero accesible"
+    },
+    "routes": {
+      "/": "WelcomeScreenNew - Portal de entrada",
+      "/awakening": "AwakeningIntro - Experiencia de despertar",
+      "/portal": "Portal Principal - Exploración principal",
+      "/explore": "Exploración - Capas de realidad", 
+      "/explore/mind": "Explorar tu Mente - 4 módulos",
+      "/evolution": "Evolución - Progreso y logros"
+    }
+  }
+}

@@ -18,6 +18,7 @@ const PublicPortal = () => {
   const views = [
     { id: 'welcome', title: '¿Qué es el Prunaverso?', icon: '🌌' },
     { id: 'explore', title: 'Explorar Arquetipos', icon: '🎭' },
+    { id: 'mind', title: 'Explorar tu Mente', icon: '🧠' },
     { id: 'journey', title: 'Iniciar Viaje', icon: '🚀' },
     { id: 'learn', title: 'Aprender Más', icon: '📚' }
   ];
@@ -46,6 +47,284 @@ const PublicPortal = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        );
+      case 'mind':
+        return (
+          <div className="text-center p-8">
+            <h2 className="text-3xl font-bold text-cyan-400 mb-4">🧠 Exploración Mental Profunda</h2>
+            <p className="text-gray-300 mb-8">
+              Una experiencia interactiva que se adapta a tu forma única de ver y entender el mundo.
+            </p>
+            
+            {/* Selector de Tipo de Exploración */}
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+              
+              {/* Análisis Cognitivo */}
+              <motion.div
+                className="p-6 bg-cyan-900/20 rounded-lg border border-cyan-600/30 hover:border-cyan-400 cursor-pointer"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => window.location.href = '/cognitive-setup'}
+              >
+                <div className="text-4xl mb-4">🔬</div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-3">Análisis Cognitivo</h3>
+                <p className="text-gray-300 mb-4">
+                  Descubre tu perfil mental, preferencias cognitivas y patrones de pensamiento únicos.
+                </p>
+                <div className="text-cyan-300 text-sm font-semibold">
+                  → Configurar Perfil Cognitivo
+                </div>
+              </motion.div>
+
+              {/* Lentes Perceptuales */}
+              <motion.div
+                className="p-6 bg-purple-900/20 rounded-lg border border-purple-600/30 hover:border-purple-400 cursor-pointer"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => setCurrentView('lenses')}
+              >
+                <div className="text-4xl mb-4">👁️</div>
+                <h3 className="text-xl font-semibold text-purple-400 mb-3">Lentes Perceptuales</h3>
+                <p className="text-gray-300 mb-4">
+                  Experimenta cómo diferentes perspectivas cambian tu percepción de la realidad.
+                </p>
+                <div className="text-purple-300 text-sm font-semibold">
+                  → Probar Lentes Cognitivas
+                </div>
+              </motion.div>
+
+              {/* Estado Mental Actual */}
+              <motion.div
+                className="p-6 bg-green-900/20 rounded-lg border border-green-600/30 hover:border-green-400 cursor-pointer"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => setCurrentView('metrics')}
+              >
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-xl font-semibold text-green-400 mb-3">Estado Mental Actual</h3>
+                <p className="text-gray-300 mb-4">
+                  Visualiza tu vitalidad, eutimia y carga cognitiva en tiempo real.
+                </p>
+                <div className="text-green-300 text-sm font-semibold">
+                  → Ver Métricas Cognitivas
+                </div>
+              </motion.div>
+
+              {/* Evolución Personal */}
+              <motion.div
+                className="p-6 bg-yellow-900/20 rounded-lg border border-yellow-600/30 hover:border-yellow-400 cursor-pointer"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => setCurrentView('evolution')}
+              >
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-xl font-semibold text-yellow-400 mb-3">Evolución Personal</h3>
+                <p className="text-gray-300 mb-4">
+                  Rastrea tu progreso cognitivo y desbloquea nuevos niveles de consciencia.
+                </p>
+                <div className="text-yellow-300 text-sm font-semibold">
+                  → Ver Progreso de Evolución
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Botón de Inmersión Total */}
+            <motion.button
+              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white rounded-lg font-semibold text-lg shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.location.href = '/awakening'}
+            >
+              🌀 Inmersión Cognitiva Total
+            </motion.button>
+          </div>
+        );
+      case 'lenses':
+        return (
+          <div className="text-center p-8">
+            <h2 className="text-3xl font-bold text-purple-400 mb-4">👁️ Lentes Perceptuales</h2>
+            <p className="text-gray-300 mb-8">
+              Cada lente transforma completamente tu experiencia del Prunaverso.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {[
+                {
+                  name: 'Analítica',
+                  icon: '🔬',
+                  color: 'cyan',
+                  description: 'Máxima claridad lógica. Datos, estructuras y relaciones causales.',
+                  effect: 'Interfaz: Terminal | Tipografía: Monoespaciada | Color: Cian'
+                },
+                {
+                  name: 'Emocional', 
+                  icon: '💫',
+                  color: 'amber',
+                  description: 'Intuición y sentimiento. Patrones emocionales y resonancia.',
+                  effect: 'Interfaz: Orgánica | Tipografía: Humana | Color: Ámbar'
+                },
+                {
+                  name: 'Sistémica',
+                  icon: '🌐', 
+                  color: 'green',
+                  description: 'Visión de patrones y conexiones. Pensamiento holístico.',
+                  effect: 'Interfaz: Red | Tipografía: Equilibrada | Color: Verde'
+                },
+                {
+                  name: 'Trascendente',
+                  icon: '✨',
+                  color: 'purple', 
+                  description: 'Consciencia unificada. Perspectiva meta-cognitiva.',
+                  effect: 'Interfaz: Etérea | Tipografía: Elegante | Color: Violeta'
+                }
+              ].map((lens, i) => (
+                <motion.div
+                  key={i}
+                  className={`p-6 bg-${lens.color}-900/20 rounded-lg border border-${lens.color}-600/30 hover:border-${lens.color}-400 cursor-pointer`}
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="text-4xl mb-4">{lens.icon}</div>
+                  <h3 className={`text-xl font-semibold text-${lens.color}-400 mb-3`}>
+                    Lente {lens.name}
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    {lens.description}
+                  </p>
+                  <div className={`text-${lens.color}-300 text-xs bg-${lens.color}-900/30 p-2 rounded`}>
+                    {lens.effect}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.button
+              className="mt-8 px-6 py-3 bg-purple-600 text-white rounded-lg"
+              whileHover={{ scale: 1.05 }}
+              onClick={() => setCurrentView('mind')}
+            >
+              ← Volver a Exploración Mental
+            </motion.button>
+          </div>
+        );
+      case 'metrics':
+        return (
+          <div className="text-center p-8">
+            <h2 className="text-3xl font-bold text-green-400 mb-4">📊 Estado Mental en Tiempo Real</h2>
+            <p className="text-gray-300 mb-8">
+              Visualización de tu sistema cognitivo interno.
+            </p>
+            
+            {/* Simulación de métricas */}
+            <div className="max-w-2xl mx-auto space-y-6">
+              {[
+                { name: 'Vitalidad', value: 75, color: 'cyan', description: 'Energía cognitiva disponible' },
+                { name: 'Eutimia', value: 68, color: 'green', description: 'Estado emocional y bienestar' },
+                { name: 'Carga', value: 42, color: 'amber', description: 'Nivel de procesamiento activo' },
+                { name: 'Coherencia', value: 85, color: 'purple', description: 'Balance sistémico general' }
+              ].map((metric, i) => (
+                <motion.div
+                  key={i}
+                  className="p-4 bg-gray-800/50 rounded-lg border border-gray-600/30"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.2 }}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className={`text-${metric.color}-400 font-semibold`}>
+                      {metric.name}
+                    </span>
+                    <span className="text-white font-mono">
+                      {metric.value}%
+                    </span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2 mb-2">
+                    <motion.div
+                      className={`bg-${metric.color}-400 h-2 rounded-full`}
+                      initial={{ width: 0 }}
+                      animate={{ width: `${metric.value}%` }}
+                      transition={{ duration: 1, delay: i * 0.2 }}
+                    />
+                  </div>
+                  <p className="text-gray-400 text-sm">{metric.description}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.button
+              className="mt-8 px-6 py-3 bg-green-600 text-white rounded-lg"
+              whileHover={{ scale: 1.05 }}
+              onClick={() => setCurrentView('mind')}
+            >
+              ← Volver a Exploración Mental
+            </motion.button>
+          </div>
+        );
+      case 'evolution':
+        return (
+          <div className="text-center p-8">
+            <h2 className="text-3xl font-bold text-yellow-400 mb-4">🚀 Tu Evolución Cognitiva</h2>
+            <p className="text-gray-300 mb-8">
+              Progreso hacia niveles superiores de consciencia.
+            </p>
+            
+            {/* Niveles de evolución */}
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                { level: 0, name: 'Visitante Inicial', status: 'completed', desc: 'Primer contacto con el Prunaverso' },
+                { level: 1, name: 'Explorador Curioso', status: 'completed', desc: 'Navegación básica y descubrimientos' },
+                { level: 2, name: 'Navegante Cognitivo', status: 'current', desc: 'Uso activo de lentes perceptuales' },
+                { level: 3, name: 'Analista Sistémico', status: 'locked', desc: 'Comprensión de patrones complejos' },
+                { level: 4, name: 'Arquitecto Mental', status: 'locked', desc: 'Capacidad de modificar estructuras' },
+                { level: 5, name: 'Maestro de Lentes', status: 'locked', desc: 'Dominio total de perspectivas' },
+                { level: 6, name: 'Omnicon Φ∞', status: 'locked', desc: 'Trascendencia cognitiva completa' }
+              ].map((stage, i) => (
+                <motion.div
+                  key={i}
+                  className={`p-4 rounded-lg border flex items-center ${
+                    stage.status === 'completed' ? 'bg-green-900/20 border-green-600/30' :
+                    stage.status === 'current' ? 'bg-yellow-900/20 border-yellow-600/30' :
+                    'bg-gray-800/20 border-gray-600/30'
+                  }`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center mr-4 ${
+                    stage.status === 'completed' ? 'bg-green-600 text-white' :
+                    stage.status === 'current' ? 'bg-yellow-600 text-black' :
+                    'bg-gray-600 text-gray-300'
+                  }`}>
+                    {stage.status === 'completed' ? '✓' : 
+                     stage.status === 'current' ? '→' : '🔒'}
+                  </div>
+                  <div className="flex-1 text-left">
+                    <div className={`font-semibold ${
+                      stage.status === 'completed' ? 'text-green-400' :
+                      stage.status === 'current' ? 'text-yellow-400' :
+                      'text-gray-400'
+                    }`}>
+                      Nivel {stage.level}: {stage.name}
+                    </div>
+                    <div className="text-gray-300 text-sm">{stage.desc}</div>
+                  </div>
+                  {stage.status === 'current' && (
+                    <div className="text-yellow-300 text-sm font-mono">
+                      67% → Nivel 3
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.button
+              className="mt-8 px-6 py-3 bg-yellow-600 text-black rounded-lg font-semibold"
+              whileHover={{ scale: 1.05 }}
+              onClick={() => setCurrentView('mind')}
+            >
+              ← Volver a Exploración Mental
+            </motion.button>
           </div>
         );
       case 'journey':

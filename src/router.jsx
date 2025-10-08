@@ -4,6 +4,7 @@ import CognitiveOnboarding from "./components/CognitiveOnboarding"
 import CognitiveProfileSetup from "./pages/CognitiveProfileSetup"
 import WelcomeScreen from "./pages/WelcomeScreen"
 import PortalMain from "./pages/PortalMain"
+import AwakeningIntro from "./pages/AwakeningIntro"
 import DevPortal from "./portals/dev"
 import PublicPortal from "./portals/public"
 import useVisitorProfile from "./hooks/useVisitorProfile"
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
   {
     path: "/onboarding",
     element: React.createElement(CognitiveOnboarding)
+  },
+  {
+    path: "/awakening",
+    element: React.createElement(AwakeningIntro)
   },
   {
     path: "/portal",

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Settings, RotateCcw } from 'lucide-react';
 import usePlayerProgression from '../../hooks/usePlayerProgression';
 
 /**
@@ -19,8 +20,19 @@ const PlayerProgressionHUD = ({ position = 'top-right', compact = false }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showLevelUp, setShowLevelUp] = useState(false);
   const [showXPGain, setShowXPGain] = useState(null);
+  const [showSettings, setShowSettings] = useState(false);
 
   const progress = getXPProgress();
+
+  // Función para reiniciar la experiencia
+  const handleResetExperience = () => {
+    if (window.confirm('¿Quieres volver a vivir la experiencia de despertar en el Prunaverso desde el principio?')) {
+      localStorage.removeItem('awakeningSeen');
+      localStorage.removeItem('prunaverso_visitor_profile');
+      localStorage.removeItem('prunaverso_player_progression');
+      window.location.href = '/awakening';
+    }
+  };
 
   // Efectos de nivel subido
   useEffect(() => {
@@ -117,7 +129,7 @@ const PlayerProgressionHUD = ({ position = 'top-right', compact = false }) => {
         {/* Header con información principal */}
         <div className="p-4 border-b border-cyan-400/30">
           <div className="flex justify-between items-center">
-            <div>
+            <div className="flex-1">
               <h3 className="text-lg font-bold text-cyan-400">
                 {currentLevelInfo.title}
               </h3>
@@ -125,13 +137,48 @@ const PlayerProgressionHUD = ({ position = 'top-right', compact = false }) => {
                 Nivel {progress.level} • {progress.total} XP Total
               </p>
             </div>
-            <div className="text-right">
-              <div className="text-2xl font-bold text-cyan-400">
-                {progress.level}
+            <div className="flex items-center space-x-2">
+              <div className="text-right">
+                <div className="text-2xl font-bold text-cyan-400">
+                  {progress.level}
+                </div>
+                <div className="text-xs text-cyan-300/70">LVL</div>
               </div>
-              <div className="text-xs text-cyan-300/70">LVL</div>
+              
+              {/* Botón de configuración */}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setShowSettings(!showSettings)}
+                className="p-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                <Settings size={16} />
+              </motion.button>
             </div>
           </div>
+
+          {/* Panel de configuración */}
+          <AnimatePresence>
+            {showSettings && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="mt-3 pt-3 border-t border-cyan-400/20"
+              >
+                <button
+                  onClick={handleResetExperience}
+                  className="flex items-center space-x-2 w-full p-2 text-sm text-cyan-300 hover:text-white hover:bg-cyan-400/10 rounded transition-colors"
+                >
+                  <RotateCcw size={14} />
+                  <span>Revivir despertar inicial</span>
+                </button>
+                <p className="text-xs text-cyan-300/50 mt-1 px-2">
+                  Vuelve a experimentar tu primer contacto con el Prunaverso
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* Barra de progreso nivel */}
           <div className="mt-3">

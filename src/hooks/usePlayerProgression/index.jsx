@@ -104,6 +104,7 @@ const usePlayerProgression = () => {
     return_visitor: 10,
     daily_streak: 15,
     weekly_activity: 40,
+    awakening: 30, // Nuevo: Completar el proceso de despertar
     
     // Interacciones complejas
     cognitive_sync: 60,
@@ -359,6 +360,22 @@ const usePlayerProgression = () => {
     }
   }, [profile, playerState.totalXP]);
 
+  // Nueva función para completar el awakening
+  const completeAwakening = useCallback(() => {
+    updateProfile({ hasCompletedAwakening: true });
+    gainXP('awakening', 'Despertar en el Prunaverso');
+  }, [updateProfile, gainXP]);
+
+  // Función para detectar si necesita awakening
+  const needsAwakening = useMemo(() => {
+    const awakeningSeen = localStorage.getItem('awakeningSeen');
+    return (
+      !profile?.hasCompletedAwakening && 
+      awakeningSeen !== 'true' && 
+      playerState.madurezPrunaverso < 5
+    );
+  }, [profile?.hasCompletedAwakening, playerState.madurezPrunaverso]);
+
   return {
     // Estado del jugador
     playerState,
@@ -366,6 +383,11 @@ const usePlayerProgression = () => {
     // Información calculada
     currentLevelInfo: getCurrentLevelInfo(),
     madurezInfo: getMadurezInfo(),
+    
+    // Sistema de awakening
+    needsAwakening,
+    completeAwakening,
+    showTutorial: playerState.currentLevel === 0,
     
     // Acciones del jugador
     gainXP,

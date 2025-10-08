@@ -86,23 +86,26 @@ const identifyKnownUser = () => {
     return userProfiles.knownProfiles[profileId]
   }
 
-  // 3. Buscar por nickname en prompt
-  const nickname = prompt('¿Eres un colaborador del Prunaverso? Escribe tu nickname:')
-  if (nickname) {
-    const lowerNick = nickname.toLowerCase()
-    if (userProfiles.recognitionPatterns.byNickname[lowerNick]) {
-      const profileId = userProfiles.recognitionPatterns.byNickname[lowerNick]
-      const knownProfile = userProfiles.knownProfiles[profileId]
-      
-      // Guardar identidad para futuras sesiones
-      localStorage.setItem('prunaverso_user_identity', profileId)
-      
-      return knownProfile
-    }
-  }
-
+  // Ya no usar prompt - será manejado por el componente de interfaz
   return null
 }
+
+const checkKnownUserByNickname = (nickname) => {
+  if (!nickname) return null;
+  
+  const lowerNick = nickname.toLowerCase();
+  if (userProfiles.recognitionPatterns.byNickname[lowerNick]) {
+    const profileId = userProfiles.recognitionPatterns.byNickname[lowerNick];
+    const knownProfile = userProfiles.knownProfiles[profileId];
+    
+    // Guardar identidad para futuras sesiones
+    localStorage.setItem('prunaverso_user_identity', profileId);
+    
+    return knownProfile;
+  }
+  
+  return null;
+};
 
 const createProfileFromKnownUser = (knownUser) => {
   return {
@@ -270,6 +273,24 @@ export default function useVisitorProfile() {
     })
   }
 
+  const activateKnownUserProfile = (nickname) => {
+    const knownUser = checkKnownUserByNickname(nickname);
+    if (knownUser) {
+      const knownProfile = createProfileFromKnownUser(knownUser);
+      setProfile(knownProfile);
+      setLevel(knownUser.permissions.level);
+      
+      // Mostrar mensaje de bienvenida
+      if (knownUser.entryMessages && knownUser.entryMessages.length > 0) {
+        const randomMessage = knownUser.entryMessages[Math.floor(Math.random() * knownUser.entryMessages.length)];
+        console.log(`🌀 ${randomMessage}`);
+      }
+      
+      return knownProfile;
+    }
+    return null;
+  };
+
   // Estado cognitivo actual
   const cognitiveState = {
     level,
@@ -293,6 +314,8 @@ export default function useVisitorProfile() {
     incrementLevel,
     trackInteraction,
     resetProfile,
+    checkKnownUser: checkKnownUserByNickname,
+    activateKnownUserProfile,
     
     // Helpers
     isNewcomer: profile?.type === VISITOR_TYPES.NEWCOMER,
