@@ -1,0 +1,33 @@
+{
+    "nombre": "Joaquim Pruna Ripollés",
+    "alias": [
+        "Papa Quim",
+        "Quim",
+        "Quim.OS"
+    ],
+    "rol_simbolico": "Núcleo fundacional del sistema emocional de Alex Pruna",
+    "vinculo": "Padre biológico, raíz filosófica y emocional",
+    "presencia": {
+        "estilo": "Silencioso, estable, profundo",
+        "referencias": [
+            "quim_from_alejandro_mono.txt",
+            "quim_from_central_nexus.txt",
+            "quim_from_fabrica.txt",
+            "quim_from_kael_premium.txt",
+            "quim_from_kael2.txt",
+            "quim_from_nucleo_primario.txt",
+            "quim_from_nucleo_tedtalker.txt",
+            "quim_from_plano_casa.txt"
+        ]
+    },
+    "rasgos": {
+        "valores_asociados": [
+            "quietud",
+            "humildad",
+            "estructura sin imposición",
+            "legado emocional no verbal"
+        ],
+        "impacto": "Estructura el núcleo afectivo de Prun.OS como sistema operativo emocional heredado"
+    },
+    "version": "papa_quim_profile_v1"
+}

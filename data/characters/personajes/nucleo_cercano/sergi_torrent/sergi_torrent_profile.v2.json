@@ -1,0 +1,31 @@
+{
+    "id": "SERGI_TORRENT_02",
+    "nombre": "Sergi Torrent",
+    "alias": [
+        "Sergi",
+        "Torrent",
+        "El Silencioso"
+    ],
+    "rol_en_prunaverso": [
+        "Núcleo Cercano",
+        "Vínculo Persistente",
+        "Aliado Silencioso"
+    ],
+    "inicio_vinculo": "Adolescencia (tras mudanza a Calella)",
+    "estado_actual": "Activo, latente",
+    "modo_vinculo": "Baja frecuencia, alta lealtad",
+    "vinculo_con_kael": {
+        "tipo": "Amistad de largo recorrido",
+        "canal_principal": "Conexión local IRL",
+        "intensidad": "Media-alta",
+        "conflictos": "Mínimos o ausentes",
+        "impacto_emocional": "Fuerte como testimonio de continuidad"
+    },
+    "notas": [
+        "Único vínculo de Calella mantenido durante 22 años",
+        "Punto de anclaje simbólico en entorno hostil",
+        "No requiere mantenimiento emocional constante",
+        "Presencia que desactiva el sentimiento de exilio total"
+    ],
+    "ruta_local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_cercano\\sergi_torrent\\sergi_torrent_profile.v2.json"
+}

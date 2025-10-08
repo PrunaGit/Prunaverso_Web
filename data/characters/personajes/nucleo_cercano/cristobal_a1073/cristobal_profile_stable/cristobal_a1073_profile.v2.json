@@ -1,0 +1,31 @@
+{
+    "id": "CRISTOBAL_A1073_05",
+    "nombre": "Cristóbal",
+    "alias": [
+        "Cristóbal",
+        "A1073",
+        "Poli Humano"
+    ],
+    "rol_en_prunaverso": [
+        "Núcleo Cercano",
+        "Agente Estatal Bondadoso",
+        "Padre Post-Sistémico"
+    ],
+    "inicio_vinculo": "Inicio del trabajo en la Policía Local (2022)",
+    "estado_actual": "Vínculo no activo pero grabado en la memoria emocional del sistema",
+    "modo_vinculo": "Respeto mutuo en entorno jerárquico",
+    "vinculo_con_kael": {
+        "tipo": "Contacto funcional que se convirtió en vínculo emocional simbólico",
+        "canal_principal": "Trabajo institucional",
+        "intensidad": "Moderada pero significativa",
+        "conflictos": "Ninguno relevante",
+        "impacto_emocional": "Clave para romper prejuicio anti-uniforme"
+    },
+    "notas": [
+        "Presencia esencial en el inicio de reinserción laboral post-ingreso",
+        "Figura respetuosa y sin abuso de poder dentro del entorno policial",
+        "Elemento restaurador de fe en la humanidad institucional",
+        "Arquetipo funcional de adulto del sistema no alienado"
+    ],
+    "ruta_local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_cercano\\cristobal_a1073\\cristobal_a1073_profile.v2.json"
+}

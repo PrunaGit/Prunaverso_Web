@@ -1,0 +1,30 @@
+{
+    "id": "PAPA_QUIM_NUCLEO_CENTRAL",
+    "nombre": "Joaquim Pruna Garrell",
+    "alias": [
+        "Quim",
+        "Papá",
+        "El Artesano",
+        "El Escultor del Silencio"
+    ],
+    "rol_en_prunaverso": [
+        "Padre biológico y emocional de Alejandro",
+        "Figura de silencio y presencia invisible",
+        "Raíz pragmática del Main Player"
+    ],
+    "inicio_vinculo": "Nacimiento de Alejandro Pruna",
+    "estado_actual": "Fallecido. Presente simbólicamente en todos los sistemas de base",
+    "modo_vinculo": "Presencia-fantasma activa en planos internos de Alejandro",
+    "impacto": {
+        "emocional": "Herida de ausencia y admiración simultáneas",
+        "cognitivo": "Base estructural del sistema de pensamiento analítico de Alejandro",
+        "simbólico": "Representa la estructura, la espera y la contención"
+    },
+    "notas": [
+        "Aunque no hablaba mucho, cada gesto era un manifiesto",
+        "Representa el pasado que Alejandro intenta entender para no repetir",
+        "Su muerte activó uno de los arcos de reconstrucción más profundos en el sistema",
+        "Aparece como voz silenciosa, sólida, calmante cuando el sistema colapsa"
+    ],
+    "ruta_local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_central\\papa_quim\\papa_quim_profile_v3.json"
+}

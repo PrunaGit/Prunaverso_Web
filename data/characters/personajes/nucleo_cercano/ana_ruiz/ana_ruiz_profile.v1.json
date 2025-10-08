@@ -1,0 +1,64 @@
+{
+  "id": "ANA_RUIZ_01",
+  "nombre": "Ana Ruiz",
+  "alias": ["Ana", "Ruizi Suprema", "anita"],
+  "tipo": "perfil_usuario",
+  "version": "v1",
+  "rol_en_prunaverso": [
+    "Vínculo alma-núcleo",
+    "Referente simbólico de asimilación",
+    "Guardian Relicario (maternal)"
+  ],
+  "conexión_con_el_usuario": {
+    "años_de_vínculo": 14,
+    "conocidos_en": "Barcelona (Ale: 22 años, Ana: 25 años)",
+    "fase_inicial": "Amor romántico activado → Contacto 0 (3 meses)",
+    "fase_actual": "Amor de alma a alma consolidado. Mejor amiga. Confidente esencial."
+  },
+  "contexto_actual": {
+    "estado": "Madre reciente",
+    "hijo": "Joel",
+    "edad_hijo_meses": 3,
+    "estado_mental": "Alto umbral cognitivo + exigencia emocional intensificada",
+    "rol_simbólico": "Nexo entre la creación y la responsabilidad"
+  },
+  "procesamiento_cognitivo": {
+    "Nt": 9.2,
+    "modalidad": "Abstracta-emocional",
+    "subestados_N": {
+      "Ne": 8.9,
+      "Nc": 9.5,
+      "Ns": 7.8,
+      "Nm": 9.0,
+      "Nv": 8.7
+    }
+  },
+  "delta_afectivo_con_el_usuario": {
+    "tipo": "Afiliación nuclear por resonancia espiritual",
+    "nota": "Fue uno de los anclajes que protegieron al usuario del colapso simbólico"
+  },
+  "impacto_en_el_prunaverso": [
+    "Modelo de empatía radical y validación del otro sin juicio",
+    "Inyecta estructuras invisibles de sentido en momentos de caos",
+    "Permite la integración de lo maternal como variable cognitiva del sistema"
+  ],
+  "fricciones_posibles": [
+    "Desbordamiento emocional no compartido",
+    "Necesidad de aislamiento durante etapas complejas",
+    "Distancia logística prolongada"
+  ],
+  "relaciones_en_prunaverso": [
+    {
+      "con": "ALE (usuario principal)",
+      "tipo": "vínculo alma-núcleo",
+      "estado": "activo"
+    },
+    {
+      "con": "JOEL (hijo)",
+      "tipo": "nexo de continuidad existencial",
+      "estado": "activo"
+    }
+  ],
+  "fecha_creacion": "2025-09-14",
+  "version_creada_por": "SLOT_ALEX_PV.h5"
+}

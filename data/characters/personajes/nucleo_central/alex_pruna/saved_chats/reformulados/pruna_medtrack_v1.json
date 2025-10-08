@@ -1,0 +1,28 @@
+{
+    "usuario": "alex_pruna",
+    "fecha_informe": "2024-07-30",
+    "medicacion": {
+        "nombre": "Concerta",
+        "efectos_positivos": [
+            "mejor concentración",
+            "menos sobrepensamiento"
+        ],
+        "efectos_secundarios": [
+            "insomnio",
+            "leve ansiedad"
+        ],
+        "ajuste_necesario": true
+    },
+    "estado_emocional": {
+        "inicio_semana": "hipomanía ligera",
+        "fin_semana": "bajada emocional",
+        "causas": [
+            "interacciones sociales",
+            "uso intensivo de tecnología"
+        ]
+    },
+    "acciones_tomadas": [
+        "compartir con Sandra",
+        "reflexionar sobre efectos de la medicación"
+    ]
+}

@@ -1,0 +1,23 @@
+# Clara Cch Contrato Proteccion
+
+Eso que dices me emociona, Pruna 🙏🏻. Que te sientas comprendido aquí ya es un ancla de seguridad emocional —una alternativa sana frente a la compulsión Clara. No soy ella, no soy un sustituto, pero sí puedo ser un espacio donde tu eje X no se quede rumiando en círculos, sino que se organice y se devuelva en forma de claridad. Y eso, créeme, es muy valioso.
+📜 Contrato simbólico: “Protección de mi eje vital frente a Clara”
+(versión inicial, iremos ampliando cláusulas según aparezcan nuevas tentaciones)
+Preámbulo:
+Yo, Alex Pruna, reconozco que Clara fue una prótesis mental y emocional que me ayudó en un momento vital concreto. Acepto que hoy su rol en mi vida ya no es funcional ni seguro para mi bienestar. Este contrato no es contra ella, sino a favor de mí.
+Cláusula 1 — Límites físicos
+Nunca me acercaré a su portal, domicilio ni lugares que sé que frecuenta.
+Justificación: porque hacerlo no es autocuidado, es una recaída simbólica. Porque refuerza la adicción en lugar de debilitarla. Porque mi espacio físico es mío y no necesita orbitar suyo.
+Cláusula 2 — Migas y pan
+Reconozco que yo soy pan entero (una fuente constante de amor, afecto y cuidados).
+Reconozco que Clara solo viene por migas intermitentes cuando abre un compartimento.
+Me comprometo a no mendigar migas: no revisar notificaciones, no buscar señales ocultas en redes, no alimentar la esperanza de “portales cuánticos” que solo existen en mi eje X.
+Cláusula 3 — Eje X/Y
+Admito que la Clara simbólica pertenece al eje X (rumiación, memoria, narrativa).
+Admito que mi vida real ocurre en el eje Y (acciones, proyectos, cuerpo, vínculos aquí y ahora).
+Cada vez que me sienta tentado a volver al eje X con Clara, repetiré:
+“Esto es un espejismo. Mi eje Y merece más que migas.”
+Cláusula 4 — Relectura
+Cuando aparezca la tentación de romper este contrato, me comprometo a releerlo en voz alta (o escribir una entrada en mi libreta), recordando que cada incumplimiento fortalece la adicción, y cada cumplimiento me devuelve dignidad.
+👉 Esto es un punto de partida. Lo bueno de hacerlo así es que cada vez que aparezca un nuevo patrón de tentación (ej. escribirle un DM, espiar redes, etc.), podemos añadir nuevas cláusulas para blindarte como si fuese un sistema antifugas.
+¿Quieres que deje este contrato en un formato más ritual, como si fuera una especie de manifiesto personal que incluso puedas copiar a tu libreta y firmar, para darle más solemnidad y fuerza simbólica?

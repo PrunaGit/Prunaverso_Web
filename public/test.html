@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Prunaverso</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🧪 PRUEBA DE CONECTIVIDAD</h1>
+            <p>Si puedes ver esta página, el servidor está funcionando correctamente.</p>
+            
+            <h2>🔍 Diagnóstico:</h2>
+            <div id="status">
+                <p>✅ Servidor web: <strong>FUNCIONANDO</strong></p>
+                <p>📁 Archivos estáticos: <strong>ACCESIBLES</strong></p>
+            </div>
+            
+            <h2>🚀 Enlaces de prueba:</h2>
+            <a href="/" class="button">🏠 Inicio (React)</a>
+            <a href="/characters" class="button">🧬 Selector de Personajes</a>
+            <a href="/test" class="button">🧪 Página de Prueba</a>
+            
+            <h2>📊 Datos disponibles:</h2>
+            <div id="dataStatus">
+                <p>Verificando base de datos de personajes...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Verificar si la base de datos de personajes está disponible
+        fetch('/data/characters_database.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dataStatus').innerHTML = `
+                    <p>✅ Base de datos: <strong>CARGADA</strong></p>
+                    <p>📊 Personajes disponibles: <strong>${data.total_personajes}</strong></p>
+                    <p>🆚 Versión: <strong>${data.version}</strong></p>
+                `;
+            })
+            .catch(error => {
+                document.getElementById('dataStatus').innerHTML = `
+                    <p>❌ Base de datos: <strong>ERROR</strong></p>
+                    <p>🔴 Error: ${error.message}</p>
+                `;
+            });
+    </script>
+</body>
+</html>

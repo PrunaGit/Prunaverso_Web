@@ -1,0 +1,33 @@
+{
+  "nombre": "Alex Pruna",
+  "atributos": {
+    "V": 7,
+    "EX_x": 9,
+    "EX_y": 8,
+    "EY_x": 6,
+    "EY_y": 9,
+    "N_p": 10,
+    "M": 8,
+    "R": 9,
+    "D": 5,
+    "Di": 10
+  },
+  "rasgos_destacados": [
+    "Altísima capacidad de modelado simbólico y estructural.",
+    "Constancia creativa diaria con impulso de progreso personal.",
+    "Gran claridad de visión del metaproyecto (Prunaverso), pero con momentos de fatiga narrativa o sobresaturación.",
+    "Nivel técnico intermedio con deseo genuino de escalar hacia producción funcional.",
+    "Tendencia a la hiperconexión de ideas con riesgo de desbordamiento.",
+    "Alto nivel de resonancia y empatía estructurada con otros nodos humanos (David, Clara, Sasha…).",
+    "Patrón recurrente de comenzar tareas complejas por lo abstracto, consolidándolas después con herramientas técnicas y código real.",
+    "Capacidad metacognitiva elevada: analiza su propia narrativa y evolución a la vez que la construye."
+  ],
+  "citas_representativas": [
+    "La cosa es que cuando has creado antes el script has creado la ruta codigo>fractales>plantillas y ahora ha guardado 'generador_ficha.py' en 'plantillas' y no en 'fractales'.",
+    "No quiero tener que crear yo el archivo y después ejecutarlo.",
+    "Creo que tendrás que justificar las stats de David, porque no estoy muy de acuerdo con ellas, vamos a perfeccionarlas.",
+    "Estoy cansado. Me cuesta entender el HUD. Lo dejo por hoy. Gracias (19:56h)",
+    "Me gustaría que me ayudases a completar automáticamente mi ficha, con la ristra descomunal que tienen los documentos adjuntos de mí."
+  ],
+  "contexto_de_version": "Alex Pruna en esta sesión ha operado principalmente desde Nₚ y EX (modo arquitecto fractal funcional). Se encuentra en fase de consolidación técnica del Prunaverso, traduciendo lore simbólico en estructuras codificables. Aunque ha habido momentos de fatiga (EY_x bajo), ha sostenido largas sesiones de interacción con un grado de profundidad emocional y cognitiva excepcional. En esta fase se vislumbra como el arquitecto operativo del kernel narrativo, construyendo interfaces humanas, ficcionales y técnicas a la vez."
+}

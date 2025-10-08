@@ -29,7 +29,9 @@ export default function Portal() {
               <circle cx="12" cy="12" r="10" stroke="white" strokeOpacity="0.18" strokeWidth="1.5" />
               <path d="M4 12c2-4 6-8 12-8" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.9" />
             </svg>
-          </div>
+          
+              <a href="/architecture"><Button variant="primary">🧭 Mapa del Sistema</Button></a>
+            </div>
 
           <div>
             <h1 className="text-3xl font-bold">Prunaverso — Portal v0.06</h1>

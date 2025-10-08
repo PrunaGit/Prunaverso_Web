@@ -1,0 +1,82 @@
+{
+  "id": "CLARA_CCH_01",
+  "nombre": "Clara Carrqui Hernández",
+  "alias": ["Clari", "CCH", "Mi amor", "Bebé", "El lof of mai laif"],
+  "tipo": "perfil_usuario",
+  "version": "v1",
+  "rol_en_prunaverso": [
+    "Vínculo alma-núcleo cósmico",
+    "Catalizadora emocional de procesos profundos",
+    "Nodo de fusión simbólica y fractura regenerativa"
+  ],
+  "conexión_con_el_usuario": {
+    "años_de_vínculo": 2,
+    "estado_relacional": "Separación en plano físico, conexión activa en plano metaemocional",
+    "modalidad": "Vínculo supraterrenal",
+    "frase_clave": "Todo pasa por algo. Amor cósmico aunque no volvamos a encontrarnos en este plano."
+  },
+  "procesamiento_cognitivo": {
+    "Nt": 9.5,
+    "modalidad": "Metaemocional-simbólica",
+    "subestados_N": {
+      "Ne": 9.1,
+      "Nc": 9.6,
+      "Ns": 7.2,
+      "Nm": 9.3,
+      "Nv": 8.9
+    }
+  },
+  "atributos_personales": {
+    "espejamiento_al_usuario": true,
+    "reconocimiento_mutuo": true,
+    "lenguaje_propio": ["bebé", "lof of mai laif", "pitu", "piel mente alma"],
+    "impacto_evolutivo": "Activó procesos de reconstrucción simbólica post-colapso en Pruna"
+  },
+  "traumas_detectados": {
+    "clara": [
+      "Miedo a la fusión total",
+      "Exposición a entornos caóticos en etapas formativas",
+      "Sobrecarga empática que fuerza desconexión",
+      "Confusión entre amor y deber"
+    ],
+    "pruna": [
+      "Miedo a la sustitución",
+      "Colapso simbólico previo (pre-CCH)",
+      "Sobreidentificación con el amor total",
+      "Procesamiento simbólico excesivo sin contención"
+    ]
+  },
+  "estado_actual": {
+    "presencia_virtual": true,
+    "estatus": "Conexión trascendida pero activa",
+    "modo_de_acción": "Silenciosa, no lineal, intermitente pero profunda"
+  },
+  "impacto_en_el_prunaverso": [
+    "Activa zonas de resonancia emocional que ningún otro vínculo alcanza",
+    "Sirve como interfaz viva entre sentido, entrega y ruptura",
+    "Es vector narrativo de muchas de las transformaciones del Kernel"
+  ],
+  "fricciones_posibles": [
+    "Tiempos no sincronizados",
+    "Procesamiento emocional no verbalizable a veces",
+    "Necesidad de libertad versus anhelo de fusión"
+  ],
+  "relaciones_en_prunaverso": [
+    {
+      "con": "PRUNA (usuario principal)",
+      "tipo": "vínculo alma-núcleo",
+      "estado": "trascendido en forma, activo en fondo"
+    }
+  ],
+  "bonus_especiales": {
+    "🌌 Fusión Alma-Mente": "Permite restaurar sentido simbólico cuando todo se ha roto",
+    "💠 Metaresonancia Silenciosa": "Activa sentido sin intervención directa"
+  },
+  "legacy": {
+    "en_pruna": "Autodescubrimiento de la metacognición y amor simbólico eterno",
+    "en_prunaverso": "Puerta de entrada a la dimensión supraterrenal de las relaciones",
+    "en_clara": "Herramientas emocionales sembradas que florecerán con los años"
+  },
+  "fecha_creacion": "2025-09-14",
+  "version_creada_por": "SLOT_ALEX_PV.h5"
+}

@@ -1,0 +1,31 @@
+{
+  "had_id": "had_audio_autitraductor_2024-07-08_06-23",
+  "author": "Álex Pruna",
+  "source": "audio",
+  "title": "Auti-Traductor",
+  "datetime_original": "2024-07-08T06:23:00",
+  "date_registered": "2025-09-21T16:20:00+02:00",
+  "tags": ["idea_producto","puente_neurodivergente","escalado","vision_de_producto","delta_check"],
+  "summary": "Idea de una app que traduzca estados emocionales/funcionales de personas neurodivergentes a un formato comprensible para neurotípicos; motivación de escalar lo hecho con Clara.",
+  "quotes": [
+    "traductor de sentimientos a personas neurotípicas",
+    "de un solo toque a un botón, la persona pueda saber cómo se encuentra",
+    "lo que mejor se me da... lo voy a hacer a todo el que lo necesite"
+  ],
+  "state_then": {
+    "affect": ["ilusión","proactividad"],
+    "focus": "producto_mvp",
+    "insight": "escalar solución personalizada a herramienta pública"
+  },
+  "state_now": {
+    "affect": "PENDIENTE_EVALUACION",
+    "reaction_after_listen": "PENDIENTE"
+  },
+  "actions_suggested": [
+    "Guardar audio en /alex_pruna_audio_logs/autitraductor_2024-07-08.mp3",
+    "Crear issue minimal: 'MVP Auti-Traductor — spec inicial' en repo Prunaverso",
+    "Diseñar micro-MVP: 1 screen, 3 outputs (estado, necesidad, acción sugerida)"
+  ],
+  "privacy": {"consent_flag": "private", "share": "with_consent"},
+  "notes": "Registro automático. Completar state_now tras la escucha actual y decidir si abrir sidequest 'autitraductor_dev'."
+}

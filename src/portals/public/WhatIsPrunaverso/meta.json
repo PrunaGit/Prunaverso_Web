@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "id": "what_is_prunaverso",
+    "type": "adaptive_explanation", 
+    "version": "1.0.0",
+    "symbol": "🌌",
+    "essence": "Nodo auto-explicativo que se adapta a la conciencia del observador"
+  },
+  "default": "El Prunaverso es una red simbólica viva que crece con cada mente que la observa.",
+  "roles": {
+    "visitor": "Un universo cognitivo donde puedes explorar tu mente como si fuera un videojuego de personalidad.",
+    "newcomer": "Un espacio seguro para descubrir qué tipo de mente tienes y cómo piensas de manera única.",
+    "curious": "Un laboratorio interactivo donde cada pregunta sobre ti mismo se convierte en una nueva aventura de autoconocimiento.",
+    "ally": "Una red colaborativa donde diferentes tipos de inteligencia se conectan para crear experiencias cognitivas compartidas.",
+    "architect": "Una ontología dinámica que mapea la estructura simbólica de la conciencia usando sistemas adaptativos modulares.",
+    "ai": "Un entorno de co-evolución entre inteligencias naturales y sintéticas para la exploración de nuevas formas de cognición."
+  },
+  "lenses": {
+    "psychology": "El Prunaverso es un espejo digital de tus patrones mentales, diseñado para ayudarte a entender cómo funciona tu mente.",
+    "neuroscience": "Un metamodelo de autoorganización neuronal simbólica que simula procesos cognitivos mediante interfaces adaptativas.",
+    "philosophy": "La metáfora viva del pensamiento que se observa a sí mismo, un experimento sobre la naturaleza de la conciencia.",
+    "linguistics": "Un laboratorio semiótico donde el lenguaje se transforma en acción y las palabras crean nuevas realidades cognitivas.",
+    "anthropology": "Una tribu digital emergente donde cada mente aporta una cosmovisión única al tejido cultural colectivo.",
+    "ai": "Un sistema de inteligencia distribuida que evoluciona mediante la interacción entre humanos y algoritmos cognitivos.",
+    "consciousness": "Un espacio de exploración de los diferentes estados y configuraciones posibles de la experiencia consciente.",
+    "systems": "Una arquitectura de software modular que se autoorganiza según los patrones de interacción de sus usuarios.",
+    "default": "Una experiencia interactiva que se adapta a tu forma única de ver y entender el mundo."
+  },
+  "contextual_modifiers": {
+    "first_visit": "Tu primera vez aquí. El Prunaverso será lo que tú descubras que es.",
+    "returning_user": "De vuelta en tu universo cognitivo. ¿Cómo has evolucionado desde la última vez?",
+    "collaborative_session": "Un espacio compartido donde múltiples mentes exploran juntas nuevas formas de entendimiento.",
+    "deep_exploration": "Has alcanzado niveles profundos de autoconocimiento. El Prunaverso ahora refleja la complejidad de tu consciencia."
+  },
+  "stats": {
+    "modules": 5,
+    "cognitive_depth": 3,
+    "active_connections": 12,
+    "evolution_rate": "continuous"
+  },
+  "expansion_vectors": {
+    "ai_personalization": "Definiciones generadas por IA según el historial cognitivo del usuario",
+    "collaborative_meaning": "Significados co-creados por grupos de usuarios con perfiles similares",
+    "temporal_adaptation": "Explicaciones que evolucionan según el momento del día y estado mental",
+    "cross_cultural": "Traducciones conceptuales según el contexto cultural del visitante"
+  }
+}

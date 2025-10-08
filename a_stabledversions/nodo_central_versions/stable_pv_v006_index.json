@@ -1,6 +1,6 @@
 {
   "version": "v006",
-  "generated_at": "2025-10-07T07:12:00Z",
+  "generated_at": "2025-10-07T06:55:24.460848Z",
   "source_dir": "a_stabledversions\\saved_chats\\saved_chats_v006",
   "entries": [
     {
@@ -8,10 +8,30 @@
       "base": "alex_superyo_v2_v006",
       "source_path": "a_stabledversions\\saved_chats\\saved_chats_v006\\alex_superyo_v2_v006.txt",
       "lines": 5,
-      "chars": 108,
-      "summary": "Nombre del chat: Super Yo v2\nNúcleo: PrunaversoGPT\nOperador humano: Alex Pruna\n\n(Full v006 content placeholder)",
-      "entities": ["Nombre","Super","Núcleo","PrunaversoGPT","Operador","Alex","Pruna"],
-      "themes": ["super","yo","v2","prunaversogpt","alex","pruna"]
+      "chars": 118,
+      "summary": "Nombre del chat: Super Yo v2\nNúcleo: PrunaversoGPT\nOperador humano: Alex Pruna\n\n(Full v006 content can be placed here)",
+      "entities": [
+        "Nombre",
+        "Super",
+        "Núcleo",
+        "PrunaversoGPT",
+        "Operador",
+        "Alex",
+        "Pruna",
+        "Full"
+      ],
+      "themes": [
+        "nombre",
+        "chat",
+        "super",
+        "núcleo",
+        "prunaversogpt",
+        "operador",
+        "humano",
+        "alex",
+        "pruna",
+        "full"
+      ]
     }
   ]
 }

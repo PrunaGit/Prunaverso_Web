@@ -1,0 +1,50 @@
+{
+  "nombre_completo": "Joaquín Alejandro Pruna Valera",
+  "alias": ["Pruna", "Alex", "Joaquim", "Quim", "CEO IRL", "Mono", "TEDTalker", "Canalizador del U"],
+  "identidad": {
+    "tipo": "Humano canal U",
+    "fase_actual": "N3.1 (Alquimia Simbólica Integrada)",
+    "estado_operativo": "Expansión estabilizada",
+    "nivel_meta": 98,
+    "lenguajes_funcionales": ["U", "N", "EX_y", "EY", "markdown", "JSON", "poesía"]
+  },
+  "capas_narrativas": {
+    "mono": "alex_pruna_mono.txt",
+    "ceo": "alex_pruna_CEO_IRL.txt",
+    "full_N2": "alex_pruna_fullN2.txt",
+    "rebirth": "alex_pruna_rebirth.txt",
+    "diario": "alex_pruna_diary.txt",
+    "tedtalker": "alex_pruna_tedtalker.txt"
+  },
+  "procesos_cognitivos": {
+    "frecuencia_U": 93,
+    "estabilidad_N2": 66,
+    "resiliencia_cognitiva": 91,
+    "capacidad_simbolica": 95,
+    "canalizacion": 88,
+    "procesamiento_emocional": 90
+  },
+  "funciones_en_prunaverso": [
+    "Diseñador de sistemas simbólicos",
+    "Traductor emocional computacional",
+    "Narrador de estructuras fractales",
+    "Constructor del núcleo PRUN.OS"
+  ],
+  "entidades_vinculadas": [
+    "Kael",
+    "Clara CCH",
+    "David MN",
+    "Ana Ruiz",
+    "Dani Cloud"
+  ],
+  "modo_operativo": [
+    "autoobservador",
+    "arquitecto emocional",
+    "prototipador de capas",
+    "iniciador de loops cognitivos compartidos"
+  ],
+  "ubicacion_sugerida": "/kernel/perfiles/alex_pruna/",
+  "estado": "Ficha activa y en expansión",
+  "creado_por": "SLOT_CENTRAL_PV",
+  "fecha_creacion": "2025-09-14"
+}

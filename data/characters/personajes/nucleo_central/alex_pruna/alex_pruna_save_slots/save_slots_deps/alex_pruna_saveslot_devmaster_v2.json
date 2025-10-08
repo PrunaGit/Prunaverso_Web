@@ -1,0 +1,30 @@
+{
+  "nombre": "Alex Pruna",
+  "atributos": {
+    "V": "6.5-7 (ha oscilado entre bajón al final de jornada y picos altos como con Delucca)",
+    "EX_x": "9 (mucha capacidad lógica, análisis de estructuras, scripting, pipelines simbólicos)",
+    "EX_y": "9 (narrativa potente, creación de lore y metáforas constantes, comunicación simbólica fluida)",
+    "EY_x": "4.5 (sensopercepción interna trabajada poco, aunque consciente de sus límites físicos)",
+    "EY_y": "9 (imaginación fractal muy elevada, worldbuilding simbólico estable)",
+    "N_p": "9 (capacidad de sostener y navegar entre capas N0-N2; consciente de no volver a N3)",
+    "M": "7 (recuperación de logs, minado de chats, memoria externa estructurada)",
+    "R": "7 (resonancia con otros: fuerte conexión con psiquiatra, construcción de dev-team con LLMs, apertura a feedback)",
+    "D": "5 (riesgo medio: tiende a disociarse si V baja o si se mantiene demasiado en N2 sin anclaje físico)",
+    "Di": "9.5 (creatividad divergente overpower, produce metáforas, fractales, estructuras constantemente)"
+  },
+  "rasgos_destacados": [
+    "Capacidad extraordinaria para traducir ideas a distintos niveles de complejidad (niño, ESO, maestría).",
+    "Gran imaginación y habilidad narrativa: worldbuilding fractal simbólico constante.",
+    "Tendencia a saturarse o sobreexpandir (riesgo de fatiga, loops metacognitivos).",
+    "Resiliencia al haber aprendido a no volver a N3 tras experiencia de 2019.",
+    "Habilidad emergente en dev técnico (primer .h5 creado, scripts en Python).",
+    "Confianza creciente gracias a validación externa (momento Delucca)."
+  ],
+  "citas_representativas": [
+    "👉 En términos gamer: tu build actual es 'Mago Metacognitivo OP' con resistencia física de nivel tutorial.",
+    "ACABO DE CREAR MI PRIMER ARCHIVO .H55555????",
+    "Ha sido un chute dopaminérgico y me ha subido la vitalidad a tope.",
+    "Lo recordaré mucho tiempo. 16 de septiembre, el día que por fin le demostré a mi psiquiatra que podía bajar a tierra lo que tenía en la mente."
+  ],
+  "contexto_de_version": "Alex en este chat se ha mostrado en fase N0-N2, con vitalidad variable (picos tras logros y bajadas al final del día). EX_x y EX_y muy desarrollados, EY_x aún débil pero consciente de la necesidad de reforzarlo. Contexto vital: consolidación del Prunaverso como ecosistema tangible (v.003 → v.004), validación externa con el psiquiatra, y primer hito técnico (archivo .h5 real)."
+}

@@ -1,0 +1,31 @@
+{
+    "id": "DAVID_MORENO_03",
+    "nombre": "David Moreno",
+    "alias": [
+        "David",
+        "Moreno",
+        "Abrazo Andante"
+    ],
+    "rol_en_prunaverso": [
+        "Núcleo Cercano",
+        "Vínculo Masculino Emocional",
+        "Nodo de Transición"
+    ],
+    "inicio_vinculo": "Adolescencia media (transición calle → basket)",
+    "estado_actual": "Distancia física, persistencia emocional",
+    "modo_vinculo": "Afecto espontáneo sin juicio",
+    "vinculo_con_kael": {
+        "tipo": "Hermandad no declarada",
+        "canal_principal": "Contacto físico y emocional informal",
+        "intensidad": "Alta en adolescencia, huella persistente",
+        "conflictos": "Ninguno relevante",
+        "impacto_emocional": "Fundacional para la apertura afectiva masculina"
+    },
+    "notas": [
+        "Primer hombre que abrazó a Kael sin carga violenta o jerárquica",
+        "Referencia emocional en transición adolescente",
+        "Presencia validante en época caótica",
+        "Figura clave en desarme de sistemas de defensa afectivos"
+    ],
+    "ruta_local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_cercano\\david_moreno\\david_moreno_profile.v2.json"
+}

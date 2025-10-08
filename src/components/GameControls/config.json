@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "name": "GameControls",
+    "type": "immersive_interface",
+    "version": "1.0.0", 
+    "symbol": "🎮",
+    "essence": "Sistema de navegación inmersiva con controles gaming"
+  },
+  "cognitive_properties": {
+    "accessibility_level": "universal",
+    "immersion_factor": "high",
+    "learning_curve": "gentle",
+    "emotional_engagement": "visceral"
+  },
+  "control_schemes": {
+    "playstation": {
+      "primary_actions": {
+        "X": "confirm_select",
+        "O": "cancel_back", 
+        "Square": "menu_inventory",
+        "Triangle": "info_help"
+      },
+      "navigation": {
+        "dpad_up": "nav_up",
+        "dpad_down": "nav_down",
+        "dpad_left": "nav_left", 
+        "dpad_right": "nav_right",
+        "left_stick": "analog_navigation"
+      },
+      "advanced": {
+        "L1": "cognitive_lens_prev",
+        "R1": "cognitive_lens_next",
+        "L2": "depth_decrease",
+        "R2": "depth_increase",
+        "start": "pause_menu",
+        "select": "system_info"
+      }
+    },
+    "keyboard": {
+      "navigation": {
+        "w": "nav_up", 
+        "s": "nav_down",
+        "a": "nav_left",
+        "d": "nav_right",
+        "arrow_keys": "directional_nav"
+      },
+      "actions": {
+        "enter": "confirm",
+        "space": "select", 
+        "escape": "menu_back",
+        "tab": "cycle_focus"
+      },
+      "shortcuts": {
+        "i": "info_orbital",
+        "h": "help_controls",
+        "m": "map_overview",
+        "c": "character_panel",
+        "1-9": "quick_access"
+      }
+    }
+  },
+  "visual_feedback": {
+    "button_indicators": {
+      "position": "bottom_right",
+      "style": "floating_pills",
+      "animation": "gentle_pulse",
+      "context_adaptive": true
+    },
+    "colors": {
+      "playstation_x": "#4CAF50",
+      "playstation_o": "#F44336", 
+      "playstation_square": "#E91E63",
+      "playstation_triangle": "#9C27B0",
+      "keyboard": "#2196F3",
+      "highlight": "#FFC107"
+    },
+    "animations": {
+      "show_hide": 0.3,
+      "button_press": 0.1,
+      "context_change": 0.5
+    }
+  },
+  "adaptive_behavior": {
+    "by_visitor_type": {
+      "newcomer": "show_all_hints",
+      "curious": "contextual_hints",
+      "ally": "minimal_hints", 
+      "architect": "shortcuts_only"
+    },
+    "by_device": {
+      "gamepad_connected": "emphasize_gamepad",
+      "keyboard_only": "emphasize_keyboard",
+      "touch_device": "touch_adaptations"
+    },
+    "by_context": {
+      "menu_navigation": "directional_focus",
+      "text_input": "typing_mode",
+      "media_viewing": "media_controls"
+    }
+  },
+  "accessibility": {
+    "screen_reader": "aria_labels",
+    "motor_impairment": "hold_alternatives", 
+    "visual_impairment": "high_contrast_mode",
+    "cognitive_load": "simplified_mode"
+  },
+  "expansion_vectors": {
+    "custom_mappings": "User-defined control schemes",
+    "ai_adaptation": "Learning user preferences",
+    "social_gaming": "Collaborative control sharing",
+    "vr_integration": "Spatial gesture controls"
+  }
+}

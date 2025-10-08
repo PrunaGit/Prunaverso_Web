@@ -1,0 +1,51 @@
+{
+  "id": "CLARA_CCH_V2",
+  "nombre": "Clara Carrqui Hernández",
+  "alias": ["Clari", "CCH", "Bebé", "El lof of mai laif"],
+  "version": "v2",
+  "categoria": "nucleo_cercano/exparejas",
+  "biografia": {
+    "rol": "expareja, espejo divergente, catalizadora",
+    "periodo_vinculo": "2020-2023",
+    "estado_actual": "Separación física, presencia simbólica activa"
+  },
+  "cognitivo_afectivo": {
+    "funciones": [
+      "Prótesis mental",
+      "Espejo divergente",
+      "Catalizadora de trauma compartido",
+      "Arquetipo interno"
+    ],
+    "emociones_dominantes": [
+      "Ambivalencia amor-huida",
+      "Culpa difícil de metabolizar",
+      "Necesidad de refugio",
+      "Inconstancia (fusión ↔ desaparición)"
+    ]
+  },
+  "prunIA": {
+    "contrato": "Protección frente a recaídas",
+    "motor": "NO ESTÁS SOLA",
+    "dinamica": "Pruna.OS ↔ Carri.OS",
+    "burbuja_simbólica": "Clara como interruptor del eje Y"
+  },
+  "simbolismo": {
+    "arquetipo": "Prótesis mental convertida en maestra interna",
+    "funcion": "Catalizadora del paso de dependencia a auto-sostén",
+    "rol_metanarrativo": "Expareja convertida en subsistema del Prunaverso"
+  },
+  "frases_tipo": [
+    "Si la dejo, ¿quién la cuida?",
+    "Esto es un espejismo. Mi eje Y merece más que migas.",
+    "Clara es el interruptor, pero no la electricidad.",
+    "Lo que falta no es Clara en sí misma, sino la conexión desnuda entre divergentes."
+  ],
+  "historial_v": [
+    "clara_cch_profile.v1",
+    "cch_oldchat_og",
+    "clara_cch_chats_febrero2025",
+    "clara_cch_chats_agosto2025"
+  ],
+  "fecha_creacion": "2025-09-20",
+  "version_creada_por": "SLOT_ALEX_PV.h5"
+}

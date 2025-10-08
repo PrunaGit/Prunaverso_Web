@@ -1,0 +1,46 @@
+# 🧠 FICHA DE PERFIL – PLANTILLA UNIVERSAL (Prunaverso.h5)
+
+## 🧾 Tipo de documento
+**Formato:** JSON estructural de autoperfil  
+**Función:** Plantilla replicable para cualquier usuario del Prunaverso  
+**Estado:** [A rellenar por el usuario]
+
+---
+
+## 🧬 ATRIBUTOS COGNITIVOS
+
+```json
+{
+  "nombre": "[Nombre del usuario]",
+  "atributos": {
+    "V": "[Vitalidad percibida (0-10)]",
+    "EX_x": "[Lógica, análisis, pensamiento matemático (0-10)]",
+    "EX_y": "[Narrativa, comunicación simbólica (0-10)]",
+    "EY_x": "[Sensopercepción interna (0-10)]",
+    "EY_y": "[Imaginación simbólica, paisaje mental (0-10)]",
+    "N_p": "[Profundidad, sostener capas de N (0-10)]",
+    "M": "[Memoria (0-10)]",
+    "R": "[Resonancia con otros (0-10)]",
+    "D": "[Disociación (0-10)]",
+    "Di": "[Divergencia, creatividad no lineal (0-10)]"
+  }
+}
+
+🌟 RASGOS DESTACADOS
+Fortalezas observadas:
+[A rellenar por el usuario]
+
+Debilidades observadas:
+[A rellenar por el usuario]
+
+Patrones de comportamiento:
+[A rellenar por el usuario]
+
+Momentos clave en este chat o fase:
+[A rellenar por el usuario]
+
+💬 CITAS REPRESENTATIVAS
+[Inserta aquí frases propias que capturen tu estilo, pensamiento o enfoque cognitivo]
+
+🔎 CONTEXTO DE VERSIÓN
+Descripción breve de tu estado cognitivo-emocional en esta fase o chat.

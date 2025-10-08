@@ -1,0 +1,30 @@
+{
+    "id": "MAMA_ANA_NUCLEO_CENTRAL",
+    "nombre": "Ana Maria Catalá Reche",
+    "alias": [
+        "Mami",
+        "Ana",
+        "Anita",
+        "La vigía del caos"
+    ],
+    "rol_en_prunaverso": [
+        "Madre biológica y escudo emocional de Alejandro",
+        "Filtro de realidad en momentos de pérdida de control",
+        "Contención pragmática de urgencias vitales"
+    ],
+    "inicio_vinculo": "Nacimiento de Alejandro Pruna",
+    "estado_actual": "Activa en el plano IRL, en comunicación casi diaria",
+    "modo_vinculo": "Vigilancia silenciosa + apoyo logístico + contención emocional",
+    "impacto": {
+        "emocional": "Fusión materno-filial intensa. Codependencia cíclica en fases N3",
+        "práctico": "Resolución de problemas cotidianos cuando el sistema Alejandro colapsa",
+        "simbólico": "Representa la tierra, el regreso, la que nunca se fue"
+    },
+    "notas": [
+        "Funciona como el último escudo antes de la caída del sistema",
+        "No interfiere, pero nunca deja de observar",
+        "Es el módulo de emergencia activado automáticamente por el subconsciente del player",
+        "Aunque sufre por dentro, protege por fuera"
+    ],
+    "ruta_local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_central\\mama_ana\\mama_ana_profile_v3.json"
+}

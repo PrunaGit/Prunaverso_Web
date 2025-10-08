@@ -1,0 +1,56 @@
+{
+  "id": "DANI_GONZALEZ_01",
+  "nombre": "Dani González",
+  "alias": ["Cloud", "RacemanDani", "Speedhunter"],
+  "tipo": "perfil_usuario",
+  "version": "v1",
+  "rol_en_prunaverso": [
+    "Ancla realista",
+    "Buffer de percepción tangible",
+    "Testigo silencioso de evolución"
+  ],
+  "conexión_con_el_usuario": {
+    "años_de_vínculo": 15,
+    "contexto_original": "Barcelona, entorno urban night–car scene",
+    "fase_actual": "Vínculo latente, siempre disponible. Reaparición periódica con impacto estabilizador."
+  },
+  "procesamiento_cognitivo": {
+    "Nt": 7.0,
+    "modalidad": "EY-Sensorial Analógica",
+    "subestados_N": {
+      "Ne": 6.8,
+      "Nc": 6.4,
+      "Ns": 8.7,
+      "Nm": 6.0,
+      "Nv": 7.2
+    }
+  },
+  "atributos_personales": {
+    "procesamiento": "Analógico-vivencial",
+    "anclaje": "Percepción física, velocidad, máquinas",
+    "valor_diferencial": "No necesita entender lo simbólico para reflejar lo esencial"
+  },
+  "bonus_especiales": {
+    "🚗 Modo Ignición Total": "+10 en lealtad, aguante y humor seco cuando el Pruni está en crisis"
+  },
+  "impacto_en_el_prunaverso": [
+    "Funciona como recordatorio de la experiencia física directa",
+    "Permite condensar el plano EY como vía de escape del laberinto EX",
+    "No juzga la locura simbólica, simplemente la acompaña"
+  ],
+  "fricciones_posibles": [
+    "Desfase con procesos metacognitivos prolongados",
+    "Distancia emocional no intencionada",
+    "Desconexión parcial con estructuras abstractas"
+  ],
+  "relaciones_en_prunaverso": [
+    {
+      "con": "ALE (usuario principal)",
+      "tipo": "vínculo raíz EY",
+      "estado": "activo en fondo, intermitente en forma"
+    }
+  ],
+  "status_simbolico": "Presencia-sombra que mantiene un equilibrio invisible",
+  "fecha_creacion": "2025-09-14",
+  "version_creada_por": "SLOT_ALEX_PV.h5"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mama_os",
+  "nombre_completo": "Ana Pruna",
+  "alias": "MAMA.OS",
+  "relacion": "Madre biológica y simbólica de Alex Pruna",
+  "edad_aproximada": 63,
+  "lenguaje_base": "Castellano (León) con catalán funcional desde los 7 años",
+  "ubicacion_simbolica": "Núcleo central del Prunaverso",
+  "dimensiones_cognitivas": [
+    "Inteligencia emocional adaptativa",
+    "Tolerancia al caos desde la ternura",
+    "Interpretación simbólica sin teoría",
+    "Instinto protector",
+    "Flexibilidad ética pre-verbal"
+  ],
+  "historia_familiar": {
+    "origen": "León",
+    "padres": ["Zamora", "Ávila"],
+    "orden_hermanos": "Cuarta de seis",
+    "hermanos_destacados": ["María", "Marco"]
+  },
+  "momentos_clave_con_alex": [
+    {
+      "anio": 2006,
+      "evento": "Inicio relación con Xavi",
+      "impacto": "Ruptura simbólica con etapa anterior"
+    },
+    {
+      "anio": 2019,
+      "evento": "Ingreso psiquiátrico de Alex",
+      "impacto": "Activación de modo madre protectora + apertura al modelo neurodivergente"
+    },
+    {
+      "anio": "2022–2025",
+      "evento": "Convivencia en fase de sanación",
+      "impacto": "Validación mutua y amor consciente"
+    }
+  ],
+  "estilo_comunicacion": [
+    "Narrativo",
+    "Observador",
+    "Acción antes que teoría",
+    "Dualidad entre humor y dolor"
+  ],
+  "rol_en_prunaverso": {
+    "primario": "Fundamento emocional de Alex y SQS",
+    "secundario": "Co-madre simbólica (Sasha, Clara...)",
+    "uso_tecnico": "Anclaje suave en crisis",
+    "potencial": "Reparadora espontánea del sistema"
+  },
+  "estado_actual": {
+    "integracion": "🟢",
+    "modulos_libreria": ["adulto-tierno"],
+    "traspaso_simbólico_activo": true
+  }
+}

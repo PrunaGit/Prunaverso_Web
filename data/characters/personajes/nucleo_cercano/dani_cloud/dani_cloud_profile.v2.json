@@ -1,0 +1,18 @@
+{
+    "nombre": "Dani Cloud",
+    "alias": [
+        "NODO_01",
+        "DANI",
+        "CLOUD"
+    ],
+    "rol": "Núcleo Cercano",
+    "vinculo": "Conexión significativa desde círculos cercanos a Alejandro / Prunaverso",
+    "descripcion": "Dani representa un nodo emocional y humano dentro del sistema. Aunque su rol es parcialmente definido, actúa como espejo, presencia de escucha y acompañamiento de fondo.",
+    "estado_actual": "Establecido como personaje en el Prunaverso con posibilidad de evolución narrativa o simbólica.",
+    "version": "v2",
+    "fuentes": [
+        "dictionary_translate_v1.txt",
+        "dani_cloud_profile.txt"
+    ],
+    "fecha_actualizacion": "2025-09-19"
+}

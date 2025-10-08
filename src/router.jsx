@@ -1,25 +1,58 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Portal from './Portal'
-import SessionStart from './pages/SessionStart'
-import CharacterSelect from './pages/CharacterSelect'
-import Wiki from './pages/Wiki'
-import Credits from './pages/Credits'
-import MonitorPanel from './components/MonitorPanel'
-import PrunaversoPanel from './PrunaversoPanel'
+﻿import React from "react"
+import { createBrowserRouter } from "react-router-dom"
+import CognitiveOnboarding from "./components/CognitiveOnboarding"
+import PortalMain from "./pages/PortalMain"
+import DevPortal from "./portals/dev"
+import PublicPortal from "./portals/public"
+import useVisitorProfile from "./hooks/useVisitorProfile"
 
-export default function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Portal />} />
-        <Route path="/session/start" element={<SessionStart />} />
-        <Route path="/character" element={<CharacterSelect />} />
-        <Route path="/wiki" element={<Wiki />} />
-        <Route path="/credits" element={<Credits />} />
-        <Route path="/monitor" element={<MonitorPanel src="/data/monitor-latest.json" poll={4000} />} />
-        <Route path="/old-panel" element={<PrunaversoPanel />} />
-      </Routes>
-    </BrowserRouter>
-  )
+// Componente que decide qué portal mostrar
+const PortalSelector = () => {
+  const { profile, isLoading } = useVisitorProfile()
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-2xl text-blue-400 animate-pulse">
+          Sincronizando conciencia...
+        </div>
+      </div>
+    )
+  }
+
+  // Si es arquitecto o accede con parámetro dev, mostrar portal dev
+  const isArchitect = profile?.type === 'architect'
+  const forceDevMode = window.location.search.includes('dev=true')
+  
+  if (isArchitect || forceDevMode) {
+    return React.createElement(DevPortal)
+  }
+
+  // Por defecto, mostrar portal público
+  return React.createElement(PublicPortal)
 }
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: React.createElement(PortalSelector)
+  },
+  {
+    path: "/onboarding",
+    element: React.createElement(CognitiveOnboarding)
+  },
+  {
+    path: "/portal",
+    element: React.createElement(PortalMain)
+  },
+  {
+    path: "/dev",
+    element: React.createElement(DevPortal)
+  },
+  {
+    path: "/public", 
+    element: React.createElement(PublicPortal)
+  }
+])
+
+export default router

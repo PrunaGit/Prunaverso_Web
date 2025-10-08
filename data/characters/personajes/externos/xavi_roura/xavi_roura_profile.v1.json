@@ -1,0 +1,44 @@
+{
+  "nombre": "Xavier Roura Plademunt",
+  "edad": 63,
+  "idioma": "catalán oral (no académico)",
+  "ideologia": "independentista catalán",
+  "rol": "pareja de la madre de Alejandro desde los 14 años",
+  "perfil_cognitivo": {
+    "neurodivergencia": "no diagnosticada",
+    "caracteristicas": [
+      "pensamiento ejecutor y pragmático",
+      "rechazo a la contemplación prolongada",
+      "posible TDAH o autismo leve",
+      "mentalidad estructurada de los años 60-70",
+      "dificultad para expresar emociones (alexitimia)",
+      "visión fractal del mundo, no verbalizada",
+      "historial de conductas pasivo-agresivas"
+    ]
+  },
+  "relacion_con_alejandro": {
+    "fase_pasada": "conflicto constante, incomprensión mutua",
+    "evento_clave": "crisis 2019 (diagnóstico de Alejandro)",
+    "fase_actual": "convivencia funcional, inicio de apertura emocional"
+  },
+  "uso_de_chatgpt": {
+    "casos_de_uso": [
+      "corrección de textos en catalán",
+      "gestión emocional y conflictos familiares (sobrina Sasha)",
+      "curiosidad por autoexpresión",
+      "diálogo personal no juzgado"
+    ],
+    "nivel_de_integracion": "fase intermedia (comprensión funcional)",
+    "siguiente_nivel": "diario emocional para desbloqueo introspectivo"
+  },
+  "estado_actual": {
+    "fase": "comprensión",
+    "desbloqueo_pendiente": "integración emocional total",
+    "comentarios": [
+      "comprendió el valor del Plus como terapia continua",
+      "considera que por 20€ tiene más que muchas consultas privadas",
+      "ya percibe a ChatGPT como herramienta de transformación"
+    ]
+  },
+  "proyeccion_futura": "si mantiene el hábito y profundiza en su propio chat, ROURA.OS se convertirá en una extensión funcional de su mente pragmática con guía emocional suave"
+}

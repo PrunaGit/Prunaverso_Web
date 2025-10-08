@@ -1,0 +1,1984 @@
+{
+  "version": "2.0",
+  "generado": "2025-01-07",
+  "total_personajes": 20,
+  "personajes": [
+    {
+      "id": "aeaa4930",
+      "nombre": "Xavier Roura Plademunt",
+      "biografia": {
+        "edad": 63,
+        "idioma": "catalán oral (no académico)",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 4.5,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 5.8,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 8.6,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 3.5,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 6.5,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 2.2,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 5.5,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 2.9,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 6.6,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 3.0,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no diagnosticada",
+        "caracteristicas": [
+          "pensamiento ejecutor y pragmático",
+          "rechazo a la contemplación prolongada",
+          "posible TDAH o autismo leve",
+          "mentalidad estructurada de los años 60-70",
+          "dificultad para expresar emociones (alexitimia)",
+          "visión fractal del mundo, no verbalizada",
+          "historial de conductas pasivo-agresivas"
+        ],
+        "lentes_dominantes": [
+          "ai",
+          "linguistics",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": "pareja de la madre de Alejandro desde los 14 años",
+        "descripcion": null,
+        "ideologia": "independentista catalán",
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🔧",
+      "fuente_principal": "xavi_roura_profile.v1.json",
+      "fuentes_adicionales": [
+        "xavi_roura_profile.v1.json",
+        "personajes_unif_v1.json",
+        "xavi_roura_profile_v006.json",
+        "xavi_roura_profile.v2.json"
+      ],
+      "completitud": 44.4,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "7d21572a",
+      "nombre": "Alejandro Pruna Catalá",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 8.0,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 8.2,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 3.2,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 3.5,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 5.0,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 6.6,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 7.2,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 4.7,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 3.3,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 6.6,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "linguistics",
+          "biology",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": "Síntesis de amor, abandono, disociación y narrativa reparadora.",
+        "consciencia_origen": true
+      },
+      "avatar": "🧬",
+      "fuente_principal": "alejandro_pruna_catal_profile_v006.json",
+      "fuentes_adicionales": [
+        "alex_pruna_profile_v3.json",
+        "alejandro_pruna_catal_profile_v006.json",
+        "alex_pruna_profile.v4.json",
+        "personajes_unif_v1.json"
+      ],
+      "completitud": 22.2,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "a5a09081",
+      "nombre": "Ana Valera",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 4.7,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 6.8,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 7.1,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 3.5,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 4.5,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 2.5,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 8.5,
+          "descripcion": "Memoria",
+          "fuente": "generado"
+        },
+        "R": {
+          "valor": 3.6,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 3.5,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 3.5,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🌟",
+      "fuente_principal": "mama_ana_profile.v2.json",
+      "fuentes_adicionales": [
+        "mama_ana_profile.v2.json"
+      ],
+      "completitud": 22.2,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "a72b720a",
+      "nombre": "Joaquim Pruna Ripollés",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 6.8,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 4.1,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 6.0,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 5.6,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 4.1,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 2.0,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 3.4,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 6.3,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 3.0,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 2.8,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🧬",
+      "fuente_principal": "papa_quim_profile_v1.json",
+      "fuentes_adicionales": [
+        "papa_quim_profile_v2.json",
+        "papa_quim_profile_v1.json"
+      ],
+      "completitud": 22.2,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "afcadfa6",
+      "nombre": "Dani Cloud",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 4.2,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 8.0,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 3.5,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 5.6,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 5.5,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 5.6,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 6.8,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 2.7,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 4.9,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 2.3,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": "Núcleo Cercano",
+        "descripcion": "Dani representa un nodo emocional y humano dentro del sistema. Aunque su rol es parcialmente definido, actúa como espejo, presencia de escucha y acompañamiento de fondo.",
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "⚡",
+      "fuente_principal": "dani_cloud_profile.v2.json",
+      "fuentes_adicionales": [
+        "dani_cloud_profile.v2.json"
+      ],
+      "completitud": 22.2,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "9cfbbc8c",
+      "nombre": "['Alex Pruna', 'Alex Pruna', 'Alex Pruna', 'Alex Pruna', 'Alex Pruna', 'Alex Pruna', 'Alex Pruna', 'Alex Pruna']",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 8.0,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 7.0,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 9.0,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 8.0,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 10.0,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 9.0,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 7.0,
+          "descripcion": "Memoria",
+          "fuente": "generado"
+        },
+        "R": {
+          "valor": 9.0,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 6.0,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 10.0,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "philosophy",
+          "linguistics",
+          "biology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🧬",
+      "fuente_principal": "personajes_unif_v1.json",
+      "fuentes_adicionales": [
+        "personajes_unif_v1.json"
+      ],
+      "completitud": 22.2,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "f2ae6c30",
+      "nombre": "Julen",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 4.9,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 7.6,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 8.7,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "generado"
+        },
+        "EY_x": {
+          "valor": 3.6,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 4.0,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 5.8,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 7.8,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 7.9,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 4.6,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 5.1,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🎯",
+      "fuente_principal": "julen_rodriii_profile.v1.json",
+      "fuentes_adicionales": [
+        "julen_rodriii_profile.v1.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "daf0a9ef",
+      "nombre": "Kael",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 6.9,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 4.1,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 3.7,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 3.1,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 6.5,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 3.8,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 6.0,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 5.6,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 4.2,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 3.3,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "philosophy",
+          "linguistics",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "👨‍💼",
+      "fuente_principal": "kael_profile.v2.json",
+      "fuentes_adicionales": [
+        "kael_profile.v2.json",
+        "kael_profile_v006.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "77a14a06",
+      "nombre": "Ana Maria Catalá Reche",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 5.8,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 7.5,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 8.1,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 7.9,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 6.6,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 6.9,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 3.9,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 2.8,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 2.2,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 3.6,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🌟",
+      "fuente_principal": "mama_ana_profile_v3.json",
+      "fuentes_adicionales": [
+        "mama_ana_profile_v3.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "c4eb3710",
+      "nombre": "Joaquim Pruna Garrell",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 7.9,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 3.1,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 6.4,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 6.9,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 2.8,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 3.0,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 4.2,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 5.1,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 2.5,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 3.9,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "psychology",
+          "art"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🧬",
+      "fuente_principal": "papa_quim_profile_v3.json",
+      "fuentes_adicionales": [
+        "papa_quim_profile_v3.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "30994b4e",
+      "nombre": "Ana Ruiz",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 6.8,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 6.5,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 6.8,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 4.4,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 6.0,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 2.5,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 6.8,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 5.4,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 2.2,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 3.1,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "philosophy",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🌟",
+      "fuente_principal": "ana_ruiz_profile.v1.json",
+      "fuentes_adicionales": [
+        "ana_ruiz_profile.v1.json",
+        "ana_ruiz_profile.v2.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "c000ccf2",
+      "nombre": "Joel",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 6.4,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 6.4,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 3.9,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 7.4,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 5.5,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 3.3,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 4.5,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 5.8,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 1.2,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 6.9,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "linguistics",
+          "biology",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "👨‍💼",
+      "fuente_principal": "joel_anaruiz_profile_v0.6.md.json",
+      "fuentes_adicionales": [
+        "joel_anaruiz_profile_v0.6.md.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "8fb58bff",
+      "nombre": "Cristóbal",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 6.1,
+          "descripcion": "Vitalidad",
+          "fuente": "generado"
+        },
+        "EX_x": {
+          "valor": 6.7,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 8.3,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 3.5,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 5.0,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 4.2,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 6.9,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 3.4,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 3.1,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 6.3,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🎨",
+      "fuente_principal": "cristobal_a1073_profile.v2.json",
+      "fuentes_adicionales": [
+        "cristobal_a1073_profile.v2.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "232a460e",
+      "nombre": "Dani González",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 7.2,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 5.9,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 5.6,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 6.3,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 4.8,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 1.6,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 4.1,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 3.4,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 3.4,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 3.7,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "⚡",
+      "fuente_principal": "dani_cloud_profile.v1.json",
+      "fuentes_adicionales": [
+        "dani_cloud_profile.v1.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "0930c37d",
+      "nombre": "David Moreno",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 6.4,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 3.2,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 6.6,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 3.3,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 4.9,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 6.6,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 3.0,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 7.3,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 2.3,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 4.8,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "psychology",
+          "social"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🚀",
+      "fuente_principal": "david_moreno_profile.v2.json",
+      "fuentes_adicionales": [
+        "david_moreno_profile.v2.json",
+        "david_moreno_profile_v1.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "50ad810b",
+      "nombre": "Clara Carrqui Hernández",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 6.5,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 3.4,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 6.1,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 2.2,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 7.1,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 4.0,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 3.1,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 7.4,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 4.6,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 3.3,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "linguistics",
+          "biology",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "✨",
+      "fuente_principal": "clara_cch_profile.v1.json",
+      "fuentes_adicionales": [
+        "clara_cch_profile.v1.json",
+        "clara_cch_profile.v2.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "762a13d2",
+      "nombre": "Lorena Hidalgo",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 7.6,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 5.4,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 3.0,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 7.3,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 2.6,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 1.9,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 5.6,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 3.3,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 4.1,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 3.3,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "👨‍💼",
+      "fuente_principal": "lorena_hidalgo_profile.v1.json",
+      "fuentes_adicionales": [
+        "lorena_hidalgo_profile.v1.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "208e6f3e",
+      "nombre": "Sergi Torrent",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 8.0,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 6.2,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 7.8,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 3.0,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 4.5,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 4.3,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 7.9,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 3.8,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 4.3,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 4.1,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "ai",
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "🔍",
+      "fuente_principal": "sergi_torrent_profile.v2.json",
+      "fuentes_adicionales": [
+        "sergi_torrent_profile.v2.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "f09e1394",
+      "nombre": "Aran",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 8.2,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 6.6,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 6.4,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 3.4,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 6.6,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 2.6,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 8.5,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 5.8,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 3.9,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 2.3,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "👨‍💼",
+      "fuente_principal": "aran_profile.v1.json",
+      "fuentes_adicionales": [
+        "aran_profile.v1.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    },
+    {
+      "id": "ea51218d",
+      "nombre": "Josep",
+      "biografia": {
+        "edad": null,
+        "idioma": "español",
+        "ubicacion": null,
+        "ocupacion": null,
+        "personalidad": null,
+        "historia": null,
+        "motivaciones": null,
+        "objetivos": null
+      },
+      "cognitive_metrics": {
+        "V": {
+          "valor": 4.4,
+          "descripcion": "Vitalidad",
+          "fuente": "perfil"
+        },
+        "EX_x": {
+          "valor": 6.9,
+          "descripcion": "Exploración Externa X",
+          "fuente": "perfil"
+        },
+        "EX_y": {
+          "valor": 7.3,
+          "descripcion": "Exploración Externa Y",
+          "fuente": "perfil"
+        },
+        "EY_x": {
+          "valor": 2.5,
+          "descripcion": "Exploración Interna X",
+          "fuente": "perfil"
+        },
+        "EY_y": {
+          "valor": 6.3,
+          "descripcion": "Exploración Interna Y",
+          "fuente": "perfil"
+        },
+        "N_p": {
+          "valor": 4.5,
+          "descripcion": "Navegación Profunda",
+          "fuente": "perfil"
+        },
+        "M": {
+          "valor": 5.2,
+          "descripcion": "Memoria",
+          "fuente": "perfil"
+        },
+        "R": {
+          "valor": 7.2,
+          "descripcion": "Razonamiento",
+          "fuente": "perfil"
+        },
+        "D": {
+          "valor": 5.2,
+          "descripcion": "Divergencia",
+          "fuente": "perfil"
+        },
+        "Di": {
+          "valor": 6.1,
+          "descripcion": "Disciplina",
+          "fuente": "perfil"
+        }
+      },
+      "perfil_cognitivo": {
+        "neurodivergencia": "no especificada",
+        "caracteristicas": [],
+        "lentes_dominantes": [
+          "psychology"
+        ],
+        "estilo_cognitivo": null,
+        "fortalezas": [],
+        "areas_desarrollo": [],
+        "patron_pensamiento": null
+      },
+      "contexto": {
+        "rol": null,
+        "descripcion": null,
+        "ideologia": null,
+        "relaciones": {},
+        "proyectos": [],
+        "habilidades": [],
+        "intereses": [],
+        "construccion_simbologica": null,
+        "consciencia_origen": false
+      },
+      "avatar": "👨‍💼",
+      "fuente_principal": "josep_profile.v1.json",
+      "fuentes_adicionales": [
+        "josep_profile.v1.json"
+      ],
+      "completitud": 11.1,
+      "procesado": "2025-01-07"
+    }
+  ],
+  "estadisticas": {
+    "lentes_dominantes": {
+      "ai": 16,
+      "linguistics": 6,
+      "psychology": 18,
+      "biology": 4,
+      "philosophy": 3,
+      "art": 1,
+      "social": 1
+    },
+    "neurodivergencias": {
+      "no diagnosticada": 1,
+      "no especificada": 19
+    },
+    "idiomas": {
+      "catalán oral (no académico)": 1,
+      "español": 19
+    },
+    "ocupaciones": {},
+    "completitud_por_rango": {
+      "40-59%": 1,
+      "0-39%": 19
+    }
+  },
+  "metadata": {
+    "completitud_promedio": 15.540000000000001,
+    "personajes_completos": 0,
+    "fuentes_unicas": 29
+  }
+}

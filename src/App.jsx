@@ -1,5 +1,16 @@
-import Router from './router'
+import { RouterProvider } from 'react-router-dom'
+import router from './router'
+import LensAtmosphereManager from './components/LensAtmosphereManagerSimple'
+import Heartbeat from './components/Heartbeat'
 
 export default function App() {
-  return <Router />
+  console.log('🚀 App component loaded')
+  
+  return (
+    <>
+      <LensAtmosphereManager />
+      <Heartbeat />
+      <RouterProvider router={router} />
+    </>
+  )
 }

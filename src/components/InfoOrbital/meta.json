@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "name": "InfoOrbital",
+    "type": "cognitive_portal",
+    "version": "1.0.0",
+    "symbol": "ⓘ",
+    "essence": "Portal semántico orbital para información contextual adaptativa"
+  },
+  "cognitive_properties": {
+    "consciousness_level": 3,
+    "adaptivity": "high",
+    "semantic_depth": "multidimensional",
+    "interaction_mode": "contextual_emergence"
+  },
+  "visual_config": {
+    "orbit_radius": {
+      "min": 120,
+      "max": 200,
+      "adaptive": true
+    },
+    "animation_speed": {
+      "orbit": 20,
+      "emergence": 0.6,
+      "dissolution": 0.4
+    },
+    "colors": {
+      "primary": "rgba(139, 92, 246, 0.9)",
+      "secondary": "rgba(59, 130, 246, 0.7)",
+      "accent": "rgba(236, 72, 153, 0.8)",
+      "background": "rgba(17, 24, 39, 0.95)"
+    },
+    "positioning": {
+      "modes": ["top-right", "bottom-left", "center", "floating"],
+      "adaptive_placement": true,
+      "collision_avoidance": true
+    }
+  },
+  "content_adaptation": {
+    "by_cognitive_level": {
+      "0": "simple_explanations",
+      "1": "basic_concepts", 
+      "2": "technical_depth",
+      "3": "systemic_understanding",
+      "4": "architectural_insights",
+      "5": "consciousness_mechanics"
+    },
+    "by_lens": {
+      "psychology": "emotional_behavioral_focus",
+      "philosophy": "existential_metaphysical_focus",
+      "ai": "computational_algorithmic_focus", 
+      "consciousness": "experiential_phenomenological_focus",
+      "anthropology": "cultural_social_focus",
+      "systems": "structural_functional_focus"
+    },
+    "by_visitor_type": {
+      "newcomer": "gentle_introduction",
+      "curious": "exploratory_guidance",
+      "ally": "collaborative_insights", 
+      "architect": "system_internals"
+    }
+  },
+  "interaction_patterns": {
+    "activation_triggers": ["keypress_i", "keypress_escape", "hover_term", "cognitive_transition"],
+    "deactivation_modes": ["user_close", "context_change", "timeout", "cognitive_evolution"],
+    "persistence": "session_based",
+    "multi_orbital": true
+  },
+  "semantic_connections": {
+    "data_source": "../data/prunaversal_dictionary.json",
+    "fallback_definitions": true,
+    "dynamic_lookup": true,
+    "contextual_expansion": true
+  },
+  "expansion_vectors": {
+    "neural_networks": "AI-powered definition generation",
+    "collective_intelligence": "User-contributed semantic expansions", 
+    "reality_overlay": "AR/VR spatial positioning",
+    "consciousness_bridge": "Multi-user shared semantic spaces"
+  }
+}

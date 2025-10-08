@@ -1,0 +1,37 @@
+{
+  "id": "CRISTOBAL_A1073_V3",
+  "alias": ["Cristo", "A1073", "Poli Humano"],
+  "version": "v3",
+  "categoria": "nucleo_cercano",
+  "biografia": {
+    "nombre_completo": "Cristóbal Javier Sánchez Pérez",
+    "nacimiento": "1975-06-17",
+    "lugar": "Malgrat de Mar",
+    "familia": {
+      "esposa": "Ana María Jiménez de Mano",
+      "hijas": ["Paula (25)", "Claudia (12)"]
+    },
+    "profesion": "Agente Policía Local (TIP A1073), coordinador de servicios",
+    "trayectoria": ["culturista", "entrenador personal", "formador"]
+  },
+  "cognitivo_afectivo": {
+    "fortalezas": ["gestión de crisis", "respeto ganado", "equilibrio autoridad-humanidad"],
+    "desafios": ["autoexigencia", "dificultad para delegar", "sensibilidad a críticas"],
+    "necesidades": ["autocuidado", "redefinir fuerza", "conexión emocional auténtica"]
+  },
+  "prunIA": {
+    "cristos_os": "mentalidad como sistema operativo optimizado",
+    "cristo_gpt": "sparring mental, entrenador cognitivo",
+    "prun_ia": "motor de click cognitivo e integración"
+  },
+  "simbolismo": {
+    "arquetipo": "adulto no opresivo",
+    "funcion": "grieta en el sistema",
+    "rol": "buen policía posible"
+  },
+  "frases_tipo": [
+    "Ajusta tu carga mental como ajustas el press de banca.",
+    "Ser fuerte también es saber pedir ayuda.",
+    "No es cambiar quién eres, es optimizar tu propia estrategia."
+  ]
+}

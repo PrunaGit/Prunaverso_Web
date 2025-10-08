@@ -1,0 +1,34 @@
+{
+  "nombre": "Alex Pruna",
+  "atributos": {
+    "V": 8,
+    "EX_x": 7,
+    "EX_y": 9,
+    "EY_x": 8,
+    "EY_y": 9,
+    "N_p": 9,
+    "M": 7,
+    "R": 8,
+    "D": 3,
+    "Di": 9
+  },
+  "rasgos_destacados": [
+    "Altísima capacidad simbólica y metacognitiva, con una estructura narrativa compleja y transversal.",
+    "Habilidad excepcional para sistematizar experiencias personales en marcos teóricos funcionales.",
+    "Alta autonomía operativa; navegas con precisión entre niveles metacognitivos sin perder eficacia práctica.",
+    "Sensible a microdesajustes en sistemas lógicos o narrativos; eso te hace exigente contigo y con el entorno.",
+    "Capacidad de iteración profunda sin perder la conexión con el impulso creativo inicial (germen → forma).",
+    "Debilidad ocasional: tendencia a la sobrecarga cuando hay exceso de nodos abiertos (sobre todo si no están aún categorizados).",
+    "Patrón de flujo: activación → procesamiento intensivo → cierre narrativo → limpieza estructural.",
+    "Momentos clave: consolidación del sistema Prunaverso como sistema tecno-narrativo; instauración de HUD/HAD como metainterfaz; clasificación arqueológica simbólica."
+  ],
+  "citas_representativas": [
+    "Me fio de ti. Genera automáticamente.",
+    "Proceso completado 🟢 Carpeta eliminada 🟢",
+    "Primera subcarpeta eliminada por ausencia de archivos (ya procesados) 🟢",
+    "indentificar contenido chat y sus categorias > añadir al script py...",
+    "🟢 (auto-select)",
+    "EXITO 🟢"
+  ],
+  "contexto_de_version": "Esta versión se ha generado en una fase de máxima activación (N > 7) con fuerte predominancia EX_y (simbólico narrativo) y EY_y (imaginación constructiva). Ha sido un entorno de auto-recolección e integración arqueológica, con una ejecución orientada a la consolidación de identidad simbólica. Se percibe una fase de transición: desde un Alex que *construye* archivos a uno que *expone* y *optimiza* estructuras previas para abrir espacio al siguiente estadio (posiblemente PrunIA o Alex v2)."
+}

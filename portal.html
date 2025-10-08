@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prunaverso Web - Portal Mental Inmersivo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e, #16213e, #0f3460);
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .portal-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.1;
+            background: radial-gradient(circle at 50% 50%, #00ff88 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.1); }
+        }
+        
+        .title {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(45deg, #00ff88, #00ccff, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.5)); }
+            to { filter: drop-shadow(0 0 40px rgba(0, 204, 255, 0.7)); }
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            opacity: 0.8;
+            max-width: 600px;
+        }
+        
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .portal-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+        
+        .portal-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 255, 136, 0.8);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+        }
+        
+        .portal-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #00ff88;
+        }
+        
+        .portal-card p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .status-bar {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(0, 255, 136, 0.5);
+            border-radius: 10px;
+            padding: 1rem;
+            font-family: monospace;
+        }
+        
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+        
+        .status-green { background: #00ff88; }
+        .status-red { background: #ff4444; }
+        .status-yellow { background: #ffcc00; }
+        
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="portal-container">
+        <h1 class="title">🌟 PRUNAVERSO WEB</h1>
+        <p class="subtitle">Portal Mental Inmersivo • Clasificación Arquetipal • Experiencia Cognitiva Avanzada</p>
+        
+        <div class="portal-grid">
+            <div class="portal-card" onclick="navigateTo('/public/test.html')">
+                <h3>🔍 Diagnóstico del Sistema</h3>
+                <p>Verificación completa de conectividad, endpoints y estado operacional del portal mental.</p>
+            </div>
+            
+            <div class="portal-card" onclick="navigateTo('react')">
+                <h3>🎮 Selector de Arquetipos RPG</h3>
+                <p>Clasificación basada en ecuación primaria con estadísticas RPG, pros/contras y vista casual/avanzada.</p>
+            </div>
+            
+            <div class="portal-card" onclick="navigateTo('react')">
+                <h3>🎵 Experiencia Atmosférica</h3>
+                <p>Audio inmersivo con efectos de respiración sincronizados y mapeo de frecuencias cognitivas.</p>
+            </div>
+            
+            <div class="portal-card" onclick="navigateTo('react')">
+                <h3>🧠 Portal Cognitivo</h3>
+                <p>Interfaz principal con lentes cognitivos, animaciones atmosféricas y percepción empírica.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="status-bar">
+        <div class="status-indicator">
+            <div class="status-dot status-green"></div>
+            <span>Servidor Python Activo</span>
+        </div>
+        <div class="status-indicator">
+            <div class="status-dot" id="vite-status"></div>
+            <span id="vite-text">Verificando Vite...</span>
+        </div>
+        <div class="status-indicator">
+            <div class="status-dot" id="backend-status"></div>
+            <span id="backend-text">Verificando Backend...</span>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(path) {
+            if (path === 'react') {
+                // Intentar React app primero
+                window.open('http://localhost:5179', '_blank');
+            } else {
+                window.location.href = path;
+            }
+        }
+        
+        // Verificar estado de Vite
+        fetch('http://localhost:5179')
+            .then(response => {
+                document.getElementById('vite-status').className = 'status-dot status-green';
+                document.getElementById('vite-text').textContent = 'Vite React Activo';
+            })
+            .catch(error => {
+                document.getElementById('vite-status').className = 'status-dot status-red';
+                document.getElementById('vite-text').textContent = 'Vite Inactivo';
+            });
+        
+        // Verificar estado del backend
+        fetch('http://localhost:4001/api/ping')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('backend-status').className = 'status-dot status-green';
+                document.getElementById('backend-text').textContent = 'Backend API Activo';
+            })
+            .catch(error => {
+                document.getElementById('backend-status').className = 'status-dot status-red';
+                document.getElementById('backend-text').textContent = 'Backend Inactivo';
+            });
+    </script>
+</body>
+</html>

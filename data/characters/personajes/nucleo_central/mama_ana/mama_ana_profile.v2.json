@@ -1,0 +1,12 @@
+{
+    "nombre": "Ana Valera",
+    "rol_materno": "Aceptado tras el nacimiento, no deseado inicialmente.",
+    "narrativa": "Vive en el presente sin estructura narrativa consolidada.",
+    "trauma_sospechado": "Asumió el rol de cuidadora desde la infancia.",
+    "atributos": {
+        "cuidadora": true,
+        "resiliente": true,
+        "analfabetismo_narrativo": true
+    },
+    "vinculo_con_alejandro": "Presente físicamente, afectiva desde el cuidado pero sin códigos simbólicos complejos."
+}

@@ -1,0 +1,14 @@
+{
+    "usuario": "alex_pruna",
+    "fecha_informe": "2024-07-30",
+    "observaciones": {
+        "estado_percibido": "normalidad o eutimia",
+        "alerta_interna": "posible distorsión del juicio por episodio anterior",
+        "evaluacion_externa": "necesaria para confirmar"
+    },
+    "seguimiento": {
+        "fase": "post-hipomanía",
+        "recomendacion": "mantener tratamiento, verificar con clínico",
+        "nota": "no confiar sólo en percepción subjetiva al alta"
+    }
+}

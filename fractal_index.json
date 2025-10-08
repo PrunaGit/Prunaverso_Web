@@ -1,0 +1,364 @@
+{
+  "metadata": {
+    "generated_at": "2025-10-08T08:27:52.993Z",
+    "version": "1.0.0",
+    "total_modules": 6,
+    "cognitive_depth": 3,
+    "components_count": 3,
+    "hooks_count": 2,
+    "pages_count": 1
+  },
+  "modules": {
+    "component.CognitiveOnboarding": {
+      "type": "component",
+      "path": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso_Web\\src\\components\\CognitiveOnboarding",
+      "files": {
+        "index.jsx": {
+          "exists": true,
+          "size": 17604,
+          "modified": "2025-10-08T08:19:26.142Z"
+        },
+        "README.md": {
+          "exists": true,
+          "size": 2854,
+          "modified": "2025-10-08T08:11:45.986Z",
+          "first_line": "# 🧠 CognitiveOnboarding - Portal de Calibración de Conciencia\r"
+        },
+        "flow.json": {
+          "exists": true,
+          "size": 4580,
+          "modified": "2025-10-08T08:12:14.116Z",
+          "metadata": {
+            "name": "CognitiveOnboarding",
+            "type": "consciousness_calibrator",
+            "version": "1.0.0",
+            "symbol": "🧠⚡",
+            "essence": "Portal de primera impresión y calibración cognitiva"
+          }
+        }
+      },
+      "cognitive_properties": {
+        "sensitivity": "high",
+        "adaptability": "maximum",
+        "learning_rate": "fast",
+        "memory_formation": "persistent"
+      },
+      "connections": [
+        {
+          "type": "consume",
+          "targets": "`userProfiles.json`, `archetypes.json`"
+        },
+        {
+          "type": "export",
+          "targets": "Perfil cognitivo completo para `useVisitorProfile`"
+        }
+      ]
+    },
+    "component.GameControls": {
+      "type": "component",
+      "path": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso_Web\\src\\components\\GameControls",
+      "files": {
+        "index.jsx": {
+          "exists": true,
+          "size": 5207,
+          "modified": "2025-10-08T03:52:34.444Z"
+        },
+        "README.md": {
+          "exists": true,
+          "size": 2155,
+          "modified": "2025-10-08T08:09:39.140Z",
+          "first_line": "# 🎮 GameControls - Sistema de Navegación Inmersiva\r"
+        },
+        "config.json": {
+          "exists": true,
+          "size": 3137,
+          "modified": "2025-10-08T08:10:00.267Z",
+          "metadata": {
+            "name": "GameControls",
+            "type": "immersive_interface",
+            "version": "1.0.0",
+            "symbol": "🎮",
+            "essence": "Sistema de navegación inmersiva con controles gaming"
+          }
+        }
+      },
+      "cognitive_properties": {
+        "accessibility_level": "universal",
+        "immersion_factor": "high",
+        "learning_curve": "gentle",
+        "emotional_engagement": "visceral"
+      },
+      "connections": [
+        {
+          "type": "consume",
+          "targets": "`useVisitorProfile` para adaptación de controles"
+        },
+        {
+          "type": "export",
+          "targets": "Hook `useKeyboardControls` y componente visual"
+        }
+      ]
+    },
+    "component.InfoOrbital": {
+      "type": "component",
+      "path": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso_Web\\src\\components\\InfoOrbital",
+      "files": {
+        "index.jsx": {
+          "exists": true,
+          "size": 9152,
+          "modified": "2025-10-08T08:19:46.186Z"
+        },
+        "README.md": {
+          "exists": true,
+          "size": 2148,
+          "modified": "2025-10-08T08:08:22.483Z",
+          "first_line": "# 🌀 InfoOrbital - Portal Semántico Cognitivo\r"
+        },
+        "meta.json": {
+          "exists": true,
+          "size": 2591,
+          "modified": "2025-10-08T08:08:42.072Z",
+          "metadata": {
+            "name": "InfoOrbital",
+            "type": "cognitive_portal",
+            "version": "1.0.0",
+            "symbol": "ⓘ",
+            "essence": "Portal semántico orbital para información contextual adaptativa"
+          }
+        }
+      },
+      "cognitive_properties": {
+        "consciousness_level": 3,
+        "adaptivity": "high",
+        "semantic_depth": "multidimensional",
+        "interaction_mode": "contextual_emergence"
+      },
+      "connections": [
+        {
+          "type": "consume",
+          "targets": "`prunaversal_dictionary.json`, `useVisitorProfile`, `useCognitiveLens`"
+        },
+        {
+          "type": "export",
+          "targets": "Componente InfoOrbital para uso global"
+        }
+      ]
+    },
+    "hook.useCognitiveLens": {
+      "type": "hook",
+      "path": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso_Web\\src\\hooks\\useCognitiveLens",
+      "files": {
+        "index.jsx": {
+          "exists": true,
+          "size": 4948,
+          "modified": "2025-10-08T02:50:36.796Z"
+        }
+      },
+      "cognitive_properties": {},
+      "connections": []
+    },
+    "hook.useVisitorProfile": {
+      "type": "hook",
+      "path": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso_Web\\src\\hooks\\useVisitorProfile",
+      "files": {
+        "index.jsx": {
+          "exists": true,
+          "size": 9352,
+          "modified": "2025-10-08T08:20:20.187Z"
+        },
+        "README.md": {
+          "exists": true,
+          "size": 3183,
+          "modified": "2025-10-08T08:13:18.865Z",
+          "first_line": "# 🧬 useVisitorProfile - Motor de Conciencia Adaptativa\r"
+        },
+        "schema.json": {
+          "exists": true,
+          "size": 4342,
+          "modified": "2025-10-08T08:13:45.577Z",
+          "metadata": {
+            "name": "useVisitorProfile",
+            "type": "consciousness_engine",
+            "version": "1.0.0",
+            "symbol": "🧬",
+            "essence": "Motor de conciencia adaptativa y memoria cognitiva persistente"
+          }
+        }
+      },
+      "cognitive_properties": {
+        "memory_type": "episodic_semantic",
+        "adaptation_speed": "real_time",
+        "learning_capacity": "unlimited",
+        "persistence_level": "permanent"
+      },
+      "connections": [
+        {
+          "type": "consume",
+          "targets": "`userProfiles.json`, `archetypes.json`, localStorage"
+        },
+        {
+          "type": "export",
+          "targets": "Hook completo con estado y funciones"
+        }
+      ]
+    },
+    "page.PortalMain": {
+      "type": "page",
+      "path": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso_Web\\src\\pages\\PortalMain",
+      "files": {
+        "index.jsx": {
+          "exists": true,
+          "size": 12195,
+          "modified": "2025-10-08T08:19:35.235Z"
+        },
+        "README.md": {
+          "exists": true,
+          "size": 3487,
+          "modified": "2025-10-08T08:14:44.443Z",
+          "first_line": "# 🌀 PortalMain - Centro de Comando del Prunaverso\r"
+        },
+        "flow.json": {
+          "exists": true,
+          "size": 5091,
+          "modified": "2025-10-08T08:15:13.646Z",
+          "metadata": {
+            "name": "PortalMain",
+            "type": "adaptive_interface",
+            "version": "1.0.0",
+            "symbol": "🌀",
+            "essence": "Centro de comando adaptativo del Prunaverso"
+          }
+        }
+      },
+      "cognitive_properties": {
+        "adaptivity_level": "maximum",
+        "complexity_scaling": "dynamic",
+        "personalization_depth": "deep",
+        "evolution_responsiveness": "real_time"
+      },
+      "connections": [
+        {
+          "type": "consume",
+          "targets": "`useVisitorProfile`, `GameControls`, `InfoOrbital`"
+        },
+        {
+          "type": "export",
+          "targets": "Página principal del portal"
+        }
+      ]
+    }
+  },
+  "connections": {
+    "component.CognitiveOnboarding": [
+      {
+        "type": "consume",
+        "targets": "`userProfiles.json`, `archetypes.json`"
+      },
+      {
+        "type": "export",
+        "targets": "Perfil cognitivo completo para `useVisitorProfile`"
+      }
+    ],
+    "component.GameControls": [
+      {
+        "type": "consume",
+        "targets": "`useVisitorProfile` para adaptación de controles"
+      },
+      {
+        "type": "export",
+        "targets": "Hook `useKeyboardControls` y componente visual"
+      }
+    ],
+    "component.InfoOrbital": [
+      {
+        "type": "consume",
+        "targets": "`prunaversal_dictionary.json`, `useVisitorProfile`, `useCognitiveLens`"
+      },
+      {
+        "type": "export",
+        "targets": "Componente InfoOrbital para uso global"
+      }
+    ],
+    "hook.useVisitorProfile": [
+      {
+        "type": "consume",
+        "targets": "`userProfiles.json`, `archetypes.json`, localStorage"
+      },
+      {
+        "type": "export",
+        "targets": "Hook completo con estado y funciones"
+      }
+    ],
+    "page.PortalMain": [
+      {
+        "type": "consume",
+        "targets": "`useVisitorProfile`, `GameControls`, `InfoOrbital`"
+      },
+      {
+        "type": "export",
+        "targets": "Página principal del portal"
+      }
+    ]
+  },
+  "evolution_map": {
+    "cognitive_levels": [
+      {
+        "key": "component.CognitiveOnboarding",
+        "level": 0
+      },
+      {
+        "key": "component.GameControls",
+        "level": 0
+      },
+      {
+        "key": "component.InfoOrbital",
+        "level": 3
+      },
+      {
+        "key": "hook.useCognitiveLens",
+        "level": 0
+      },
+      {
+        "key": "hook.useVisitorProfile",
+        "level": 0
+      },
+      {
+        "key": "page.PortalMain",
+        "level": 0
+      }
+    ],
+    "max_level": 3,
+    "expansion_vectors": {
+      "component.CognitiveOnboarding": {
+        "ai_personality": "Machine learning personality detection",
+        "biometric_integration": "Physiological state awareness",
+        "social_onboarding": "Collaborative personality discovery",
+        "adaptive_questioning": "Dynamic question generation based on responses"
+      },
+      "component.GameControls": {
+        "custom_mappings": "User-defined control schemes",
+        "ai_adaptation": "Learning user preferences",
+        "social_gaming": "Collaborative control sharing",
+        "vr_integration": "Spatial gesture controls"
+      },
+      "component.InfoOrbital": {
+        "neural_networks": "AI-powered definition generation",
+        "collective_intelligence": "User-contributed semantic expansions",
+        "reality_overlay": "AR/VR spatial positioning",
+        "consciousness_bridge": "Multi-user shared semantic spaces"
+      },
+      "hook.useVisitorProfile": {
+        "machine_learning": "Behavioral pattern recognition for auto-adaptation",
+        "social_cognition": "Multi-user profile interactions and shared memories",
+        "temporal_analytics": "Long-term cognitive evolution tracking and prediction",
+        "neural_interface": "Direct brain-computer interface for profile updates"
+      },
+      "page.PortalMain": {
+        "ai_recommendations": "Predictive menu suggestions based on behavior",
+        "collaborative_spaces": "Real-time multi-user portal sharing",
+        "immersive_environments": "3D/VR portal navigation",
+        "neural_adaptation": "Direct brain-computer interface for menu control"
+      }
+    }
+  }
+}

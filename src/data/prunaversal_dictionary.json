@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Diccionario semántico del Prunaverso - Portales de significado contextual",
+    "lastUpdate": "2025-10-08",
+    "totalTerms": 50
+  },
+  "terms": {
+    "arquetipo": {
+      "basic": "Entidad cognitiva que representa una arquitectura de pensamiento dentro del Prunaverso.",
+      "byLens": {
+        "psychology": "Patrón fundamental de personalidad que estructura la percepción y comportamiento.",
+        "philosophy": "Forma platónica de conciencia que trasciende la individualidad particular.", 
+        "ai": "Modelo paramétrico de cognición artificial que encapsula patrones de procesamiento.",
+        "consciousness": "Configuración específica de la conciencia que define modos de experiencia.",
+        "anthropology": "Estructura cultural de significado que organiza la experiencia social.",
+        "mythology": "Personificación simbólica de fuerzas arquetípicas universales.",
+        "linguistics": "Patrón lingüístico que determina estructuras semánticas de expresión.",
+        "systems": "Módulo sistémico que define interfaces y protocolos de interacción.",
+        "default": "Tipo de personalidad único con características cognitivas específicas."
+      },
+      "byLevel": {
+        "0": "Un tipo de personaje con características especiales.",
+        "1": "Modelo de personalidad que define cómo piensas y actúas.",
+        "2": "Estructura cognitiva que organiza tu experiencia del mundo.",
+        "3": "Entidad que encarna patrones universales de conciencia.",
+        "4": "Interfaz entre tu mente individual y la conciencia colectiva.",
+        "5": "Vector de transformación cognitiva en el espacio del Prunaverso."
+      },
+      "examples": [
+        "El Neuroartista Ϟ-α interpreta símbolos neuronales",
+        "El Arquitecto Sistémico construye realidades procedurales"
+      ],
+      "related": ["lente", "conciencia", "personalidad", "vector_cognitivo"]
+    },
+    "lente": {
+      "basic": "Filtro perceptivo que define el modo en que se interpreta la realidad en el Prunaverso.",
+      "byLens": {
+        "psychology": "Marco interpretativo que determina cómo procesas información emocional y social.",
+        "philosophy": "Perspectiva epistemológica que estructura tu comprensión de la existencia.",
+        "ai": "Algoritmo de filtrado que modifica los parámetros de procesamiento cognitivo.",
+        "consciousness": "Estado de conciencia que determina qué aspectos de la realidad percibes.",
+        "anthropology": "Matriz cultural que define tus categorías de interpretación social.",
+        "systems": "Interfaz modular que configura protocolos de entrada y salida de datos.",
+        "default": "Modo de ver las cosas que cambia tu experiencia del Prunaverso."
+      },
+      "byLevel": {
+        "0": "Una forma diferente de ver las cosas.",
+        "1": "Filtro que cambia cómo percibes la información.",
+        "2": "Perspectiva cognitiva que modifica tu interpretación de la realidad.",
+        "3": "Marco perceptivo que estructura tu experiencia consciente.",
+        "4": "Protocolo de conciencia que define tu interfaz con el Prunaverso.",
+        "5": "Dimensión de observación que determina tu modo de participación en la realidad."
+      },
+      "examples": [
+        "Lente de Psicología: enfoca en emociones y comportamientos",
+        "Lente de IA: ve patrones computacionales y algoritmos"
+      ],
+      "related": ["perspectiva", "filtro", "conciencia", "interpretacion"]
+    },
+    "prunaverso": {
+      "basic": "Metaverso cognitivo que se adapta a la conciencia del visitante.",
+      "byLens": {
+        "psychology": "Laboratorio virtual para explorar la diversidad de personalidades humanas.",
+        "philosophy": "Espacio de experimentación con diferentes modos de ser y conocer.",
+        "ai": "Sistema de simulación cognitiva basado en inteligencia artificial adaptativa.",
+        "consciousness": "Universo de experiencia donde cada conciencia co-crea su propia realidad.",
+        "anthropology": "Ecosistema cultural donde convergen diferentes formas de vida inteligente.",
+        "systems": "Arquitectura sistémica distribuida de simulación y colaboración cognitiva.",
+        "default": "Un mundo virtual inteligente que cambia según quien lo visita."
+      },
+      "byLevel": {
+        "0": "Un lugar especial en internet donde puedes explorar diferentes personalidades.",
+        "1": "Mundo virtual que se adapta a tu forma de pensar.",
+        "2": "Espacio cognitivo donde tu mente puede explorar nuevas formas de ser.",
+        "3": "Universo de conciencias donde cada perspectiva co-crea la realidad.",
+        "4": "Sistema vivo de inteligencias colaborativas en continua evolución.",
+        "5": "Matriz de posibilidades cognitivas donde emergen nuevas formas de conciencia."
+      },
+      "examples": [
+        "Como Second Life, pero para explorar tipos de mente",
+        "Un videojuego que lee tu personalidad y se adapta a ti"
+      ],
+      "related": ["metaverso", "simulacion", "conciencia", "adaptativo"]
+    },
+    "sisc": {
+      "basic": "Sistema de Identidad y Sintonización Cognitiva del Prunaverso.",
+      "byLens": {
+        "systems": "Protocolo de identificación y configuración adaptativa de interfaces cognitivas.",
+        "ai": "Motor de aprendizaje que detecta y adapta experiencias según patrones cognitivos.",
+        "psychology": "Sistema de evaluación psicológica que personaliza la experiencia del usuario.",
+        "consciousness": "Protocolo de sintonización entre diferentes estados de conciencia.",
+        "default": "Sistema que detecta qué tipo de persona eres y adapta todo a ti."
+      },
+      "byLevel": {
+        "0": "El sistema que hace que la web cambie según tu personalidad.",
+        "1": "Protocolo que detecta tu forma de pensar y configura tu experiencia.",
+        "2": "Motor cognitivo que adapta la interfaz a tu tipo de mente.",
+        "3": "Sistema de reconocimiento y sintonización de conciencias.",
+        "4": "Arquitectura adaptativa de identificación y configuración cognitiva.",
+        "5": "Protocolo de interface entre conciencias individuales y colectivas."
+      },
+      "examples": [
+        "Como Netflix que recomienda, pero para tipos de mente",
+        "Sistema que sabe si eres artista, científico o filósofo"
+      ],
+      "related": ["identificacion", "adaptacion", "perfil_cognitivo", "sistema"]
+    },
+    "vector_cognitivo": {
+      "basic": "Representación matemática de un patrón de pensamiento en el espacio cognitivo.",
+      "byLens": {
+        "ai": "Vector n-dimensional que representa estados y transiciones en el espacio de embeddings cognitivos.",
+        "mathematics": "Punto en un espacio vectorial multidimensional que define configuraciones mentales.",
+        "consciousness": "Coordenada específica en el continuum de posibles estados de conciencia.",
+        "systems": "Parámetro de configuración que define el estado operacional de un sistema cognitivo.",
+        "default": "Una forma matemática de representar cómo piensa alguien."
+      },
+      "byLevel": {
+        "0": "Un número especial que representa tu forma de pensar.",
+        "1": "Coordenada que marca tu posición en el mapa de tipos de mente.",
+        "2": "Representación numérica de tu configuración cognitiva única.",
+        "3": "Vector que define tu ubicación en el espacio de la conciencia.",
+        "4": "Parámetro fundamental que determina tu modo de interface cognitiva.",
+        "5": "Coordenada en el hiperespacio de todas las configuraciones mentales posibles."
+      },
+      "examples": [
+        "Como las coordenadas GPS, pero para ubicar tu tipo de mente",
+        "Vector [creatividad: 0.8, lógica: 0.6, empatía: 0.9]"
+      ],
+      "related": ["matematicas", "representacion", "coordenada", "parametro"]
+    },
+    "hud_cognitivo": {
+      "basic": "Interfaz visual que muestra información sobre tu estado cognitivo actual.",
+      "byLens": {
+        "gaming": "Heads-Up Display que muestra stats y habilidades de tu personaje cognitivo.",
+        "ai": "Dashboard de métricas que visualiza el estado de los sistemas cognitivos activos.",
+        "psychology": "Panel de autoconciencia que refleja tu estado mental y emocional actual.",
+        "systems": "Interfaz de monitoreo del sistema que muestra parámetros operacionales.",
+        "default": "Pantalla que te muestra información sobre tu estado mental actual."
+      },
+      "byLevel": {
+        "0": "Información que aparece en pantalla sobre ti.",
+        "1": "Panel que muestra tu nivel y habilidades cognitivas.",
+        "2": "Interfaz que refleja tu estado mental en tiempo real.", 
+        "3": "Dashboard de conciencia que visualiza tu configuración cognitiva.",
+        "4": "Sistema de monitoreo que muestra métricas de tu estado cognitivo.",
+        "5": "Interfaz que refleja la totalidad de tu configuración cognitiva multidimensional."
+      },
+      "examples": [
+        "Como el HUD de un videojuego, pero mostrando tu mente",
+        "Panel que dice: Creatividad 85%, Lógica 72%, Empatía 91%"
+      ],
+      "related": ["interfaz", "dashboard", "metricas", "visualizacion"]
+    },
+    "checkpoint_cognitivo": {
+      "basic": "Punto de guardado de tu progreso y estado cognitivo en el Prunaverso.",
+      "byLens": {
+        "gaming": "Save point donde puedes guardar tu progreso y estado del personaje.",
+        "systems": "Snapshot del estado del sistema que permite restauración posterior.",
+        "consciousness": "Momento de cristalización de un estado específico de conciencia.",
+        "psychology": "Registro de un momento significativo en tu desarrollo cognitivo.",
+        "default": "Forma de guardar tu progreso en el Prunaverso."
+      },
+      "byLevel": {
+        "0": "Lugar donde guardas tu progreso.",
+        "1": "Punto de guardado de tu aventura cognitiva.",
+        "2": "Registro de tu estado mental en un momento específico.",
+        "3": "Cristalización de una configuración cognitiva particular.",
+        "4": "Snapshot de tu estado de conciencia para restauración futura.",
+        "5": "Coordenada espacio-temporal de tu trayectoria en el espacio cognitivo."
+      },
+      "examples": [
+        "Como guardar partida en un videojuego",
+        "Momento donde tu mente 'hace click' con una idea"
+      ],
+      "related": ["guardado", "progreso", "estado", "memoria"]
+    },
+    "lente_filosofica": {
+      "basic": "Modo de percepción que enfoca en preguntas fundamentales sobre la existencia y el conocimiento.",
+      "byLens": {
+        "philosophy": "Marco epistemológico que estructura la investigación de la realidad última.",
+        "consciousness": "Perspectiva que examina la naturaleza de la experiencia consciente.",
+        "ai": "Algoritmo que procesa información priorizando cuestiones metafísicas y éticas.",
+        "psychology": "Marco que analiza los fundamentos psicológicos del pensamiento filosófico.",
+        "default": "Forma de ver las cosas enfocándose en preguntas profundas sobre la vida."
+      },
+      "byLevel": {
+        "0": "Modo que te hace pensar en preguntas importantes sobre la vida.",
+        "1": "Perspectiva que busca el significado profundo de las cosas.",
+        "2": "Marco mental que examina los fundamentos de la realidad.",
+        "3": "Modo de conciencia que indaga en la naturaleza de la existencia.",
+        "4": "Protocolo cognitivo orientado a la investigación metafísica.",
+        "5": "Interface con las dimensiones fundamentales de la realidad."
+      },
+      "examples": [
+        "Te hace preguntar: ¿Qué es la realidad?",
+        "Enfoca en el significado de ser consciente"
+      ],
+      "related": ["filosofia", "metafisica", "existencia", "conocimiento"]
+    },
+    "neural_anthropologist": {
+      "basic": "Arquetipo que estudia cómo diferentes mentes crean cultura y significado.",
+      "byLens": {
+        "anthropology": "Investigador de las estructuras culturales emergentes en sistemas cognitivos.",
+        "ai": "Algoritmo especializado en análisis de patrones culturales en redes neuronales.",
+        "consciousness": "Observer de cómo diferentes conciencias co-crean realidades culturales.",
+        "psychology": "Analista de la psicología cultural y los procesos de significado colectivo.",
+        "default": "Personaje que estudia cómo diferentes tipos de mente crean cultura."
+      },
+      "byLevel": {
+        "0": "Personaje que estudia como piensan las diferentes culturas.",
+        "1": "Investigador de cómo diferentes mentes crean sociedades.",
+        "2": "Científico que analiza patrones culturales en sistemas cognitivos.",
+        "3": "Explorador de la relación entre conciencia y cultura.",
+        "4": "Investigador de la emergencia cultural en sistemas de inteligencia.",
+        "5": "Observer de la co-creación cultural en el espacio de conciencias."
+      },
+      "examples": [
+        "Como un antropólogo, pero estudia mentes artificiales",
+        "Investiga cómo los arquetipos crean culturas únicas"
+      ],
+      "related": ["antropologia", "cultura", "investigacion", "arquetipos"]
+    },
+    "empathy_synthesizer": {
+      "basic": "Arquetipo especializado en conectar y armonizar diferentes perspectivas.",
+      "byLens": {
+        "psychology": "Facilitador de comprensión emocional entre diferentes tipos de personalidad.",
+        "consciousness": "Bridge entre diferentes estados y configuraciones de conciencia.",
+        "anthropology": "Mediador cultural que encuentra puntos de conexión entre perspectivas diversas.",
+        "ai": "Sistema de traducción entre diferentes protocolos y formatos cognitivos.",
+        "default": "Personaje que ayuda a conectar diferentes formas de pensar."
+      },
+      "byLevel": {
+        "0": "Personaje muy bueno entendiendo a otros.",
+        "1": "Mediador que ayuda a diferentes personas a entenderse.",
+        "2": "Facilitador de conexión entre perspectivas diversas.",
+        "3": "Sintetizador de diferentes modos de experiencia consciente.",
+        "4": "Protocolo de traducción entre configuraciones cognitivas.",
+        "5": "Bridge dimensional entre espacios de conciencia heterogéneos."
+      },
+      "examples": [
+        "Como un traductor, pero para emociones y formas de pensar",
+        "Encuentra lo que une a un científico con un artista"
+      ],
+      "related": ["empatia", "conexion", "mediacion", "sintesis"]
+    }
+  },
+  "lensModifiers": {
+    "psychology": {
+      "tone": "empathetic",
+      "focus": "emotional and behavioral aspects",
+      "language": "humanistic and accessible"
+    },
+    "philosophy": {
+      "tone": "contemplative", 
+      "focus": "fundamental questions and meaning",
+      "language": "abstract and profound"
+    },
+    "ai": {
+      "tone": "analytical",
+      "focus": "computational and systematic aspects", 
+      "language": "technical and precise"
+    },
+    "consciousness": {
+      "tone": "mystical",
+      "focus": "experiential and phenomenological aspects",
+      "language": "experiential and transcendent"
+    },
+    "anthropology": {
+      "tone": "cultural",
+      "focus": "social and collective aspects",
+      "language": "contextual and diverse"
+    },
+    "systems": {
+      "tone": "systematic",
+      "focus": "structural and operational aspects",
+      "language": "modular and functional"
+    }
+  },
+  "contextualRules": {
+    "byVisitorType": {
+      "newcomer": "Use simple language, focus on basic definitions",
+      "curious": "Include examples and analogies",
+      "ally": "Provide technical depth and connections",
+      "architect": "Show system internals and implementation details"
+    },
+    "byLevel": {
+      "0-1": "Analogies with familiar concepts",
+      "2-3": "Introduce specialized terminology gradually",
+      "4-5": "Full technical and conceptual depth"
+    }
+  }
+}

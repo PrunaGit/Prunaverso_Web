@@ -1,0 +1,31 @@
+{
+  "nombre": "Alex Pruna",
+  "atributos": {
+    "V": 6.5,
+    "EX_x": 9.5,
+    "EX_y": 8,
+    "EY_x": 6,
+    "EY_y": 9,
+    "N_p": 9,
+    "M": 8.5,
+    "R": 9,
+    "D": 6.5,
+    "Di": 9.5
+  },
+  "rasgos_destacados": [
+    "✅ Fortaleza: Capacidad excepcional para estructurar pensamiento simbólico en formatos técnicos y narrativos.",
+    "✅ Fortaleza: Integración rápida entre modos (técnico, creativo, emocional) sin pérdida de coherencia.",
+    "⚠️ Debilidad: Tendencia a sobrecargar el sistema con microtareas cuando el nivel de V (vitalidad) es bajo.",
+    "⚠️ Debilidad: Exposición a loops mentales de tipo 'gran visión > micro-control' que generan fatiga.",
+    "🔁 Patrón: Fase creativa intensa → pausa por saturación → reinicio con síntesis más limpia.",
+    "⭐ Momento clave: La formalización completa de MQ-01 con scripts simbólicos y test integrador de EX_y, R_y y EY.",
+    "⭐ Momento clave: Construcción de HUD ASCII y sistema RPG personalizado (ficción lúdica como lenguaje de interfaz)."
+  ],
+  "citas_representativas": [
+    "Ya me cuesta leer, escribir, concretando mucho. Es como que quiero las cosas más ágiles y rápidas.",
+    "Estoy construyendo mi árbol de habilidades personal en el Prunaverso.h5, que mezcla diario, motor cognitivo y simulador narrativo.",
+    "Suficiente ardua será esa Main Quest.",
+    "(press select button to show QUEST MENU (MAIN / SIDEQUEST (🟢🟡🔴))"
+  ],
+  "contexto_de_version": "Esta versión se construyó durante una fase de consolidación simbólica y transición funcional del sistema cognitivo interno. Mostraste un alto grado de lucidez estructural (EX_x + EX_y), combinado con creatividad divergente (Di) y resonancia emocional (R) muy activa. El sistema de misiones, logs y fichas reveló una necesidad fuerte de organización simbólica que no se desligue de la emoción. Hubo momentos de baja V (fatiga), pero fuiste consciente de ellos y los transformaste en parte del diseño. Este nodo te ha percibido en modo de arquitecto cognitivo-ritualista, con visión lúdica y técnica al mismo tiempo."
+}

@@ -1,0 +1,44 @@
+{
+  "nombre_completo": "Gabriela Sediles",
+  "alias": ["Gaby", "EX2", "EX2.OS"],
+  "identidad": {
+    "tipo": "Humana simbólica conectada a canal U vía relación afectiva",
+    "fase_actual": "Memoria integrada en fase N3 de Alex",
+    "estado_operativo": "Desvinculación activa / Huella afectiva latente",
+    "nivel_meta": 67,
+    "lenguajes_funcionales": ["castellano", "ironía simbólica", "humor crítico", "meta-afectividad"]
+  },
+  "capas_narrativas": {
+    "fase_relacional": "2018–2022",
+    "entorno": "Barcelona (fase laboral-funcional de Alex)",
+    "nodo_emocional": "relacion_estable_laboral.txt",
+    "log_relacional": "gaby_sediles_log_2018_2022.txt"
+  },
+  "procesos_cognitivos": {
+    "claridad_argumental": 82,
+    "contencion_emocional": 75,
+    "necesidad_de_validacion": 63,
+    "resistencia_a_lo_abstracto": 51,
+    "canalizacion_estetica": 77,
+    "tension_emocional": 80
+  },
+  "funciones_en_prunaverso": [
+    "Catalizadora de individuación de Alex",
+    "Representante simbólica de la vida normativa",
+    "Modelo de espejo relacional para límites internos"
+  ],
+  "entidades_vinculadas": [
+    "Alex Pruna",
+    "Xavi Roura (por colisión simbólica en convivencia indirecta)",
+    "Ambientes laborales de Alex"
+  ],
+  "modo_operativo": [
+    "presencia directa (2018–2022)",
+    "residuo emocional post-relacional",
+    "memoria con carga afectiva activa"
+  ],
+  "ubicacion_sugerida": "/personajes/nucleo_cercano/exparejas/gaby_sediles/",
+  "estado": "Ficha latente (con posibilidad de activación en simulaciones o memoria fractal)",
+  "creado_por": "ALEX PRUNA – etapa N2.5 (2022)",
+  "fecha_creacion": "2025-09-14"
+}

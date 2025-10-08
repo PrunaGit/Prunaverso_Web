@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "fecha_creacion": "2025-09-20",
+  "nucleo_familiar": {
+    "madre": {
+      "nombre": "Ana Ruiz",
+      "rol": "Nodo Matriz",
+      "atributos": [
+        "Resiliencia estructural",
+        "Inteligencia emocional con heridas pendientes",
+        "Capacidad de cuidado transgeneracional"
+      ],
+      "funcion_simbolica": "Fuente emocional primaria"
+    },
+    "padre": {
+      "nombre": "José",
+      "rol": "Soporte estructural del núcleo",
+      "atributos": [
+        "Estabilidad racional",
+        "Compromiso parental consciente",
+        "Protección desde la lógica"
+      ],
+      "funcion_simbolica": "Columna vertebral del núcleo"
+    },
+    "hijo": {
+      "nombre": "Joel",
+      "rol": "Nodo emergente",
+      "atributos": [
+        "Presencia energética pura",
+        "Curiosidad sensorial expansiva",
+        "Afectividad no verbal codificada"
+      ],
+      "funcion_simbolica": "Proyección de síntesis afectiva"
+    }
+  },
+  "relaciones": [
+    {
+      "nodos": ["Ana", "José"],
+      "tipo": "pareja estable",
+      "descripcion": "Unión basada en estructura, cotidianidad y proyección conjunta"
+    },
+    {
+      "nodos": ["Ana", "Joel"],
+      "tipo": "vínculo vital",
+      "descripcion": "Fusión emocional primaria, canal de aprendizaje mutuo"
+    },
+    {
+      "nodos": ["José", "Joel"],
+      "tipo": "acompañamiento",
+      "descripcion": "Guía racional y presencia constante, amor desde la acción y la observación"
+    }
+  ],
+  "notas_sistemicas": [
+    "Unidad autosuficiente con sentido interno completo",
+    "Ana resignifica patrones de infancia a través de la maternidad",
+    "Joel representa la vía de sanación y redefinición del amor"
+  ],
+  "registro": "ANA-RUIZ_TREE_V1.0"
+}

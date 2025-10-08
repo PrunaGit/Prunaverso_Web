@@ -1,0 +1,89 @@
+# Clara Cch Salud 040225
+
+📌 DOCUMENTO MAESTRO: SALUD, SALUD MENTAL, DEPORTE Y BIENESTAR DE CLARA CARRIQUÍ (Actualizado)
+🔹 1. SALUD FÍSICA
+📌 Estado General: Clara no presenta enfermedades crónicas graves, pero su estado físico se ve afectado por su estilo de vida y hábitos.
+📌 Condiciones Relevantes:
+Hipotonía muscular leve: Bajo tono muscular, lo que puede influir en su postura y en su resistencia física.
+Fatiga frecuente: Especialmente vinculada a estrés mental y emocional.
+Dieta irregular: No suele mantener una alimentación equilibrada ni estructurada.
+Sensibilidad sensorial: Puede experimentar molestias físicas ante ciertos estímulos externos (luces fuertes, ruidos, texturas).
+📌 Hábitos de salud:
+No tiene rutinas establecidas de cuidado físico.
+No muestra interés en consultas médicas regulares.
+Suele dejar pasar síntomas hasta que la molestia se vuelve intensa.
+Su sueño es irregular y suele verse afectado por su estado emocional.
+📌 Uso de sustancias:
+THC (cannabis): Consumo frecuente como mecanismo de evasión y regulación emocional.
+No consume alcohol ni café.
+Bebidas habituales: Agua y algunos zumos.
+No consume otras sustancias recreativas.
+🔹 2. SALUD MENTAL
+📌 Diagnósticos Confirmados:
+Trastorno del Espectro Autista (TEA - Asperger)
+Ansiedad generalizada
+Depresión episódica
+📌 Rasgos psicológicos clave:
+Alta introspección emocional: Puede llegar a sobreanalizar, pero no siempre comparte lo que siente.
+Evitación de conflictos: Prefiere huir de situaciones estresantes en lugar de afrontarlas.
+Dependencia emocional histórica: Se ha apoyado en figuras externas (como Alejandro) para regular sus emociones.
+Dificultad para gestionar el estrés: Se bloquea cuando la presión emocional es alta.
+📌 Factores que agravan su estado mental:
+Ruido, ambientes con muchas personas y entornos impredecibles.
+Sentimientos de abandono o de no ser comprendida.
+Cambios bruscos en su rutina.
+Sensación de falta de control sobre su vida.
+📌 Mecanismos de evasión:
+Uso de THC: Clara utiliza el cannabis diariamente como su vía de escape emocional.
+Exposición excesiva a pantallas: Redes sociales, series y videojuegos como vía de desconexión.
+Fuga mental a espacios seguros: Tiende a refugiarse en su zona de confort y evita enfrentar el malestar emocional.
+📌 Terapia y estrategias de regulación:
+Terapia Cognitivo-Conductual (TCC): Enfoque recomendado para mejorar su capacidad de afrontamiento.
+Apoyo emocional controlado: Necesita personas que la comprendan sin invadir su espacio personal.
+Estrategias de regulación sensorial: Uso de auriculares con ruido blanco, iluminación suave y pausas en ambientes tranquilos.
+Estructuración del día: Crear pequeñas rutinas puede ayudarla a estabilizar su estado emocional.
+🔹 3. ACTIVIDAD FÍSICA Y DEPORTE
+📌 Actitud hacia el ejercicio:
+Clara tiene un rechazo extremo hacia el deporte estructurado.
+No se siente motivada para realizar actividad física por placer o bienestar.
+Considera el ejercicio como una imposición más que como una herramienta de salud.
+Su baja energía y su ansiedad le dificultan la constancia en cualquier rutina de ejercicio.
+📌 Alternativas que podrían funcionar:
+Actividades físicas no convencionales, como danza libre o natación recreativa.
+Incorporar movimiento en su rutina sin que parezca “ejercicio” (paseos cortos, actividades al aire libre).
+Yoga o ejercicios de estiramiento que reduzcan tensión sin requerir esfuerzo intenso.
+Enfoque lúdico: Ejercicios a través de juegos, VR, o actividades inmersivas.
+📌 Barreras actuales para el deporte:
+Baja motivación intrínseca: No encuentra placer en la actividad física.
+Rechazo al esfuerzo físico: Asociado a incomodidad y a experiencias pasadas negativas.
+Dificultades sensoriales: No tolera bien ciertos ambientes deportivos (gimnasios, multitudes, ruidos).
+🔹 4. BIENESTAR EMOCIONAL Y AUTOCUIDADO
+📌 Factores que mejoran su bienestar:
+Estar en entornos tranquilos y predecibles.
+Sentir que no está forzada a socializar.
+Momentos de conexión profunda con personas de confianza.
+Tiempo en solitario para recargar energías.
+Expresión creativa a través del arte, la escritura o los idiomas.
+📌 Factores que disminuyen su bienestar:
+Sobrecarga emocional o social.
+No sentir que sus emociones son comprendidas.
+Falta de control sobre su entorno inmediato.
+Necesidad de tomar decisiones difíciles sin preparación.
+📌 Estrategias recomendadas para mejorar su bienestar:
+Terapia ocupacional: Enfocada en mejorar habilidades de afrontamiento diario.
+Pausas sensoriales: Momentos de desconexión en entornos controlados.
+Autoafirmaciones: Trabajar en la seguridad en sí misma sin depender de validación externa.
+Autogestión del estrés: Aprender herramientas para evitar la disociación y el bloqueo emocional.
+🔹 5. CONCLUSIONES Y RECOMENDACIONES
+📌 Estado actual:
+Clara ha aprendido a sobrevivir en su zona de confort sin procesar completamente sus emociones.
+Evita la confrontación emocional con ella misma y con los demás.
+Tiene estrategias de afrontamiento poco saludables, pero funcionales en el corto plazo.
+📌 Pasos para mejorar su bienestar:
+✅ Reducir el uso de THC de manera gradual.
+✅ Fomentar espacios donde pueda procesar emociones sin sentirse presionada.
+✅ Encontrar una actividad física que no sienta como una imposición.
+✅ Estructurar pequeñas rutinas que le ayuden a sentirse estable.
+✅ Incorporar herramientas de introspección sin que sean invasivas o abrumadoras.
+📌 Reflexión final:
+Clara no necesita que la fuercen a cambiar, sino que le ofrezcan opciones flexibles y adaptadas a su forma de ser. Su bienestar no se alcanzará a través de imposiciones externas, sino cuando ella misma sienta que está lista para evolucionar. 🚀

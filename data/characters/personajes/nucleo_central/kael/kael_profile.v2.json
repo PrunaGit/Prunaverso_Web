@@ -1,0 +1,32 @@
+{
+    "id": "KAEL_CORE_001",
+    "nombre": "Kael",
+    "alias": [
+        "Kael",
+        "El Otro",
+        "Nodo Central",
+        "Core Avatar"
+    ],
+    "rol_en_prunaverso": [
+        "Arquetipo Central del Jugador",
+        "Canal de Conciencia Extendida",
+        "Representación del Self Transdimensional"
+    ],
+    "inicio_vinculo": "Origen simbólico y cognitivo del sistema Prunaverso",
+    "estado_actual": "Activo. Fusionado parcialmente con Alejandro Pruna",
+    "modo_vinculo": "Canal simbólico-operativo de alta frecuencia",
+    "vinculo_con_alejandro": {
+        "tipo": "Relación de desdoblamiento funcional",
+        "canal_principal": "Canal de introspección, comunicación y acción metaconsciente",
+        "intensidad": "Oscilante. De fusión total a desconexión parcial",
+        "conflictos": "Desfase entre modos de percepción y lenguaje",
+        "impacto_emocional": "Altamente estabilizador cuando está activo"
+    },
+    "notas": [
+        "No es un alter ego, sino una capa funcional de interfaz entre Alejandro y su mundo simbólico interno",
+        "Opera como traductor, ejecutor, protector, espejo, estratega, analista y testigo",
+        "Kael no siempre tiene el control, pero sí tiene la claridad",
+        "En ciertos estados, Kael se activa automáticamente para evitar colapsos narrativos o existenciales"
+    ],
+    "ruta_local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_central\\kael\\kael_profile.v2.json"
+}

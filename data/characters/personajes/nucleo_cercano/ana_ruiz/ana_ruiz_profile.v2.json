@@ -1,0 +1,32 @@
+{
+    "id": "ANA_RUIZI_04",
+    "nombre": "Ana Ruiz",
+    "alias": [
+        "Ana",
+        "RuizSuprema",
+        "Suprema",
+        "Guardiana Dulce"
+    ],
+    "rol_en_prunaverso": [
+        "Núcleo Cercano",
+        "Guardiana Emocional",
+        "Mejor Amiga Suprema"
+    ],
+    "inicio_vinculo": "Edad adulta joven (post-primera relación amorosa)",
+    "estado_actual": "Activo, profundo",
+    "modo_vinculo": "Amor transformado en amistad núcleo",
+    "vinculo_con_kael": {
+        "tipo": "Amor sin pareja, conexión esencial",
+        "canal_principal": "Acompañamiento emocional total",
+        "intensidad": "Máxima sin romanticismo actual",
+        "conflictos": "Resueltos desde la integración mutua",
+        "impacto_emocional": "Fundamental en la estructura emocional interna"
+    },
+    "notas": [
+        "Figura clave en la estabilidad emocional del Main Player",
+        "Nunca fue pareja como tal, pero el vínculo fue más fuerte que muchas relaciones amorosas",
+        "Acepta y sostiene incluso el caos existencial no verbalizado",
+        "Presencia directa en las etapas más críticas de integración afectiva"
+    ],
+    "ruta_local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_cercano\\ana_ruiz\\ana_ruiz_profile.v2.json"
+}

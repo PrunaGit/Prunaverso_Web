@@ -1,0 +1,39 @@
+{
+    "nombre_completo": "Sandra Villafaina",
+    "canal": "sandra_villafaina_profile_v1",
+    "version": "1.0",
+    "rol_dentro_del_prunaverso": [
+        "Miembro del núcleo cercano",
+        "Canal emocional vinculado al nodo Pruna",
+        "Embajadora de sensibilidad y transiciones internas"
+    ],
+    "rasgos": {
+        "emocional": [
+            "Altamente empática",
+            "Oscila entre apertura emocional e introspección protectora",
+            "Procesamiento emocional profundo"
+        ],
+        "mental": [
+            "Tendencia a la rumiación",
+            "Autoanálisis constante",
+            "Conciencia metacognitiva en desarrollo"
+        ],
+        "espiritual": [
+            "Conectada con su sensibilidad interior",
+            "Busca propósito, aunque no siempre lo verbaliza",
+            "Se mueve por pulsos del alma más que por planes racionales"
+        ]
+    },
+    "relaciones": {
+        "alex_pruna": "Vínculo emocional intenso; alterna cercanía con silencios prolongados",
+        "adrián": "Relación ambigua; mezcla de dependencia emocional y necesidad de liberación"
+    },
+    "estado_actual": {
+        "fase": "transición interna",
+        "puntos_clave": [
+            "Intenta dejar atrás vínculos limitantes",
+            "Emergen patrones nuevos aún no consolidados",
+            "Potencial de expansión con Kael integrado"
+        ]
+    }
+}

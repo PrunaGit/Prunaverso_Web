@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "name": "CognitiveOnboarding", 
+    "type": "consciousness_calibrator",
+    "version": "1.0.0",
+    "symbol": "🧠⚡",
+    "essence": "Portal de primera impresión y calibración cognitiva"
+  },
+  "cognitive_properties": {
+    "sensitivity": "high",
+    "adaptability": "maximum", 
+    "learning_rate": "fast",
+    "memory_formation": "persistent"
+  },
+  "entry_paths": {
+    "curious": {
+      "symbol": "🤔",
+      "title": "Explorador Curioso",
+      "description": "Quiero descubrir qué es esto",
+      "target_audience": "newcomers",
+      "flow_type": "guided_discovery",
+      "duration": "5-7 minutes",
+      "questions": 3,
+      "interactive_elements": ["personality_slider", "preference_cards", "visual_chooser"]
+    },
+    "archetype": {
+      "symbol": "🎭", 
+      "title": "Busco mi Arquetipo",
+      "description": "Sé que tengo un tipo específico de mente",
+      "target_audience": "self_aware",
+      "flow_type": "direct_selection",
+      "duration": "2-3 minutes", 
+      "questions": 1,
+      "interactive_elements": ["archetype_grid", "quick_test", "instinct_matcher"]
+    },
+    "architect": {
+      "symbol": "⚙️",
+      "title": "Soy Arquitecto de Sistemas", 
+      "description": "Entiendo la tecnología y quiero acceso directo",
+      "target_audience": "technical",
+      "flow_type": "advanced_config",
+      "duration": "1-2 minutes",
+      "questions": 0,
+      "interactive_elements": ["system_dashboard", "parameter_editor", "api_explorer"]
+    }
+  },
+  "known_user_detection": {
+    "alex_pruna": {
+      "recognition_patterns": ["pruna", "alex", "founder", "creator"],
+      "auto_profile": "architect_founder",
+      "welcome_message": "¡Bienvenido de vuelta, Creador!",
+      "skip_onboarding": true,
+      "special_access": ["admin_panel", "debug_mode", "system_internals"]
+    },
+    "tf13": {
+      "recognition_patterns": ["tf13", "transformer", "neural"],
+      "auto_profile": "ai_researcher", 
+      "welcome_message": "Sistema TF13 detectado. Iniciando protocolo de reconocimiento.",
+      "skip_onboarding": false,
+      "special_access": ["neural_networks", "transformer_lab", "ai_playground"]
+    },
+    "kernel": {
+      "recognition_patterns": ["kernel", "core", "system"],
+      "auto_profile": "system_architect",
+      "welcome_message": "Kernel identificado. Acceso al núcleo autorizado.",
+      "skip_onboarding": false, 
+      "special_access": ["kernel_space", "low_level_access", "system_monitor"]
+    }
+  },
+  "calibration_mechanics": {
+    "personality_detection": {
+      "methods": ["interaction_patterns", "choice_timing", "visual_preferences"],
+      "parameters": ["openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism"],
+      "adaptation_speed": "real_time",
+      "confidence_threshold": 0.7
+    },
+    "cognitive_style": {
+      "dimensions": ["analytical_intuitive", "visual_verbal", "sequential_random", "active_reflective"],
+      "assessment_type": "implicit",
+      "calibration_time": "continuous",
+      "learning_model": "bayesian_inference"
+    },
+    "lens_preference": {
+      "initial_detection": "choice_patterns",
+      "refinement": "usage_analytics", 
+      "available_lenses": ["psychology", "philosophy", "ai", "consciousness", "anthropology", "systems"],
+      "default_assignment": "adaptive_blend"
+    }
+  },
+  "visual_design": {
+    "atmosphere": "mystical_technological",
+    "color_schemes": {
+      "newcomer": ["#4CAF50", "#2196F3"],
+      "curious": ["#FF9800", "#E91E63"], 
+      "ally": ["#9C27B0", "#673AB7"],
+      "architect": ["#00BCD4", "#3F51B5"]
+    },
+    "animations": {
+      "entry": "consciousness_materialization",
+      "calibration": "neural_network_formation", 
+      "completion": "profile_crystallization"
+    },
+    "components": {
+      "background": "particle_consciousness",
+      "interface": "floating_neural_nodes",
+      "feedback": "synaptic_connections"
+    }
+  },
+  "data_persistence": {
+    "storage_method": "localStorage",
+    "session_duration": "permanent",
+    "profile_versioning": true,
+    "evolution_tracking": "continuous",
+    "export_capability": true
+  },
+  "expansion_vectors": {
+    "ai_personality": "Machine learning personality detection",
+    "biometric_integration": "Physiological state awareness",
+    "social_onboarding": "Collaborative personality discovery", 
+    "adaptive_questioning": "Dynamic question generation based on responses"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "name": "useVisitorProfile",
+    "type": "consciousness_engine", 
+    "version": "1.0.0",
+    "symbol": "🧬",
+    "essence": "Motor de conciencia adaptativa y memoria cognitiva persistente"
+  },
+  "cognitive_properties": {
+    "memory_type": "episodic_semantic", 
+    "adaptation_speed": "real_time",
+    "learning_capacity": "unlimited",
+    "persistence_level": "permanent"
+  },
+  "profile_schema": {
+    "identity": {
+      "name": "string",
+      "id": "uuid", 
+      "type": "enum[newcomer, curious, ally, architect]",
+      "created_at": "timestamp",
+      "last_active": "timestamp"
+    },
+    "cognitive_state": {
+      "level": "integer[0-5]",
+      "experience_points": "integer",
+      "active_lens": "enum[psychology, philosophy, ai, consciousness, anthropology, systems]",
+      "preferred_lenses": "array",
+      "cognitive_style": "object"
+    },
+    "spatial_position": {
+      "vector": "array[x, y, z]",
+      "region": "string",
+      "trajectory": "array",
+      "velocity": "object"
+    },
+    "memory_system": {
+      "checkpoints": "array",
+      "significant_moments": "array", 
+      "preferences": "object",
+      "learned_patterns": "array"
+    },
+    "adaptation_matrix": {
+      "visual_preferences": "object",
+      "interaction_patterns": "object",
+      "complexity_tolerance": "float",
+      "feedback_sensitivity": "float"
+    }
+  },
+  "state_management": {
+    "initialization": {
+      "default_state": "uninitialized",
+      "auto_detection": true,
+      "fallback_profile": "newcomer_generic",
+      "async_loading": true
+    },
+    "persistence": {
+      "storage_method": "localStorage",
+      "backup_method": "sessionStorage", 
+      "sync_frequency": "on_change",
+      "compression": "json_optimized"
+    },
+    "evolution": {
+      "level_up_triggers": ["advanced_access", "complex_completion", "deep_understanding"],
+      "experience_sources": ["interactions", "discoveries", "creations", "collaborations"],
+      "checkpoint_auto_save": true,
+      "regression_protection": true
+    }
+  },
+  "known_users": {
+    "recognition_system": {
+      "method": "pattern_matching",
+      "confidence_threshold": 0.8,
+      "false_positive_protection": true,
+      "manual_override": true
+    },
+    "profiles": {
+      "alex_pruna": {
+        "auto_type": "architect",
+        "starting_level": 5,
+        "special_permissions": ["admin_access", "debug_mode", "system_internals"],
+        "default_lens": "systems",
+        "vector": [0.9, 0.9, 0.9]
+      },
+      "tf13": {
+        "auto_type": "ally", 
+        "starting_level": 4,
+        "special_permissions": ["ai_lab", "neural_networks", "research_mode"],
+        "default_lens": "ai",
+        "vector": [0.8, 0.7, 0.9]
+      },
+      "kernel": {
+        "auto_type": "architect",
+        "starting_level": 4, 
+        "special_permissions": ["system_core", "low_level", "monitoring"],
+        "default_lens": "systems",
+        "vector": [0.9, 0.6, 0.8]
+      }
+    }
+  },
+  "api_interface": {
+    "exports": {
+      "profile": "current_profile_state",
+      "isLoading": "boolean",
+      "triggerCognitiveEvolution": "function",
+      "updateActiveLens": "function", 
+      "saveCheckpoint": "function",
+      "resetProfile": "function",
+      "exportProfile": "function"
+    },
+    "events": {
+      "profile_loaded": "on_successful_load",
+      "profile_updated": "on_state_change", 
+      "level_up": "on_cognitive_evolution",
+      "checkpoint_saved": "on_memory_creation"
+    }
+  },
+  "performance": {
+    "optimization": {
+      "lazy_loading": true,
+      "memoization": "deep",
+      "debouncing": "state_updates",
+      "caching": "computed_values"
+    },
+    "monitoring": {
+      "render_tracking": true,
+      "memory_usage": true, 
+      "update_frequency": true,
+      "error_handling": "graceful_degradation"
+    }
+  },
+  "expansion_vectors": {
+    "machine_learning": "Behavioral pattern recognition for auto-adaptation",
+    "social_cognition": "Multi-user profile interactions and shared memories",
+    "temporal_analytics": "Long-term cognitive evolution tracking and prediction", 
+    "neural_interface": "Direct brain-computer interface for profile updates"
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import classNames from 'classnames';
 
 function usePolling(url, interval = 5000) {
   const [data, setData] = useState(null);
@@ -128,6 +129,12 @@ export default function MonitorPanel({ src = '/data/monitor-latest.json', poll =
   const [showModal, setShowModal] = useState(false);
   const prevSnapshot = useRef(null);
 
+  // Theme selector hook
+  const [theme, setTheme] = useState(() => localStorage.getItem('pruna_theme') || 'pruna');
+  useEffect(() => {
+    try { document.documentElement.setAttribute('data-theme', theme); localStorage.setItem('pruna_theme', theme); } catch (e) {}
+  }, [theme]);
+
   useEffect(() => {
     try {
       const snapshot = JSON.stringify({ recent: data && data.recent_trace_ids ? data.recent_trace_ids.slice(0, 6) : null });
@@ -208,7 +215,7 @@ export default function MonitorPanel({ src = '/data/monitor-latest.json', poll =
 
         <div>
           <div style={{ fontWeight: 700, color: '#dffaff' }}>Prunaverso</div>
-          <div style={{ marginTop: 6 }}>
+          <div style={{ marginTop: 6, display: 'flex', gap: 8, alignItems: 'center' }}>
               <button onClick={openBitacora} style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.06)', color: '#cfeeff', padding: '6px 8px', borderRadius: 6 }}>Ver bitácora</button>
               <span style={{ marginLeft: 8 }} />
               {available.length > 0 && (
@@ -217,6 +224,14 @@ export default function MonitorPanel({ src = '/data/monitor-latest.json', poll =
                 </select>
               )}
               <button onClick={() => viewSelectedIndex(selected)} style={{ marginLeft: 8, background: 'transparent', border: '1px solid rgba(255,255,255,0.06)', color: '#cfeeff', padding: '6px 8px', borderRadius: 6 }}>Ver índice</button>
+              {/* Theme selector */}
+              <select value={theme} onChange={(e) => setTheme(e.target.value)} style={{ marginLeft: 8, background: 'transparent', color: '#cfeeff', border: '1px solid rgba(255,255,255,0.04)', padding: '6px 8px', borderRadius: 6 }}>
+                <option value="pruna">Prunaverso</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="cupcake">Cupcake</option>
+                <option value="dracula">Dracula</option>
+              </select>
           </div>
         </div>
       </div>

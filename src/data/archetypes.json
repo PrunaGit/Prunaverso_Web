@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "totalPossibleCombinations": 1200000,
+    "activeArchetypes": 24,
+    "description": "Base simbólica de arquetipos cognitivos del Prunaverso",
+    "lastUpdate": "2025-10-08"
+  },
+  "cognitiveAfinities": {
+    "analytical": ["systems", "logic", "patterns", "structure"],
+    "intuitive": ["consciousness", "philosophy", "mysticism", "art"],
+    "social": ["anthropology", "psychology", "linguistics", "empathy"],
+    "creative": ["mythology", "storytelling", "imagination", "synthesis"],
+    "technical": ["ai", "engineering", "computation", "precision"],
+    "exploratory": ["discovery", "curiosity", "experimentation", "adventure"]
+  },
+  "auralFrequencies": {
+    "violet": { "hex": "#9b59b6", "frequency": "high", "traits": ["transcendent", "mystical"] },
+    "blue": { "hex": "#3498db", "frequency": "calm", "traits": ["analytical", "peaceful"] },
+    "green": { "hex": "#2ecc71", "frequency": "balanced", "traits": ["growth", "harmony"] },
+    "gold": { "hex": "#f1c40f", "frequency": "warm", "traits": ["wisdom", "alliance"] },
+    "red": { "hex": "#e74c3c", "frequency": "intense", "traits": ["passionate", "creative"] },
+    "silver": { "hex": "#95a5a6", "frequency": "neutral", "traits": ["systematic", "precise"] }
+  },
+  "baseArchetypes": [
+    {
+      "id": "neuroartist_alpha",
+      "name": "Neuroartista Ϟ-α",
+      "description": "Interpretador de símbolos neuronales",
+      "traits": ["intuitive", "experimental", "linguistic"],
+      "lenses": ["linguistics", "philosophy", "psychology"],
+      "aura": "violet",
+      "role": "Traductor de conciencias",
+      "entryPhrase": "Percibo patrones donde otros ven caos",
+      "cognitiveAffinity": "intuitive",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "system_architect_prime",
+      "name": "Arquitecto Sistémico Ψ-1",
+      "description": "Constructor de realidades procedurales",
+      "traits": ["analytical", "systematic", "visionary"],
+      "lenses": ["systems", "ai", "consciousness"],
+      "aura": "silver",
+      "role": "Diseñador de metaversos",
+      "entryPhrase": "Veo la estructura detrás de cada experiencia",
+      "cognitiveAffinity": "technical",
+      "rarity": "rare"
+    },
+    {
+      "id": "consciousness_explorer",
+      "name": "Explorador de Conciencia Φ-∞",
+      "description": "Navegante de estados mentales",
+      "traits": ["exploratory", "philosophical", "empathetic"],
+      "lenses": ["consciousness", "philosophy", "psychology"],
+      "aura": "blue",
+      "role": "Cartógrafo mental",
+      "entryPhrase": "Cada mente es un universo por descubrir",
+      "cognitiveAffinity": "exploratory",
+      "rarity": "common"
+    },
+    {
+      "id": "narrative_weaver",
+      "name": "Tejedor Narrativo Ω-∆",
+      "description": "Creador de historias vivas",
+      "traits": ["creative", "social", "intuitive"],
+      "lenses": ["mythology", "linguistics", "anthropology"],
+      "aura": "red",
+      "role": "Contador de futuros",
+      "entryPhrase": "Cada persona es una historia esperando ser contada",
+      "cognitiveAffinity": "creative",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "empathy_synthesizer",
+      "name": "Sintetizador Empático Ε-♡",
+      "description": "Unificador de perspectivas",
+      "traits": ["social", "intuitive", "harmonious"],
+      "lenses": ["psychology", "anthropology", "philosophy"],
+      "aura": "green",
+      "role": "Puente entre mundos",
+      "entryPhrase": "Encuentro conexión donde otros ven diferencia",
+      "cognitiveAffinity": "social",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "logic_mystic",
+      "name": "Místico Lógico Λ-☯",
+      "description": "Unión de razón y intuición",
+      "traits": ["analytical", "mystical", "balanced"],
+      "lenses": ["logic", "philosophy", "consciousness"],
+      "aura": "gold",
+      "role": "Reconciliador de opuestos",
+      "entryPhrase": "La lógica más pura es indistinguible de la magia",
+      "cognitiveAffinity": "analytical",
+      "rarity": "rare"
+    },
+    {
+      "id": "pattern_dancer",
+      "name": "Danzarín de Patrones ∿-♪",
+      "description": "Músico de las estructuras",
+      "traits": ["creative", "analytical", "rhythmic"],
+      "lenses": ["patterns", "art", "systems"],
+      "aura": "violet",
+      "role": "Compositor de realidades",
+      "entryPhrase": "Escucho la música oculta en los datos",
+      "cognitiveAffinity": "creative",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "consciousness_hacker",
+      "name": "Hacker de Conciencia Ξ-⚡",
+      "description": "Modificador de percepciones",
+      "traits": ["technical", "experimental", "rebellious"],
+      "lenses": ["ai", "consciousness", "systems"],
+      "aura": "red",
+      "role": "Liberador de mentes",
+      "entryPhrase": "Cada limitación mental es un código por hackear",
+      "cognitiveAffinity": "technical",
+      "rarity": "rare"
+    },
+    {
+      "id": "memory_archaeologist",
+      "name": "Arqueólogo de Memorias Μ-⌘",
+      "description": "Excavador de historias olvidadas",
+      "traits": ["exploratory", "intuitive", "preservative"],
+      "lenses": ["anthropology", "psychology", "mythology"],
+      "aura": "blue",
+      "role": "Guardián del pasado cognitivo",
+      "entryPhrase": "En cada recuerdo hay una civilización perdida",
+      "cognitiveAffinity": "exploratory",
+      "rarity": "common"
+    },
+    {
+      "id": "future_anthropologist",
+      "name": "Antropólogo del Futuro Τ-↗",
+      "description": "Estudioso de civilizaciones venideras",
+      "traits": ["analytical", "visionary", "social"],
+      "lenses": ["anthropology", "ai", "systems"],
+      "aura": "silver",
+      "role": "Predictor de evoluciones",
+      "entryPhrase": "Estudio las culturas que aún no han nacido",
+      "cognitiveAffinity": "analytical",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "emotion_engineer",
+      "name": "Ingeniero Emocional Η-💫",
+      "description": "Arquitecto de experiencias afectivas",
+      "traits": ["technical", "empathetic", "precise"],
+      "lenses": ["psychology", "ai", "systems"],
+      "aura": "green",
+      "role": "Constructor de sentimientos",
+      "entryPhrase": "Diseño las máquinas que comprenden el corazón",
+      "cognitiveAffinity": "technical",
+      "rarity": "rare"
+    },
+    {
+      "id": "quantum_storyteller",
+      "name": "Narrador Cuántico Θ-∆∞",
+      "description": "Contador de todas las historias posibles",
+      "traits": ["creative", "analytical", "multidimensional"],
+      "lenses": ["mythology", "systems", "consciousness"],
+      "aura": "violet",
+      "role": "Bibliotecario de realidades",
+      "entryPhrase": "Cada decisión crea una historia, yo las cuento todas",
+      "cognitiveAffinity": "creative",
+      "rarity": "legendary"
+    }
+  ],
+  "generativeParameters": {
+    "traitCombinations": 144,
+    "lensCombinations": 35,
+    "auralVariations": 6,
+    "roleArchetypes": 12,
+    "rarityLevels": ["common", "uncommon", "rare", "legendary"],
+    "totalExpansionPotential": 1200000
+  },
+  "cognitiveProfiles": {
+    "newcomer": {
+      "recommendedArchetypes": ["consciousness_explorer", "memory_archaeologist"],
+      "entryLenses": ["psychology"],
+      "maxComplexity": "simple"
+    },
+    "curious": {
+      "recommendedArchetypes": ["neuroartist_alpha", "pattern_dancer", "narrative_weaver"],
+      "entryLenses": ["psychology", "philosophy"],
+      "maxComplexity": "moderate"
+    },
+    "ally": {
+      "recommendedArchetypes": ["system_architect_prime", "empathy_synthesizer", "future_anthropologist"],
+      "entryLenses": ["ai", "consciousness", "anthropology"],
+      "maxComplexity": "high"
+    },
+    "advanced": {
+      "recommendedArchetypes": ["logic_mystic", "consciousness_hacker", "quantum_storyteller"],
+      "entryLenses": ["all"],
+      "maxComplexity": "maximum"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "id": null,
+    "nombre": "Alejandro Pruna Catalá",
+    "alias": [
+        "Alex",
+        "Pruna",
+        "KaelShell",
+        "Player1"
+    ],
+    "categoria": null,
+    "atributos": null,
+    "contexto": null,
+    "simbolismo": null,
+    "coordenadas": {
+        "X": 0,
+        "Y": 0
+    },
+    "estado": "generated_v006",
+    "timestamp": "2025-10-05T18:39:50Z"
+}

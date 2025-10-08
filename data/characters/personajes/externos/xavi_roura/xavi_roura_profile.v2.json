@@ -1,0 +1,32 @@
+{
+    "id": "XAVI_ROURA_OS_06",
+    "nombre": "Xavi Roura",
+    "alias": [
+        "Xavi",
+        "El Silente",
+        "El Hombre de Mamá",
+        "Roura.OS"
+    ],
+    "rol_en_prunaverso": [
+        "Núcleo Cercano",
+        "Presencia Silenciosa",
+        "Soporte Logístico Familiar"
+    ],
+    "inicio_vinculo": "Adolescencia media (convivencia con madre)",
+    "estado_actual": "Estable pero distante",
+    "modo_vinculo": "Coexistencia no intrusiva",
+    "vinculo_con_kael": {
+        "tipo": "Adulto funcional sin carga emocional explícita",
+        "canal_principal": "Convivencia doméstica",
+        "intensidad": "Baja en lo emocional, alta en estabilidad",
+        "conflictos": "Inexistentes o evitados",
+        "impacto_emocional": "Moderado pero funcional"
+    },
+    "notas": [
+        "Presencia clave en la estabilidad logística de Kael desde la adolescencia",
+        "No fue figura de guía, pero sí de presencia firme",
+        "Relación distante pero sin fricción grave",
+        "Símbolo de resistencia emocional no expresiva"
+    ],
+    "ruta_local": "C:\\Users\\pruna\\Documents\\GITHUB\\Prunaverso\\personajes\\nucleo_cercano\\xavi_roura\\xavi_roura_profile.v2.json"
+}

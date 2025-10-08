@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "name": "PortalMain",
+    "type": "adaptive_interface",
+    "version": "1.0.0",
+    "symbol": "🌀",
+    "essence": "Centro de comando adaptativo del Prunaverso"
+  },
+  "cognitive_properties": {
+    "adaptivity_level": "maximum",
+    "complexity_scaling": "dynamic",
+    "personalization_depth": "deep",
+    "evolution_responsiveness": "real_time"
+  },
+  "menu_architecture": {
+    "base_options": [
+      {
+        "id": "explore_archetypes",
+        "min_level": 0,
+        "path": "/arquetipos",
+        "icon": "🎭",
+        "gaming_key": "X"
+      },
+      {
+        "id": "character_selector", 
+        "min_level": 0,
+        "path": "/personajes",
+        "icon": "⚡",
+        "gaming_key": "O"
+      },
+      {
+        "id": "cognitive_lab",
+        "min_level": 1, 
+        "path": "/laboratorio",
+        "icon": "🧠",
+        "gaming_key": "Square"
+      }
+    ],
+    "advanced_options": [
+      {
+        "id": "vector_space",
+        "min_level": 2,
+        "path": "/vectores", 
+        "icon": "📐",
+        "gaming_key": "Triangle"
+      },
+      {
+        "id": "consciousness_network",
+        "min_level": 3,
+        "path": "/red",
+        "icon": "🌐",
+        "gaming_key": "L1"
+      },
+      {
+        "id": "system_admin",
+        "min_level": 4,
+        "path": "/admin",
+        "icon": "⚙️",
+        "gaming_key": "R1",
+        "architect_only": true
+      }
+    ]
+  },
+  "visual_adaptation": {
+    "color_schemes": {
+      "newcomer": {
+        "primary": "from-green-400 to-blue-500",
+        "secondary": "from-blue-400 to-indigo-500", 
+        "accent": "text-green-400"
+      },
+      "curious": {
+        "primary": "from-yellow-400 to-orange-500",
+        "secondary": "from-orange-400 to-red-500",
+        "accent": "text-yellow-400"
+      },
+      "ally": {
+        "primary": "from-purple-500 to-pink-600",
+        "secondary": "from-pink-500 to-red-500",
+        "accent": "text-purple-400"
+      },
+      "architect": {
+        "primary": "from-cyan-400 to-blue-600", 
+        "secondary": "from-blue-500 to-indigo-600",
+        "accent": "text-cyan-400"
+      }
+    },
+    "animations": {
+      "background_rotation": {
+        "duration": 20,
+        "pattern": "scale_rotate",
+        "infinity": true
+      },
+      "menu_emergence": {
+        "duration": 0.6,
+        "delay": 0.2,
+        "easing": "ease_out"
+      },
+      "selection_indicator": {
+        "duration": 0.3,
+        "layout_id": "selection_indicator",
+        "type": "gradient_bar"
+      }
+    }
+  },
+  "hud_system": {
+    "cognitive_status": {
+      "position": "center_bottom",
+      "components": [
+        {
+          "label": "Sistema",
+          "value": "SISC activo",
+          "indicator": "green_dot"
+        },
+        {
+          "label": "Vector", 
+          "value": "dynamic_coordinates",
+          "indicator": "blue_dot"
+        },
+        {
+          "label": "Checkpoints",
+          "value": "checkpoint_count",
+          "indicator": "purple_dot"
+        }
+      ]
+    },
+    "user_greeting": {
+      "position": "center_top",
+      "format": "Bienvenido, {name}",
+      "animation": "gentle_pulse",
+      "color": "adaptive_accent"
+    },
+    "status_line": {
+      "position": "below_greeting",
+      "components": ["cognitive_level", "user_type", "active_lens"],
+      "separator": " | ",
+      "style": "subtle_gray"
+    }
+  },
+  "interaction_systems": {
+    "keyboard_navigation": {
+      "up_down": "menu_selection",
+      "enter_space": "confirm_selection", 
+      "escape_i": "toggle_help",
+      "wasd": "alternative_navigation"
+    },
+    "gaming_controls": {
+      "dpad": "menu_navigation",
+      "face_buttons": "action_mapping",
+      "shoulder_buttons": "advanced_functions",
+      "visual_indicators": true
+    },
+    "info_orbitals": {
+      "activation": ["keypress_i", "keypress_escape"],
+      "positions": ["top-right", "bottom-left", "center"],
+      "terms": ["prunaverso", "sisc", "arquetipo"],
+      "adaptive_content": true
+    }
+  },
+  "navigation_flow": {
+    "entry_point": "from_cognitive_onboarding",
+    "exit_points": [
+      "/arquetipos",
+      "/personajes", 
+      "/laboratorio",
+      "/vectores",
+      "/red",
+      "/admin"
+    ],
+    "evolution_triggers": {
+      "level_up": "access_advanced_option",
+      "checkpoint": "significant_discovery",
+      "adaptation": "usage_pattern_change"
+    }
+  },
+  "performance_optimization": {
+    "lazy_loading": "menu_options",
+    "memoization": "color_schemes",
+    "debouncing": "key_presses", 
+    "virtual_scrolling": "large_menus"
+  },
+  "expansion_vectors": {
+    "ai_recommendations": "Predictive menu suggestions based on behavior",
+    "collaborative_spaces": "Real-time multi-user portal sharing",
+    "immersive_environments": "3D/VR portal navigation", 
+    "neural_adaptation": "Direct brain-computer interface for menu control"
+  }
+}

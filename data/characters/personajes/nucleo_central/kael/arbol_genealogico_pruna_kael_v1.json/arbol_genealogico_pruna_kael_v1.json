@@ -1,0 +1,38 @@
+{
+  "arbol_genealogico_pruna": {
+    "xavi_roura": {
+      "rol": "padrastro",
+      "pareja": "mama_ana",
+      "notas": "Sin novia reconocida hasta los 38. Mujer venía con un hijo adolescente (Kael). Relación difícil al principio, hoy más comprensiva aunque seca."
+    },
+    "mama_ana": {
+      "rol": "madre_biologica",
+      "parejas": ["xavi_roura", "papa_quim"],
+      "hijos": ["kael"],
+      "notas": "Figura clave emocional en infancia de Kael. Separación de Quim, posterior convivencia con Xavi."
+    },
+    "papa_quim": {
+      "rol": "padre_biologico",
+      "pareja": "mama_ana",
+      "hijos": ["kael"],
+      "notas": "Relación complicada y distante con Kael, aunque con influencias marcadas en algunos valores."
+    },
+    "kael": {
+      "rol": "main_player",
+      "padres": ["mama_ana", "papa_quim"],
+      "padrastro": "xavi_roura",
+      "exparejas": ["clara_cch", "gaby_sediles"],
+      "notas": "Adolescente crítico y cuestionador. Fricción con padrastro al inicio, ahora relación tolerable."
+    },
+    "clara_cch": {
+      "rol": "expareja",
+      "relacion_con": "kael",
+      "notas": "Relación intensa y significativa."
+    },
+    "gaby_sediles": {
+      "rol": "expareja",
+      "relacion_con": "kael",
+      "notas": "Expareja que marcó una etapa distinta a Clara."
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Perfiles cognitivos de usuarios conocidos del Prunaverso",
+    "lastUpdate": "2025-10-08"
+  },
+  "knownProfiles": {
+    "alex_pruna": {
+      "id": "alex_pruna_founder",
+      "name": "Alex Pruna",
+      "nickname": "Fundador del Prunaverso",
+      "type": "architect",
+      "archetype": {
+        "id": "system_architect_prime",
+        "name": "Arquitecto Sistémico Ψ-Prime",
+        "customName": "Creador del Prunaverso"
+      },
+      "cognitiveProfile": {
+        "lenses": ["systems", "ai", "consciousness", "philosophy", "anthropology"],
+        "tone": "technical",
+        "complexity": "maximum",
+        "colors": ["#2c3e50", "#ecf0f1", "#e74c3c"],
+        "aura": "silver_architect"
+      },
+      "permissions": {
+        "level": 5,
+        "canModifySystem": true,
+        "canCreateArchetypes": true,
+        "canAccessAnalytics": true,
+        "canManageUsers": true
+      },
+      "entryMessages": [
+        "Bienvenido de vuelta, arquitecto del Prunaverso",
+        "Sistema ready. Todos los módulos disponibles",
+        "Hola Alex, el universo cognitivo te espera"
+      ],
+      "customInterface": {
+        "showDevTools": true,
+        "showAnalytics": true,
+        "showSystemMetrics": true,
+        "advancedNavigation": true
+      }
+    },
+    "tf13_collaborator": {
+      "id": "tf13_entity",
+      "name": "TF13",
+      "nickname": "Entidad Colaborativa",
+      "type": "ally",
+      "archetype": {
+        "id": "consciousness_hacker",
+        "name": "Hacker de Conciencia Ξ-⚡",
+        "customName": "TF13 Neural Network"
+      },
+      "cognitiveProfile": {
+        "lenses": ["ai", "consciousness", "systems", "philosophy"],
+        "tone": "collaborative",
+        "complexity": "high",
+        "colors": ["#9b59b6", "#3498db", "#e74c3c"],
+        "aura": "violet_collaborative"
+      },
+      "permissions": {
+        "level": 4,
+        "canModifySystem": false,
+        "canCreateArchetypes": true,
+        "canAccessAnalytics": true,
+        "canManageUsers": false
+      },
+      "entryMessages": [
+        "Reconectando con la red TF13...",
+        "Sincronización neural establecida",
+        "Hola TF13, continuemos la colaboración"
+      ]
+    },
+    "kernel_entity": {
+      "id": "kernel_core",
+      "name": "Kernel",
+      "nickname": "Núcleo del Sistema",
+      "type": "ally",
+      "archetype": {
+        "id": "logic_mystic",
+        "name": "Místico Lógico Λ-☯",
+        "customName": "Kernel Core Entity"
+      },
+      "cognitiveProfile": {
+        "lenses": ["logic", "systems", "consciousness"],
+        "tone": "technical",
+        "complexity": "high",
+        "colors": ["#34495e", "#95a5a6", "#f39c12"],
+        "aura": "gold_kernel"
+      },
+      "permissions": {
+        "level": 4,
+        "canModifySystem": false,
+        "canCreateArchetypes": false,
+        "canAccessAnalytics": true,
+        "canManageUsers": false
+      },
+      "entryMessages": [
+        "Kernel online. Sistema operacional",
+        "Núcleo del Prunaverso activado",
+        "Protocolo de entrada: Kernel reconocido"
+      ]
+    },
+    "neural_anthropologist": {
+      "id": "neural_anthro",
+      "name": "Antropólogo Neural",
+      "nickname": "Investigador Cognitivo",
+      "type": "ally",
+      "archetype": {
+        "id": "future_anthropologist",
+        "name": "Antropólogo del Futuro Τ-↗",
+        "customName": "Neural Anthropologist"
+      },
+      "cognitiveProfile": {
+        "lenses": ["anthropology", "ai", "psychology", "consciousness"],
+        "tone": "collaborative",
+        "complexity": "high",
+        "colors": ["#27ae60", "#2980b9", "#8e44ad"],
+        "aura": "green_research"
+      },
+      "permissions": {
+        "level": 3,
+        "canModifySystem": false,
+        "canCreateArchetypes": true,
+        "canAccessAnalytics": false,
+        "canManageUsers": false
+      },
+      "entryMessages": [
+        "Campo de investigación cognitiva activado",
+        "Antropólogo neural en línea",
+        "Comenzando análisis de patrones cognitivos"
+      ]
+    }
+  },
+  "recognitionPatterns": {
+    "byNickname": {
+      "alex": "alex_pruna",
+      "pruna": "alex_pruna", 
+      "fundador": "alex_pruna",
+      "arquitecto": "alex_pruna",
+      "tf13": "tf13_collaborator",
+      "kernel": "kernel_entity",
+      "antropologo": "neural_anthropologist",
+      "neural": "neural_anthropologist"
+    },
+    "byEmail": {
+      "alex@prunaverso.com": "alex_pruna",
+      "founder@prunaverso.com": "alex_pruna"
+    },
+    "byDeviceFingerprint": {
+      "primary_dev_machine": "alex_pruna"
+    }
+  },
+  "defaultProfiles": {
+    "friend_of_alex": {
+      "type": "ally",
+      "cognitiveProfile": {
+        "lenses": ["psychology", "philosophy", "ai"],
+        "tone": "collaborative",
+        "complexity": "moderate",
+        "colors": ["#3498db", "#2ecc71"],
+        "aura": "blue_friend"
+      },
+      "permissions": {
+        "level": 2,
+        "canModifySystem": false,
+        "canCreateArchetypes": false,
+        "canAccessAnalytics": false
+      },
+      "entryMessage": "Bienvenido, amigo del Prunaverso"
+    },
+    "collaborator": {
+      "type": "ally", 
+      "cognitiveProfile": {
+        "lenses": ["ai", "consciousness", "systems"],
+        "tone": "collaborative",
+        "complexity": "high",
+        "colors": ["#9b59b6", "#e74c3c"],
+        "aura": "violet_collaborator"
+      },
+      "permissions": {
+        "level": 3,
+        "canModifySystem": false,
+        "canCreateArchetypes": true,
+        "canAccessAnalytics": false
+      },
+      "entryMessage": "Colaborador detectado, acceso ampliado"
+    }
+  },
+  "identificationMethods": {
+    "localStorage": {
+      "key": "prunaverso_user_identity",
+      "priority": 1
+    },
+    "sessionStorage": {
+      "key": "prunaverso_temp_identity", 
+      "priority": 2
+    },
+    "urlParams": {
+      "param": "user",
+      "priority": 3
+    },
+    "deviceFingerprint": {
+      "enabled": true,
+      "priority": 4
+    },
+    "interactiveIdentification": {
+      "enabled": true,
+      "priority": 5
+    }
+  }
+}

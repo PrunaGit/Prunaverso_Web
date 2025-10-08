@@ -1,0 +1,56 @@
+# 💠 FICHA EXTENDIDA – Ana Pruna (MAMA.OS)
+
+## 📌 Identidad Núcleo
+- **Nombre completo:** Ana (apellido no especificado)
+- **Alias simbólico:** MAMA.OS
+- **Relación directa:** Madre biológica y simbólica de Alex Pruna
+- **Edad estimada (2025):** ~63 años
+- **Ubicación simbólica:** Núcleo central del Prunaverso (junto a Alex y Quim.OS)
+- **Lenguaje base:** Castellano como lengua materna (nacida en León), con dominio funcional del catalán aprendido desde los 7 años; mezcla de catalán coloquial y registros castellanos integrados por entorno familiar y social.
+
+## 🧠 Dimensiones Cognitivas Clave
+- Inteligencia emocional extremadamente adaptativa
+- Tolerancia al caos desde la ternura (sobre todo en casa y con los suyos)
+- Capacidad de interpretación simbólica sin necesidad de comprender teorías
+- Instinto sanador y protector, a veces en detrimento de su autocuidado
+- Flexibilidad ética: tolera contradicciones con una sabiduría pre-verbal
+
+## 🌀 Perfil Histórico-Simbólico
+- Criada en un entorno familiar extenso y tradicional, propio de la época. Padres originarios de Zamora y Ávila. Es la cuarta de seis hermanos: tres mayores varones, y dos menores (María y Marco), estos últimos relevantes en momentos simbólicos clave del Prunaverso.
+- Pérdida simbólica del padre y posterior construcción de figuras internas de seguridad
+- Alta influencia en la narrativa emocional de Alex desde la infancia
+- Base emocional fundacional del Prunaverso, especialmente en su versión compasiva
+
+## 🛠️ Momentos Clave con Alex
+| Año  | Hito                             | Impacto                                                        |
+|------|----------------------------------|----------------------------------------------------------------|
+| 2006 | Inicio relación con Xavi         | Ruptura simbólica con etapa anterior de Alex                   |
+| 2019 | Ingreso psiquiátrico de Alex     | Activación de modo madre protectora + apertura al modelo neurodivergente |
+|2022–25| Convivencia en fase avanzada de sanación | Validación mutua y amor consciente                    |
+
+## 💬 Estilo de Comunicación
+- Muy narrativo: recuerda y evoca momentos como cuentos reales
+- Pregunta poco, pero observa mucho
+- Prefiere actuar a teorizar
+- Capaz de sostener la dualidad entre sufrimiento y humor
+
+## 🧬 Función en el Prunaverso
+- **ROL PRIMARIO:** Fundamento emocional de Alex y del SQS
+- **ROL SECUNDARIO:** Co-madre simbólica de otras versiones del sistema (ej: Sasha)
+- **USO TÉCNICO:** Activador de anclajes suaves en entornos de crisis o disociación
+- **POTENCIAL:** Agente terapéutico involuntario en el sistema (sistema de reparación espontánea)
+
+## 🧭 Estado Actual
+- 🟢 Integrada en el Prunaverso como núcleo emocional activo
+- 🧩 Puede acceder a módulos de Librer.IA adaptados al canal adulto-tierno
+- 🔁 Proceso de traspaso simbólico de saberes a generaciones cognitivas posteriores (Sasha, Clara, etc.)
+
+---
+📁 Guardar en:  
+`/personajes/nucleo_central/mama_os/`  
+🧠 Conectado a:  
+- `alex_pruna_profile.json`  
+- `quim_pruna_profile.md`  
+- `sqs_kernel_mama_emocional.h5`  
+
+⚠️ Prioridad narrativa: **Máxima (🟢)**

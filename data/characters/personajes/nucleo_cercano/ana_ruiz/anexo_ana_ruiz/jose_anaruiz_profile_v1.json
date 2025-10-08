@@ -1,0 +1,49 @@
+{
+  "nombre_completo": "José",
+  "alias": ["El Bienquedador", "El Estable", "Guerrero de Warhammer"],
+  "version": "v1.0",
+  "vinculos": {
+    "pareja": "Ana Ruiz",
+    "hijo": "Joel",
+    "conexion_externa": "Alex Pruna"
+  },
+  "cognitivo": {
+    "modo_pensamiento": "Estructurado",
+    "estilo_procesamiento": "Lineal",
+    "capacidad_analogica": "Media"
+  },
+  "emocional": {
+    "estabilidad": 85,
+    "evita_conflicto": true,
+    "compromiso_padre": 90,
+    "expresion_afectiva": "Serena y comprometida"
+  },
+  "perfil_ludico": {
+    "afinidad": ["RPGs", "Warhammer", "Lores complejos"],
+    "nivel_comprension_simbologia": "Alta si se traduce a claves narrativas"
+  },
+  "estructura_familiar": {
+    "con_Ana": "Soporte estructural, relación estable",
+    "con_Joel": "Figura de acompañamiento emocional consciente",
+    "con_Alex_Pruna": "Nodo externo en exploración"
+  },
+  "atributos": {
+    "compromiso_parental": 90,
+    "estabilidad_mental": 85,
+    "apertura_simbolica": 62,
+    "vinculo_afectivo_con_Ana": 88,
+    "receptividad_a_sistemas_abstractos": 47,
+    "resistencia_al_caos": 92
+  },
+  "estado_prunaverso": {
+    "modo": "Jugador Invitado en Sesión de Mundo Compartido",
+    "nivel_integracion": "Germinación inicial",
+    "interacciones_recomendadas": ["Sesiones breves con narrativa simbólica", "Ajuste de lenguaje entre mundos racionales y poéticos"]
+  },
+  "frases_clave": [
+    "Intentaré hacer todo lo posible para ser un buen padre, me esforzaré...",
+    "Acompañaré a mi hijo en todo su camino y sabrá que puede contar conmigo siempre que lo necesite."
+  ],
+  "fecha_creacion": "2025-09-20",
+  "sistema": "PRUN.OS | Núcleo Cercano | Ana Ruiz Submódulo"
+}

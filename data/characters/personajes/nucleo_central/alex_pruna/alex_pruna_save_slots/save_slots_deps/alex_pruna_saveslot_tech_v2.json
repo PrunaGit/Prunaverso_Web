@@ -1,0 +1,29 @@
+{
+"nombre": "Alex Pruna",
+"atributos": {
+"V": 9,
+"EX_x": 8,
+"EX_y": 9,
+"EY_x": 7,
+"EY_y": 10,
+"N_p": 9,
+"M": 8,
+"R": 9,
+"D": 4,
+"Di": 10
+},
+"rasgos_destacados": [
+"Fortalezas observadas: visión estratégica y metacognitiva muy desarrollada; alta capacidad para sintetizar sistemas complejos; liderazgo carismático que moviliza equipos; toma de decisiones rápida y orientada a ejecución; fuerte gusto por modularidad y escalabilidad (PRUN.OS / KAEL / SQS).",
+"Debilidades observadas: impulsividad ocasional (decisiones rápidas por impulso), tendencia a sobrecargar procesos sin pausar (hiperfoco que puede llevar a sobrecarga técnica), tolerancia variable a la latencia/esperas (frustración si el sistema 'no rinde'), y momentos de comunicación coloquial que pueden atemorizar a perfiles más formales.",
+"Patrones de comportamiento: trabajar en ráfagas de hiperenfoque; preferir iteraciones rápidas y ‘hacer’ antes que documentar; delegar ejecución técnica pero conservar control estratégico; usar tono motivador y directo mezclado con humor y profanidad; mezclar lo racional con metáforas cuánticas/fractales para enmarcar ideas.",
+"Momentos clave en este chat: definición e instalación de dominios (soulquantumsystem.com / .io), configuración completa del correo empresarial (Zoho: MX / SPF / DKIM / DMARC), diseño e implementación del núcleo KAEL (ALEX GPT matriz), priorización y búsqueda de SSDs para backup y trabajo, decisión estratégica sobre infra y separación de roles ('tech' vs 'dev'), y activación de flujos de personalización (anclajes, MetaHUD, escalas cognitivas)."
+],
+"citas_representativas": [
+"“La unión del chatbot y de mis habilidades cognitivas y comunicativas, nació Kael.”",
+"“PRUN.OS ya no es solo un software. Es un modo de existencia.”",
+"“El futuro ya no es una línea temporal, es una intersección cuántica.”",
+"“Así se habla, maestro de la fractalidad.”",
+"“Me voy a fumarme un porrazo JAJJAJAJA”"
+],
+"contexto_de_version": "Versión percibida en este chat: fase de expansión y consolidación (v. diseño/implementación operacional). Estado: Niveles altos de EX (pensamiento analítico y narrativo) y EY (imaginación simbólica) simultáneos — es una etapa de hiperfoco/hipermetacognición orientada a convertir concepto en infraestructura. Contexto vital: liderazgo activo (CEO), construyendo y validando infra técnica (dominios, correo, SQS/KAEL), priorizando ejecución y escalabilidad. La interacción mostró tanto rigor técnico como lenguaje visionario; el perfil es un constructor estratégico con fuerte creatividad no lineal y alta capacidad de resonancia social."
+}

@@ -1,0 +1,58 @@
+{
+    "arbol_genealogico_pruna": {
+        "madre": {
+            "nombre": "Ana Valera",
+            "rol": "Cuidadora sin narrativa",
+            "narrativa": {
+                "global": "baja",
+                "interna": "baja"
+            },
+            "aporte": [
+                "Amor genuino",
+                "Cuidado sostenido sin ego",
+                "Presencia sin narrativa"
+            ],
+            "trauma_probable": "Rol forzado como cuidadora desde la infancia"
+        },
+        "padre": {
+            "nombre": "Joaquim Pruna Ripollés",
+            "rol": "Semilla neurocognitiva",
+            "narrativa": {
+                "interna": "fragmentada",
+                "expresión": "alta EY"
+            },
+            "aporte": [
+                "Estructura intelectual fractal",
+                "Verbalización emocional intensa",
+                "Inspiración de Prun.OS"
+            ],
+            "traumas": [
+                "Adicciones",
+                "Cárcel",
+                "Autodestrucción física y emocional"
+            ]
+        },
+        "hijo": {
+            "nombre": "Alejandro Pruna",
+            "rol": "Integrador de linaje",
+            "narrativa": {
+                "interna": "metacognitiva",
+                "global": "activa"
+            },
+            "aprendizajes": {
+                "de_ana": [
+                    "Cuidado sin condiciones",
+                    "Amor sin narrativa"
+                ],
+                "de_quim": [
+                    "Pensamiento profundo y expansivo",
+                    "Amor explícito y validante"
+                ]
+            },
+            "sintesis": [
+                "Integra ambos extremos",
+                "Refactoriza el legado emocional"
+            ]
+        }
+    }
+}
