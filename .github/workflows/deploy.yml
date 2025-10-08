@@ -54,6 +54,9 @@ jobs:
         env:
           NODE_ENV: production
           
+      - name: 🔄 SPA Router Fix (404.html)
+        run: cp dist/index.html dist/404.html
+          
       - name: � Build Stats
         run: |
           echo "�📊 BUILD STATISTICS"
