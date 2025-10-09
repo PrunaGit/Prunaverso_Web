@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import classNames from 'classnames';
+import atmosphereManager from '../system-core/atmosphereManager';
 
 function usePolling(url, interval = 5000) {
   const [data, setData] = useState(null);
@@ -27,6 +28,27 @@ function usePolling(url, interval = 5000) {
   }, [url, interval]);
 
   return { data, error };
+}
+
+// Hook para usar el atmosphereManager en componentes React
+function useAtmosphere() {
+  const [currentTheme, setCurrentTheme] = useState(atmosphereManager.getActiveAtmosphere());
+  const [currentPalette, setCurrentPalette] = useState(atmosphereManager.getCurrentPalette());
+
+  useEffect(() => {
+    const handleAtmosphereChange = (event) => {
+      setCurrentTheme(event.detail.theme);
+      setCurrentPalette(event.detail.palette);
+    };
+
+    window.addEventListener('atmosphereChange', handleAtmosphereChange);
+    
+    return () => {
+      window.removeEventListener('atmosphereChange', handleAtmosphereChange);
+    };
+  }, []);
+
+  return { currentTheme, currentPalette };
 }
 
 // Lightweight, dependency-free markdown -> HTML renderer for the bitácora modal.

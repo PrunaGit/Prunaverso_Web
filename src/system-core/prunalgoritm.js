@@ -15,6 +15,7 @@
 import profileManager from './profileManager.js';
 import lensManager from './lensManager.js';
 import logManager from './logManager.js';
+import atmosphereManager from './atmosphereManager.js';
 
 // 🧠 CONSTANTES DEL SISTEMA COGNITIVO
 export const COGNITIVE_CONSTANTS = {
@@ -37,7 +38,8 @@ export const COGNITIVE_CONSTANTS = {
 export const CORE_SYSTEMS = {
   profileManager,
   lensManager,
-  logManager
+  logManager,
+  atmosphereManager
 };
 
 // 🔄 FUNCIÓN PRINCIPAL DEL PRUNALGORITM
@@ -306,7 +308,11 @@ export const initializePrunalgoritm = async (config = {}) => {
     logManager.logInfo('SYSTEM', 'Inicializando LensManager...');
     lensManager.initialize();
 
-    // 4. Orquestación: configurar estado inicial basado en perfil detectado
+    // 4. Inicializar el subsistema de atmósfera visual
+    logManager.logInfo('SYSTEM', 'Inicializando AtmosphereManager...');
+    atmosphereManager.initialize();
+
+    // 5. Orquestación: configurar estado inicial basado en perfil detectado
     const { isCollaborator, nickname } = profileManager.getCurrentProfile();
 
     if (isCollaborator) {
@@ -335,17 +341,21 @@ export const initializePrunalgoritm = async (config = {}) => {
       });
     }
 
-    // 5. Marcar el sistema como listo
+    // 6. Sincronizar atmósfera con el estado de lentes
+    atmosphereManager.updateAtmosphereFromLens();
+
+    // 7. Marcar el sistema como listo
     isSystemReady = true;
     
-    // 6. Notificar a los managers que el core está listo
+    // 8. Notificar a los managers que el core está listo
     lensManager.onCoreReady?.(isSystemReady);
     
     logManager.logInfo('SYSTEM', '✅ Inicialización del PRUNALGORITM completada. Coherencia Sistémica establecida.');
     logManager.logDebug('SYSTEM', 'Sistemas activos:', {
       profileManager: profileManager.getCurrentProfile().name,
       lensManager: lensManager.getState().activeLens,
-      logManager: logManager.isLoggerReady()
+      logManager: logManager.isLoggerReady(),
+      atmosphereManager: atmosphereManager.getActiveAtmosphere()
     });
 
     return true;
@@ -379,6 +389,11 @@ export const getSystemStatus = () => {
         ready: logManager.isLoggerReady(),
         totalLogs: logManager.getLoggerStats().totalEntries,
         config: logManager.getLoggerConfig().level
+      },
+      atmosphere: {
+        ready: atmosphereManager.isReady(),
+        currentTheme: atmosphereManager.getActiveAtmosphere(),
+        palette: atmosphereManager.getCurrentPalette()
       }
     },
     timestamp: new Date().toISOString()
