@@ -5,20 +5,22 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command, mode }) => {
   // Para desarrollo local, usar base '/'
   // Para producción/GitHub Pages, usar '/Prunaverso_Web/'
-  const base = mode === 'dev' ? '/' : '/Prunaverso_Web/';
+  const base = command === 'serve' ? '/' : '/Prunaverso_Web/';
   
   return {
     base,
     plugins: [react()],
     server: {
       host: '0.0.0.0',
-      port: 5179,
+      port: 5173,
       strictPort: false,
+      historyApiFallback: true,
       proxy: {
         '/api': {
           target: 'http://localhost:4001',
           changeOrigin: true,
-          secure: false
+          secure: false,
+          rewrite: (path) => path
         }
       }
     },

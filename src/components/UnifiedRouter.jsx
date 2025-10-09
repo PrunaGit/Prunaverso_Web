@@ -13,7 +13,6 @@ import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import routerManager, { ROUTES } from '../system-core/routerManager.js';
 import componentRegistry from '../system-core/componentRegistry.js';
 import atmosphereManager from '../system-core/atmosphereManager.js';
-import { uiLogger } from '../system-core/logManager.js';
 
 /**
  * Componente de página dinámica que integra atmosphere y component registry
@@ -37,15 +36,15 @@ function DynamicPageComponent({ routeKey, fallbackComponent = null }) {
         // Aplicar atmósfera de la ruta
         if (route.atmosphere) {
           atmosphereManager.setAtmosphere(route.atmosphere);
-          uiLogger.logDebug('ROUTER', `Atmósfera aplicada: ${route.atmosphere} para ruta ${routeKey}`);
+          console.log('ROUTER - Atmósfera aplicada:', route.atmosphere, 'para ruta', routeKey);
         }
 
         // Log de navegación
-        uiLogger.logInfo('ROUTER', `Página cargada: ${route.name} (${route.path})`);
+        console.log('ROUTER - Página cargada:', route.name, `(${route.path})`);
 
         setIsLoading(false);
       } catch (err) {
-        uiLogger.logError('ROUTER', `Error cargando página ${routeKey}:`, err);
+        console.error('ROUTER - Error cargando página', routeKey, ':', err);
         setError(err.message);
         setIsLoading(false);
       }
@@ -111,7 +110,7 @@ function DynamicPageComponent({ routeKey, fallbackComponent = null }) {
 function NotFoundPage() {
   useEffect(() => {
     atmosphereManager.setAtmosphere('atmosphere-error');
-    uiLogger.logWarn('ROUTER', 'Página 404 cargada');
+    console.warn('ROUTER - Página 404 cargada');
   }, []);
 
   return React.createElement(
@@ -195,7 +194,7 @@ export function UnifiedRouter() {
     const checkRouterReady = () => {
       if (routerManager.isReady()) {
         setIsRouterReady(true);
-        uiLogger.logInfo('ROUTER', 'UnifiedRouter inicializado correctamente');
+        console.log('ROUTER - UnifiedRouter inicializado correctamente');
       } else {
         // Reintentar en 100ms
         setTimeout(checkRouterReady, 100);
@@ -219,21 +218,46 @@ export function UnifiedRouter() {
       Routes,
       null,
       
-      // Ruta principal
+      // Ruta principal - Launcher
       React.createElement(Route, {
         path: '/',
         element: React.createElement(RouteWrapper, 
-          { routeKey: 'HOME' },
-          React.createElement(DynamicPageComponent, { routeKey: 'HOME' })
+          { routeKey: 'LAUNCHER' },
+          React.createElement(DynamicPageComponent, { routeKey: 'LAUNCHER' })
         )
       }),
 
-      // Portal principal
+      // Portal/Launcher alternativo
       React.createElement(Route, {
         path: '/portal',
         element: React.createElement(RouteWrapper, 
-          { routeKey: 'PORTAL' },
-          React.createElement(DynamicPageComponent, { routeKey: 'PORTAL' })
+          { routeKey: 'LAUNCHER' },
+          React.createElement(DynamicPageComponent, { routeKey: 'LAUNCHER' })
+        )
+      }),
+
+      // Secuencia de entrada al Prunaverso
+      React.createElement(Route, {
+        path: '/welcome',
+        element: React.createElement(RouteWrapper, 
+          { routeKey: 'WELCOME' },
+          React.createElement(DynamicPageComponent, { routeKey: 'WELCOME' })
+        )
+      }),
+
+      React.createElement(Route, {
+        path: '/identify',
+        element: React.createElement(RouteWrapper, 
+          { routeKey: 'IDENTIFY' },
+          React.createElement(DynamicPageComponent, { routeKey: 'IDENTIFY' })
+        )
+      }),
+
+      React.createElement(Route, {
+        path: '/menu',
+        element: React.createElement(RouteWrapper, 
+          { routeKey: 'MENU' },
+          React.createElement(DynamicPageComponent, { routeKey: 'MENU' })
         )
       }),
 

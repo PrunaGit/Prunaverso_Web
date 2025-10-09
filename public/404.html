@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prunaverso - Redirigiendo...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .redirect-message {
+            max-width: 400px;
+            padding: 2rem;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(108, 92, 231, 0.3);
+            border-top: 4px solid #6c5ce7;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1 {
+            color: #6c5ce7;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-message">
+        <div class="spinner"></div>
+        <h1>🌌 Redirigiendo al Prunaverso</h1>
+        <p>Reubicando coordenadas cognitivas...</p>
+    </div>
+    <script>
+        // Redirigir al portal principal manteniendo el path para SPA routing
+        const currentPath = window.location.pathname;
+        const currentSearch = window.location.search;
+        const currentHash = window.location.hash;
+        
+        // Construir URL de redirección
+        const baseUrl = window.location.origin;
+        const redirectUrl = baseUrl + '/#' + currentPath + currentSearch + currentHash;
+        
+        // Redirigir después de un breve delay para mostrar el mensaje
+        setTimeout(() => {
+            window.location.replace(redirectUrl);
+        }, 1000);
+    </script>
+</body>
+</html>

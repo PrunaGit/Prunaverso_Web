@@ -13,6 +13,7 @@ import { getSystemStatus } from '../../system-core/prunalgoritm.js';
 import routerManager from '../../system-core/routerManager.js';
 import atmosphereManager from '../../system-core/atmosphereManager.js';
 import serviceConfig from '../../system-core/serviceConfig.js';
+import serviceConnectivity, { CONNECTIVITY_STATUS } from '../../system-core/serviceConnectivity.js';
 import { uiLogger } from '../../system-core/logManager.js';
 
 /**
@@ -20,6 +21,7 @@ import { uiLogger } from '../../system-core/logManager.js';
  */
 export default function SystemDiagnostics() {
   const [systemStatus, setSystemStatus] = useState(null);
+  const [connectivityState, setConnectivityState] = useState(null);
   const [refreshCount, setRefreshCount] = useState(0);
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [lastRefresh, setLastRefresh] = useState(null);
@@ -29,7 +31,7 @@ export default function SystemDiagnostics() {
   const [managerDetails, setManagerDetails] = useState({});
 
   // Refrescar datos del sistema
-  const refreshSystemStatus = () => {
+  const refreshSystemStatus = async () => {
     try {
       const status = getSystemStatus();
       const timestamp = new Date().toISOString();
@@ -38,12 +40,17 @@ export default function SystemDiagnostics() {
       setLastRefresh(timestamp);
       setRefreshCount(prev => prev + 1);
       
+      // Verificar conectividad externa
+      const connectivity = await serviceConnectivity.checkAllServices();
+      setConnectivityState(connectivity);
+      
       // Agregar al historial (mantener últimas 10 entradas)
       setDiagnosticHistory(prev => {
         const newEntry = {
           timestamp,
           status: status.isReady,
           systems: Object.keys(status.systems).length,
+          connectivity: connectivity,
           refreshCount
         };
         return [newEntry, ...prev].slice(0, 10);
@@ -53,10 +60,11 @@ export default function SystemDiagnostics() {
       setManagerDetails({
         router: routerManager.getStats(),
         atmosphere: atmosphereManager.getActiveAtmosphere(),
-        services: serviceConfig.getEndpoints()
+        services: serviceConfig.getEndpoints(),
+        connectivity: serviceConnectivity.getConnectivityStats()
       });
 
-      uiLogger.logDebug('DIAGNOSTICS', 'Estado del sistema actualizado', status);
+      uiLogger.logDebug('DIAGNOSTICS', 'Estado del sistema actualizado', { status, connectivity });
       
     } catch (error) {
       uiLogger.logError('DIAGNOSTICS', 'Error obteniendo estado del sistema:', error);
@@ -73,14 +81,20 @@ export default function SystemDiagnostics() {
     }
   }, [autoRefresh]);
 
-  // Aplicar atmósfera de diagnóstico
+  // Aplicar atmósfera de diagnóstico y configurar conectividad
   useEffect(() => {
     atmosphereManager.setAtmosphere('atmosphere-analytical');
     uiLogger.logInfo('DIAGNOSTICS', 'Panel de diagnóstico sistémico cargado');
     
+    // Iniciar monitoreo de conectividad
+    serviceConnectivity.startHealthMonitoring(5000); // Cada 5 segundos
+    
     return () => {
       // Restaurar atmósfera anterior al salir
       atmosphereManager.setAtmosphere('atmosphere-exploration');
+      
+      // Detener monitoreo de conectividad
+      serviceConnectivity.stopHealthMonitoring();
     };
   }, []);
 
@@ -217,6 +231,55 @@ export default function SystemDiagnostics() {
         />
       </div>
 
+      {/* Sección de Conectividad Externa */}
+      <div style={styles.connectivitySection}>
+        <h3 style={styles.sectionTitle}>🌐 Conectividad de Servicios Externos</h3>
+        <div style={styles.connectivityGrid}>
+          {/* Characters Service */}
+          <ConnectivityCard
+            title="Characters API"
+            icon="👥"
+            service="characters"
+            connectivity={connectivityState?.characters}
+          />
+
+          {/* API Service */}
+          <ConnectivityCard
+            title="Backend API"
+            icon="🔗"
+            service="api"
+            connectivity={connectivityState?.api}
+          />
+
+          {/* Connectivity Stats */}
+          <div style={styles.connectivityStats}>
+            <h4>📊 Estadísticas de Conectividad</h4>
+            {managerDetails.connectivity && (
+              <div style={styles.statsGrid}>
+                <div style={styles.statItem}>
+                  <span style={styles.statLabel}>Servicios Totales:</span>
+                  <span style={styles.statValue}>{managerDetails.connectivity.totalServices}</span>
+                </div>
+                <div style={styles.statItem}>
+                  <span style={styles.statLabel}>Conectados:</span>
+                  <span style={styles.statValue}>{managerDetails.connectivity.connected}</span>
+                </div>
+                <div style={styles.statItem}>
+                  <span style={styles.statLabel}>Con Errores:</span>
+                  <span style={styles.statValue}>{managerDetails.connectivity.errors}</span>
+                </div>
+                <div style={styles.statItem}>
+                  <span style={styles.statLabel}>Salud General:</span>
+                  <span style={styles.statValue}>
+                    {Math.round((managerDetails.connectivity.overallHealth || 0) * 100)}%
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
       {/* Historial de diagnósticos */}
       <div style={styles.historySection}>
         <h3 style={styles.sectionTitle}>📊 Historial de Diagnósticos</h3>
@@ -270,8 +333,87 @@ export default function SystemDiagnostics() {
 }
 
 /**
- * Componente individual para cada manager
+ * Componente para mostrar el estado de conectividad de un servicio
  */
+function ConnectivityCard({ title, icon, service, connectivity }) {
+  if (!connectivity) {
+    return (
+      <div style={styles.connectivityCard('unknown')}>
+        <div style={styles.connectivityHeader}>
+          <span style={styles.connectivityIcon}>{icon}</span>
+          <h4 style={styles.connectivityTitle}>{title}</h4>
+          <div style={styles.connectivityStatus('unknown')}>⚪</div>
+        </div>
+        <div style={styles.connectivityDetails}>
+          <p>Verificando conectividad...</p>
+        </div>
+      </div>
+    );
+  }
+
+  const statusIcon = {
+    [CONNECTIVITY_STATUS.CONNECTED]: '✅',
+    [CONNECTIVITY_STATUS.CONNECTING]: '🔄',
+    [CONNECTIVITY_STATUS.DISCONNECTED]: '❌',
+    [CONNECTIVITY_STATUS.ERROR]: '⚠️',
+    [CONNECTIVITY_STATUS.UNKNOWN]: '⚪'
+  };
+
+  const statusText = {
+    [CONNECTIVITY_STATUS.CONNECTED]: 'Conectado',
+    [CONNECTIVITY_STATUS.CONNECTING]: 'Conectando...',
+    [CONNECTIVITY_STATUS.DISCONNECTED]: 'Desconectado',
+    [CONNECTIVITY_STATUS.ERROR]: 'Error',
+    [CONNECTIVITY_STATUS.UNKNOWN]: 'Desconocido'
+  };
+
+  return (
+    <div style={styles.connectivityCard(connectivity.status)}>
+      <div style={styles.connectivityHeader}>
+        <span style={styles.connectivityIcon}>{icon}</span>
+        <h4 style={styles.connectivityTitle}>{title}</h4>
+        <div style={styles.connectivityStatus(connectivity.status)}>
+          {statusIcon[connectivity.status]}
+        </div>
+      </div>
+      
+      <div style={styles.connectivityDetails}>
+        <div style={styles.connectivityRow}>
+          <span>Estado:</span>
+          <span>{statusText[connectivity.status]}</span>
+        </div>
+        
+        {connectivity.latency && (
+          <div style={styles.connectivityRow}>
+            <span>Latencia:</span>
+            <span>{connectivity.latency}ms</span>
+          </div>
+        )}
+        
+        {connectivity.lastCheck && (
+          <div style={styles.connectivityRow}>
+            <span>Última verificación:</span>
+            <span>{new Date(connectivity.lastCheck).toLocaleTimeString()}</span>
+          </div>
+        )}
+        
+        {connectivity.error && (
+          <div style={styles.connectivityRow}>
+            <span>Error:</span>
+            <span style={{color: 'var(--color-error, #ff6b6b)'}}>{connectivity.error}</span>
+          </div>
+        )}
+        
+        {connectivity.url && (
+          <div style={styles.connectivityRow}>
+            <span>URL:</span>
+            <span style={{fontSize: '0.8rem', opacity: 0.8}}>{connectivity.url}</span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 function ManagerCard({ title, icon, status, details }) {
   const isReady = status?.ready || false;
   
@@ -512,5 +654,102 @@ const styles = {
     background: 'var(--color-surface-tertiary, rgba(15, 52, 96, 0.5))',
     borderRadius: '4px',
     fontSize: '0.9rem'
+  },
+
+  // Estilos de conectividad
+  connectivitySection: {
+    marginBottom: '2rem'
+  },
+
+  connectivityGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '1.5rem'
+  },
+
+  connectivityCard: (status) => {
+    const borderColors = {
+      [CONNECTIVITY_STATUS.CONNECTED]: 'var(--color-success, #00b894)',
+      [CONNECTIVITY_STATUS.CONNECTING]: 'var(--color-warning, #fdcb6e)',
+      [CONNECTIVITY_STATUS.DISCONNECTED]: 'var(--color-error, #ff6b6b)',
+      [CONNECTIVITY_STATUS.ERROR]: 'var(--color-error, #ff6b6b)',
+      [CONNECTIVITY_STATUS.UNKNOWN]: 'var(--color-border-primary, #333)'
+    };
+
+    return {
+      background: 'var(--color-surface-secondary, rgba(22, 33, 62, 0.9))',
+      borderRadius: '12px',
+      padding: '1.5rem',
+      border: `2px solid ${borderColors[status] || borderColors[CONNECTIVITY_STATUS.UNKNOWN]}`,
+      transition: 'transform 0.2s ease'
+    };
+  },
+
+  connectivityHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '1rem',
+    gap: '0.75rem'
+  },
+
+  connectivityIcon: {
+    fontSize: '1.5rem'
+  },
+
+  connectivityTitle: {
+    flex: 1,
+    margin: 0,
+    fontSize: '1.1rem',
+    color: 'var(--color-text-primary, #ffffff)'
+  },
+
+  connectivityStatus: (status) => ({
+    fontSize: '1.2rem'
+  }),
+
+  connectivityDetails: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.5rem'
+  },
+
+  connectivityRow: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '0.25rem 0',
+    fontSize: '0.9rem'
+  },
+
+  connectivityStats: {
+    background: 'var(--color-surface-secondary, rgba(22, 33, 62, 0.9))',
+    borderRadius: '12px',
+    padding: '1.5rem',
+    border: '1px solid var(--color-border-primary, #333)'
+  },
+
+  statsGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gap: '0.75rem',
+    marginTop: '1rem'
+  },
+
+  statItem: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '0.5rem',
+    background: 'var(--color-surface-tertiary, rgba(15, 52, 96, 0.5))',
+    borderRadius: '6px'
+  },
+
+  statLabel: {
+    fontSize: '0.9rem',
+    opacity: 0.8
+  },
+
+  statValue: {
+    fontSize: '0.9rem',
+    fontWeight: 'bold',
+    color: 'var(--color-accent-secondary, #a29bfe)'
   }
 };

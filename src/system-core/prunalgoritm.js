@@ -212,7 +212,8 @@ export const initializePrunalgoritm = async () => {
 
     // 4. Configurar servicios
     logManager.logInfo('SYSTEM', 'Configurando sistema de servicios...');
-    serviceConfig.configure();
+    // serviceConfig se auto-configura al importarse
+    logManager.logInfo('SYSTEM', `Ambiente detectado: ${serviceConfig.getCurrentEnvironment()}`);
     
     // 5. Inicializar router
     logManager.logInfo('SYSTEM', 'Inicializando sistema de rutas...');

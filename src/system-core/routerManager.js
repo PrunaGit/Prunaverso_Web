@@ -24,13 +24,25 @@ export const ROUTES = {
   // Rutas principales
   HOME: {
     path: '/',
-    name: 'Home',
-    title: 'Prunaverso - Portal Cognitivo',
-    atmosphere: 'atmosphere-exploration',
+    name: 'Launcher',
+    title: 'Prunaverso - Portal Universal',
+    atmosphere: 'atmosphere-cosmic',
     requiresAuth: false,
     meta: {
       description: 'Portal principal del sistema cognitivo Prunaverso',
-      keywords: 'prunaverso, cognitivo, portal, bienvenida'
+      keywords: 'prunaverso, cognitivo, portal, launcher'
+    }
+  },
+
+  LAUNCHER: {
+    path: '/portal',
+    name: 'PrunaversoLauncher',
+    title: 'Portal Universal - Prunaverso',
+    atmosphere: 'atmosphere-cosmic',
+    requiresAuth: false,
+    meta: {
+      description: 'Launcher unificado del ecosistema Prunaverso',
+      keywords: 'launcher, portal, prunaverso, unificado'
     }
   },
 
@@ -44,6 +56,43 @@ export const ROUTES = {
     meta: {
       description: 'Portal principal de navegación del Prunaverso',
       keywords: 'portal, navegación, sistema'
+    }
+  },
+
+  // Nueva secuencia de entrada al Prunaverso
+  WELCOME: {
+    path: '/welcome',
+    name: 'Welcome',
+    title: 'Bienvenido al Prunaverso',
+    atmosphere: 'atmosphere-mystic',
+    requiresAuth: false,
+    meta: {
+      description: 'Pantalla de bienvenida e introducción al Prunaverso',
+      keywords: 'bienvenida, inicio, introducción'
+    }
+  },
+
+  IDENTIFY: {
+    path: '/identify',
+    name: 'Identify',
+    title: 'Identificación Cognitiva - Prunaverso',
+    atmosphere: 'atmosphere-exploratory',
+    requiresAuth: false,
+    meta: {
+      description: 'Proceso de identificación y selección de perfil',
+      keywords: 'identificación, perfil, selección'
+    }
+  },
+
+  MENU: {
+    path: '/menu',
+    name: 'MainMenu',
+    title: 'Portal Principal - Prunaverso',
+    atmosphere: 'atmosphere-collaborative',
+    requiresAuth: false,
+    meta: {
+      description: 'Menú principal del juego y portal de acceso',
+      keywords: 'menú, principal, portal, juego'
     }
   },
 

@@ -14,14 +14,14 @@ export default function App() {
   useEffect(() => {
     const initializeSystem = async () => {
       try {
-        uiLogger.logInfo('APP', 'Iniciando Prunaverso Web v2.1.0...');
+        console.log('APP - Iniciando Prunaverso Web v2.1.0...');
         
         // Inicializar sistema core
         const success = await initializePrunalgoritm();
         
         if (success) {
           setIsSystemReady(true);
-          uiLogger.logInfo('APP', '✅ Sistema Prunaverso completamente inicializado');
+          console.log('APP - ✅ Sistema Prunaverso completamente inicializado');
           
           // Aplicar atmósfera inicial
           atmosphereManager.setAtmosphere('atmosphere-exploration');
@@ -31,7 +31,7 @@ export default function App() {
         }
         
       } catch (error) {
-        uiLogger.logError('APP', 'Error crítico en inicialización:', error);
+        console.error('APP - Error crítico en inicialización:', error);
         setInitError(error.message);
         setIsSystemReady(false);
       }

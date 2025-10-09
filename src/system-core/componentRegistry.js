@@ -17,6 +17,7 @@ import { uiLogger } from '../system-core/logManager.js';
 
 // Componentes críticos que se cargan inmediatamente
 import WelcomeScreen from '../pages/WelcomeScreen.jsx';
+import PrunaversoLauncher from '../pages/PrunaversoLauncher.jsx';
 import MonitorPanel from '../components/MonitorPanel.jsx';
 
 // ================================
@@ -26,6 +27,10 @@ import MonitorPanel from '../components/MonitorPanel.jsx';
 // Páginas principales
 const CharacterSelectorRPG = lazy(() => import('../pages/CharacterSelectorRPG.jsx'));
 const AwakeningIntro = lazy(() => import('../pages/AwakeningIntro.jsx'));
+
+// Nuevas páginas del flujo de entrada
+const IdentificationScreen = lazy(() => import('../pages/IdentificationScreen.jsx'));
+const MainMenu = lazy(() => import('../pages/MainMenu.jsx'));
 
 // Componentes especializados
 const SystemDiagnostics = lazy(() => import('../components/Specialized/SystemDiagnostics.jsx'));
@@ -58,14 +63,44 @@ const createPlaceholder = (name) => {
  */
 const COMPONENT_CONFIG = {
   // Páginas principales
+  LAUNCHER: {
+    component: PrunaversoLauncher,
+    name: 'PrunaversoLauncher',
+    category: 'page',
+    loadType: 'eager',
+    description: 'Launcher unificado del ecosistema Prunaverso',
+    route: 'LAUNCHER',
+    atmosphere: 'atmosphere-cosmic'
+  },
+
   WELCOME: {
     component: WelcomeScreen,
     name: 'WelcomeScreen',
     category: 'page',
     loadType: 'eager',
     description: 'Pantalla de bienvenida principal del Prunaverso',
-    route: 'HOME',
-    atmosphere: 'atmosphere-exploration'
+    route: 'WELCOME',
+    atmosphere: 'atmosphere-mystic'
+  },
+
+  IDENTIFICATION: {
+    component: IdentificationScreen,
+    name: 'IdentificationScreen',
+    category: 'page',
+    loadType: 'lazy',
+    description: 'Pantalla de identificación y selección de perfil',
+    route: 'IDENTIFY',
+    atmosphere: 'atmosphere-exploratory'
+  },
+
+  MAIN_MENU: {
+    component: MainMenu,
+    name: 'MainMenu',
+    category: 'page',
+    loadType: 'lazy',
+    description: 'Menú principal del juego y portal de acceso',
+    route: 'MENU',
+    atmosphere: 'atmosphere-collaborative'
   },
 
   CHARACTER_SELECTOR: {
