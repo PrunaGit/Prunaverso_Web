@@ -1,94 +1,80 @@
-import React, { useState, useEffect } from 'react'
+/**
+ * @hook useCognitiveLens  
+ * @description Wrapper del sistema core de Lens Manager.
+ * Expone la interfaz de lentes cognitivas para la capa de presentación (React).
+ * Mantiene el patrón de separación Lógica Core vs Presentación React.
+ * 
+ * @author Pruna - Sistema Cognitivo Prunaverso
+ * @version 2.1.0
+ */
+
+import React, { useState, useEffect, useCallback } from 'react';
+import lensManager from '../../system-core/lensManager';
 
 // Hook principal para gestionar lente cognitiva y grado académico
 export function useCognitiveLens() {
-  const [cognitiveLenses, setCognitiveLenses] = useState(() => {
-    const saved = localStorage.getItem('prunaverso_cognitive_lenses')
-    return saved ? JSON.parse(saved) : ['ai', 'philosophy', 'linguistics'] // Alex Pruna default
-  })
+  // Estados locales de React que se sincronizan con el core
+  const [localState, setLocalState] = useState(() => lensManager.getState());
 
-  const [academicDegree, setAcademicDegree] = useState(() => {
-    return localStorage.getItem('prunaverso_academic_degree') || 'researcher'
-  })
-
-  const [userProfile, setUserProfile] = useState(() => {
-    const saved = localStorage.getItem('prunaverso_user_profile')
-    return saved ? JSON.parse(saved) : {
-      narrativeStyle: 'philosophical',
-      emotionalTone: 'contemplative',
-      conceptualComplexity: 'interdisciplinary',
-      culturalReferences: 'underground',
-      presentationFormat: 'network'
-    } // Alex Pruna default profile
-  })
-
-  const [activeProfile, setActiveProfile] = useState(() => {
-    return localStorage.getItem('prunaverso_active_profile') || 'alex_pruna'
-  })
-
-  const [breathingMode, setBreathingMode] = useState(() => {
-    return localStorage.getItem("pruna_breathing") === "1";
-  });
-
+  // Inicialización del hook: el core maneja el estado internamente
+  // React solo se suscribe a los cambios.
   useEffect(() => {
-    localStorage.setItem("pruna_breathing", breathingMode ? "1" : "0");
-  }, [breathingMode]);
-
-  const setCognitiveLensesWithPersistence = (newLenses) => {
-    setCognitiveLenses(newLenses)
-    localStorage.setItem('prunaverso_cognitive_lenses', JSON.stringify(newLenses))
+    // Se ejecuta una sola vez al montar para asegurar la inicialización
+    // del Manager si no se ha hecho.
+    if (!lensManager.isReady()) {
+      lensManager.initialize();
+    }
     
-    // Dispatch global event for other components
-    window.dispatchEvent(new CustomEvent('cognitiveLensesChange', {
-      detail: { lenses: newLenses, degree: academicDegree, profile: userProfile }
-    }))
-  }
+    // Sincronizar estado inicial
+    setLocalState(lensManager.getState());
+  }, []);
 
-  const setAcademicDegreeWithPersistence = (newDegree) => {
-    setAcademicDegree(newDegree)
-    localStorage.setItem('prunaverso_academic_degree', newDegree)
-    
-    // Dispatch global event for text retransformation
-    window.dispatchEvent(new CustomEvent('academicDegreeChange', {
-      detail: { lenses: cognitiveLenses, degree: newDegree }
-    }))
-  }
+  // Funciones wrapper que delegan al core y actualizan estado local
+  const setCognitiveLensesWithPersistence = useCallback((newLenses) => {
+    lensManager.setCognitiveLenses(newLenses);
+    setLocalState(lensManager.getState());
+  }, []);
 
-  const setUserProfileWithPersistence = (newProfile) => {
-    setUserProfile(newProfile)
-    localStorage.setItem('prunaverso_user_profile', JSON.stringify(newProfile))
-    
-    // Dispatch global event for personality change
-    window.dispatchEvent(new CustomEvent('userProfileChange', {
-      detail: { profile: newProfile, lenses: cognitiveLenses, degree: academicDegree }
-    }))
-  }
+  const setAcademicDegreeWithPersistence = useCallback((newDegree) => {
+    lensManager.setAcademicDegree(newDegree);
+    setLocalState(lensManager.getState());
+  }, []);
 
-  const setActiveProfileWithPersistence = (profileId) => {
-    setActiveProfile(profileId)
-    localStorage.setItem('prunaverso_active_profile', profileId)
-    
-    // Dispatch global event for profile change
-    window.dispatchEvent(new CustomEvent('activeProfileChange', {
-      detail: { profileId }
-    }))
-  }
+  const setUserProfileWithPersistence = useCallback((newProfile) => {
+    lensManager.setUserProfile(newProfile);
+    setLocalState(lensManager.getState());
+  }, []);
 
+  const setActiveProfileWithPersistence = useCallback((profileId) => {
+    lensManager.setActiveProfile(profileId);
+    setLocalState(lensManager.getState());
+  }, []);
+
+  const setBreathingModeWrapper = useCallback((enabled) => {
+    lensManager.setBreathingMode(enabled);
+    setLocalState(lensManager.getState());
+  }, []);
+
+  // Exponer la interfaz React manteniendo compatibilidad
   return {
-    cognitiveLenses,
+    // Estado desde el core
+    cognitiveLenses: localState.cognitiveLenses,
+    academicDegree: localState.academicDegree,
+    userProfile: localState.userProfile,
+    activeProfile: localState.activeProfile,
+    breathingMode: localState.breathingMode,
+    
+    // Setters que delegan al core
     setCognitiveLenses: setCognitiveLensesWithPersistence,
-    academicDegree,
     setAcademicDegree: setAcademicDegreeWithPersistence,
-    userProfile,
     setUserProfile: setUserProfileWithPersistence,
-    activeProfile,
     setActiveProfile: setActiveProfileWithPersistence,
-    breathingMode,
-    setBreathingMode,
+    setBreathingMode: setBreathingModeWrapper,
+    
     // Compatibilidad hacia atrás
-    cognitiveLens: cognitiveLenses[0] || null,
+    cognitiveLens: localState.cognitiveLenses[0] || null,
     setCognitiveLens: (lens) => setCognitiveLensesWithPersistence(lens ? [lens] : [])
-  }
+  };
 }
 
 // Hook de compatibilidad para componentes que solo necesitan la lente actual

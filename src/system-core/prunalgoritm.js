@@ -13,6 +13,8 @@
  */
 
 import profileManager from './profileManager.js';
+import lensManager from './lensManager.js';
+import logManager from './logManager.js';
 
 // 🧠 CONSTANTES DEL SISTEMA COGNITIVO
 export const COGNITIVE_CONSTANTS = {
@@ -34,8 +36,8 @@ export const COGNITIVE_CONSTANTS = {
 // 🌐 INTEGRACIÓN DE SISTEMAS CORE
 export const CORE_SYSTEMS = {
   profileManager,
-  // lensManager se agregará en el siguiente paso
-  // achievementSystem ya existe
+  lensManager,
+  logManager
 };
 
 // 🔄 FUNCIÓN PRINCIPAL DEL PRUNALGORITM
@@ -272,4 +274,113 @@ export const applyLensFilter = (rawData, lensType) => {
   };
   
   return filters[lensType] ? filters[lensType](rawData) : rawData;
+};
+
+// ================================
+// ORQUESTACIÓN E INICIALIZACIÓN
+// ================================
+
+/**
+ * Estado de inicialización del sistema
+ */
+let isSystemReady = false;
+
+/**
+ * @function initializePrunalgoritm
+ * @description Inicializa todos los subsistemas core: Logging, Perfiles y Lentes.
+ * Orquesta la inicialización completa del sistema cognitivo.
+ * @param {Object} config - Configuración opcional del sistema
+ * @returns {Promise<boolean>} Estado de inicialización
+ */
+export const initializePrunalgoritm = async (config = {}) => {
+  try {
+    // 1. Inicializar el subsistema de logging PRIMERO
+    logManager.initializeLogger(config.logging);
+    logManager.logInfo('SYSTEM', 'Iniciando inicialización del PRUNALGORITM...');
+
+    // 2. Inicializar el subsistema de perfiles
+    logManager.logInfo('SYSTEM', 'Inicializando ProfileManager...');
+    await profileManager.initializeProfileSystem();
+
+    // 3. Inicializar el subsistema de lentes (Atmósfera y Estado Global)
+    logManager.logInfo('SYSTEM', 'Inicializando LensManager...');
+    lensManager.initialize();
+
+    // 4. Orquestación: configurar estado inicial basado en perfil detectado
+    const { isCollaborator, nickname } = profileManager.getCurrentProfile();
+
+    if (isCollaborator) {
+      logManager.logInfo('SYSTEM', `Colaborador detectado: ${nickname}. Configurando modo administrador.`);
+      
+      // Configurar estado inicial especial para colaboradores
+      lensManager.setState({
+        systemState: 'ADMIN_MODE',
+        activeLens: 'systemic',
+        cognitiveIntensity: 85
+      });
+      
+      // Configurar logging extendido para colaboradores
+      logManager.updateLoggerConfig({
+        level: logManager.LOG_LEVELS.DEBUG,
+        enableStorage: true
+      });
+    } else {
+      logManager.logInfo('SYSTEM', 'Visitante detectado. Configurando modo exploración.');
+      
+      // Estado inicial para visitantes
+      lensManager.setState({
+        systemState: 'EXPLORATION_MODE',
+        activeLens: 'emotional',
+        cognitiveIntensity: 45
+      });
+    }
+
+    // 5. Marcar el sistema como listo
+    isSystemReady = true;
+    
+    // 6. Notificar a los managers que el core está listo
+    lensManager.onCoreReady?.(isSystemReady);
+    
+    logManager.logInfo('SYSTEM', '✅ Inicialización del PRUNALGORITM completada. Coherencia Sistémica establecida.');
+    logManager.logDebug('SYSTEM', 'Sistemas activos:', {
+      profileManager: profileManager.getCurrentProfile().name,
+      lensManager: lensManager.getState().activeLens,
+      logManager: logManager.isLoggerReady()
+    });
+
+    return true;
+    
+  } catch (error) {
+    logManager.logError('SYSTEM', 'Error en inicialización del PRUNALGORITM:', error);
+    return false;
+  }
+};
+
+/**
+ * @function getSystemStatus
+ * @description Obtiene el estado actual de todos los subsistemas
+ * @returns {Object} Estado completo del sistema
+ */
+export const getSystemStatus = () => {
+  return {
+    isReady: isSystemReady,
+    systems: {
+      profile: {
+        ready: profileManager.getCurrentProfile() !== null,
+        currentProfile: profileManager.getCurrentProfile()?.name,
+        userType: profileManager.getCurrentProfile()?.type
+      },
+      lens: {
+        ready: lensManager.isReady(),
+        currentLens: lensManager.getState().activeLens,
+        systemState: lensManager.getState().systemState
+      },
+      logging: {
+        ready: logManager.isLoggerReady(),
+        totalLogs: logManager.getLoggerStats().totalEntries,
+        config: logManager.getLoggerConfig().level
+      }
+    },
+    timestamp: new Date().toISOString()
+  };
 };
