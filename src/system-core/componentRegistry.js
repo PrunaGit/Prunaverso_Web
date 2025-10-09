@@ -27,6 +27,9 @@ import MonitorPanel from '../components/MonitorPanel.jsx';
 const CharacterSelectorRPG = lazy(() => import('../pages/CharacterSelectorRPG.jsx'));
 const AwakeningIntro = lazy(() => import('../pages/AwakeningIntro.jsx'));
 
+// Componentes especializados
+const SystemDiagnostics = lazy(() => import('../components/Specialized/SystemDiagnostics.jsx'));
+
 // Crear componentes placeholder para los que no existen aún
 const createPlaceholder = (name) => {
   return () => React.createElement(
@@ -99,11 +102,11 @@ const COMPONENT_CONFIG = {
   },
 
   SYSTEM_DIAGNOSTICS: {
-    component: createPlaceholder('Diagnósticos del Sistema'),
+    component: SystemDiagnostics,
     name: 'SystemDiagnostics',
     category: 'system',
-    loadType: 'eager',
-    description: 'Diagnósticos del sistema',
+    loadType: 'lazy',
+    description: 'Panel completo de diagnóstico sistémico',
     route: 'DIAGNOSTICS'
   },
 
