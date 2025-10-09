@@ -8,7 +8,7 @@
  * - Mecánicas de evolución del perfil
  * - Orquestación de sistemas core
  * 
- * @version 2.0.0 - Evolution Build
+ * @version 2.1.0 - Evolution Build con Router Manager
  * @author Alex Pruna
  */
 
@@ -16,305 +16,174 @@ import profileManager from './profileManager.js';
 import lensManager from './lensManager.js';
 import logManager from './logManager.js';
 import atmosphereManager from './atmosphereManager.js';
+import serviceConfig from './serviceConfig.js';
+import routerManager from './routerManager.js';
 
 // 🧠 CONSTANTES DEL SISTEMA COGNITIVO
-export const COGNITIVE_CONSTANTS = {
-  MAX_VITALIDAD: 100,
-  MAX_EUTIMIA: 100,
-  MAX_CARGA: 100,
-  
-  // Umbrales de transición
-  AWAKENING_THRESHOLD: 5,
-  EVOLUTION_THRESHOLD: 25,
-  TRANSCENDENCE_THRESHOLD: 85,
-  
-  // Factores de decaimiento
-  VITALIDAD_DECAY: 0.1,
-  EUTIMIA_RECOVERY: 0.3,
-  CARGA_ACCUMULATION: 0.15
+const COGNITIVE_STATES = {
+  TRANSCENDENT: { id: 5, name: 'Trascendente', threshold: 85, atmosphere: 'transcendent' },
+  SYSTEMIC: { id: 4, name: 'Sistémico', threshold: 70, atmosphere: 'systemic' },
+  CREATIVE: { id: 3, name: 'Creativo', threshold: 55, atmosphere: 'creative' },
+  EMOTIONAL: { id: 2, name: 'Emocional', threshold: 35, atmosphere: 'emotional' },
+  ANALYTICAL: { id: 1, name: 'Analítico', threshold: 0, atmosphere: 'analytical' }
 };
 
-// 🌐 INTEGRACIÓN DE SISTEMAS CORE
-export const CORE_SYSTEMS = {
-  profileManager,
-  lensManager,
-  logManager,
-  atmosphereManager
+const PROGRESSION_MULTIPLIERS = {
+  'Arquitecto': { base: 1.5, cognitiveBonus: 0.3 },
+  'Colaborador': { base: 1.2, cognitiveBonus: 0.2 },
+  'Visitante': { base: 1.0, cognitiveBonus: 0.1 }
 };
 
-// 🔄 FUNCIÓN PRINCIPAL DEL PRUNALGORITM
-export const calculateCognitiveState = (currentState, interactions, timeElapsed) => {
-  const {
-    vitalidad = 50,
-    eutimia = 50,
-    carga = 0,
-    maturity = 0,
-    level = 0
-  } = currentState;
+// 🎯 VARIABLES DE ESTADO GLOBAL
+let isSystemReady = false;
+let lastUpdateTimestamp = null;
 
-  // Calcular nuevos valores basados en interacciones
-  const newVitalidad = calculateVitalidad(vitalidad, interactions, timeElapsed);
-  const newEutimia = calculateEutimia(eutimia, interactions, timeElapsed);
-  const newCarga = calculateCarga(carga, interactions, timeElapsed);
-  
-  // Determinar evolución de madurez
-  const newMaturity = calculateMaturity(maturity, interactions, level);
-  const newLevel = determineLevel(newMaturity, level);
-
-  return {
-    vitalidad: Math.max(0, Math.min(100, newVitalidad)),
-    eutimia: Math.max(0, Math.min(100, newEutimia)),
-    carga: Math.max(0, Math.min(100, newCarga)),
-    maturity: Math.max(0, Math.min(100, newMaturity)),
-    level: newLevel,
-    
-    // Estado derivado
-    cognitiveCoherence: calculateCoherence(newVitalidad, newEutimia, newCarga),
-    evolutionReadiness: calculateEvolutionReadiness(newMaturity, newLevel),
-    systemStability: calculateSystemStability(newVitalidad, newEutimia, newCarga)
-  };
-};
-
-// 🌱 CÁLCULO DE VITALIDAD
-const calculateVitalidad = (current, interactions, timeElapsed) => {
-  let vitalidad = current;
-  
-  // Decaimiento temporal natural
-  vitalidad -= (timeElapsed / 1000) * COGNITIVE_CONSTANTS.VITALIDAD_DECAY;
-  
-  // Incrementos por interacciones
-  interactions.forEach(interaction => {
-    switch (interaction.type) {
-      case 'character_interaction':
-        vitalidad += 2;
-        break;
-      case 'lens_change':
-        vitalidad += 1.5;
-        break;
-      case 'knowledge_discovery':
-        vitalidad += 3;
-        break;
-      case 'system_exploration':
-        vitalidad += 1;
-        break;
-      default:
-        vitalidad += 0.5;
-    }
-  });
-  
-  return vitalidad;
-};
-
-// 😊 CÁLCULO DE EUTIMIA
-const calculateEutimia = (current, interactions, timeElapsed) => {
-  let eutimia = current;
-  
-  // Recuperación natural gradual
-  eutimia += (timeElapsed / 1000) * COGNITIVE_CONSTANTS.EUTIMIA_RECOVERY;
-  
-  // Modulación por tipo de interacción
-  interactions.forEach(interaction => {
-    switch (interaction.type) {
-      case 'positive_feedback':
-        eutimia += 5;
-        break;
-      case 'achievement_unlock':
-        eutimia += 8;
-        break;
-      case 'social_connection':
-        eutimia += 3;
-        break;
-      case 'cognitive_breakthrough':
-        eutimia += 10;
-        break;
-      case 'frustration_event':
-        eutimia -= 2;
-        break;
-    }
-  });
-  
-  return eutimia;
-};
-
-// ⚡ CÁLCULO DE CARGA COGNITIVA
-const calculateCarga = (current, interactions, timeElapsed) => {
-  let carga = current;
-  
-  // Acumulación por actividad intensa
-  const intensityFactor = interactions.length * COGNITIVE_CONSTANTS.CARGA_ACCUMULATION;
-  carga += intensityFactor;
-  
-  // Reducción gradual en reposo
-  if (interactions.length === 0) {
-    carga -= (timeElapsed / 1000) * 0.2;
-  }
-  
-  return carga;
-};
-
-// 🎓 CÁLCULO DE MADUREZ COGNITIVA
-const calculateMaturity = (current, interactions, level) => {
-  let maturity = current;
-  
-  // Incremento base por experiencia
-  const experienceGain = interactions.reduce((acc, interaction) => {
-    const weights = {
-      'deep_reflection': 2.0,
-      'system_understanding': 1.5,
-      'pattern_recognition': 1.2,
-      'meta_cognition': 2.5,
-      'knowledge_synthesis': 1.8
-    };
-    
-    return acc + (weights[interaction.type] || 0.5);
-  }, 0);
-  
-  // Factor de nivel para acelerar o desacelerar crecimiento
-  const levelMultiplier = 1 + (level * 0.1);
-  
-  return maturity + (experienceGain * levelMultiplier);
-};
-
-// 📊 DETERMINACIÓN DE NIVEL
-const determineLevel = (maturity, currentLevel) => {
-  const levelThresholds = [0, 5, 15, 30, 50, 75, 100];
-  
-  for (let i = levelThresholds.length - 1; i >= 0; i--) {
-    if (maturity >= levelThresholds[i]) {
-      return Math.max(currentLevel, i); // Solo permitir ascensos
-    }
-  }
-  
-  return currentLevel;
-};
-
-// 🔗 COHERENCIA COGNITIVA
-const calculateCoherence = (vitalidad, eutimia, carga) => {
-  // La coherencia es alta cuando vitalidad y eutimia son altas, y carga es baja
-  const vitEutBalance = (vitalidad + eutimia) / 2;
-  const cargaPenalty = carga * 0.3;
-  
-  return Math.max(0, vitEutBalance - cargaPenalty);
-};
-
-// 🚀 PREPARACIÓN PARA EVOLUCIÓN
-const calculateEvolutionReadiness = (maturity, level) => {
-  const nextLevelThreshold = [5, 15, 30, 50, 75, 100][level] || 100;
-  const progress = Math.min(100, (maturity / nextLevelThreshold) * 100);
-  
-  return {
-    percentage: progress,
-    ready: progress >= 95,
-    nextThreshold: nextLevelThreshold
-  };
-};
-
-// ⚖️ ESTABILIDAD DEL SISTEMA
-const calculateSystemStability = (vitalidad, eutimia, carga) => {
-  // Estabilidad basada en el balance entre componentes
-  const variance = Math.abs(vitalidad - eutimia) + carga;
-  const baseStability = 100 - variance;
-  
-  return Math.max(0, Math.min(100, baseStability));
-};
-
-// 🎯 FUNCIONES DE UTILIDAD PARA COMPONENTES
-export const getStateDescription = (state) => {
-  const { vitalidad, eutimia, carga, cognitiveCoherence } = state;
-  
-  if (cognitiveCoherence > 80) return "🌟 Estado Óptimo";
-  if (cognitiveCoherence > 60) return "✨ Estado Estable";
-  if (cognitiveCoherence > 40) return "⚡ Estado Activo";
-  if (cognitiveCoherence > 20) return "🔄 Estado Inestable";
-  return "⚠️ Estado Crítico";
-};
-
-export const getLevelName = (level) => {
-  const names = [
-    "Visitante Inicial",
-    "Explorador Curioso", 
-    "Navegante Cognitivo",
-    "Analista Sistémico",
-    "Arquitecto Mental",
-    "Maestro de Lentes",
-    "Omnicon Φ∞"
-  ];
-  
-  return names[level] || "Estado Desconocido";
-};
-
-// 🎨 CONFIGURACIÓN DE LENTES COGNITIVAS
-export const applyLensFilter = (rawData, lensType) => {
-  const filters = {
-    analytical: (data) => ({
-      ...data,
-      emphasis: 'logic',
-      colorScheme: 'cyan',
-      dataDisplay: 'detailed'
-    }),
-    
-    emotional: (data) => ({
-      ...data,
-      emphasis: 'feeling',
-      colorScheme: 'amber',
-      dataDisplay: 'intuitive'
-    }),
-    
-    systemic: (data) => ({
-      ...data,
-      emphasis: 'patterns',
-      colorScheme: 'green',
-      dataDisplay: 'network'
-    }),
-    
-    transcendent: (data) => ({
-      ...data,
-      emphasis: 'unity',
-      colorScheme: 'violet',
-      dataDisplay: 'holistic'
-    })
-  };
-  
-  return filters[lensType] ? filters[lensType](rawData) : rawData;
-};
-
-// ================================
-// ORQUESTACIÓN E INICIALIZACIÓN
-// ================================
+// 🔄 FUNCIONES DE CÁLCULO COGNITIVO
 
 /**
- * Estado de inicialización del sistema
+ * @function calculateCognitiveState
+ * @description Calcula el estado cognitivo basado en múltiples factores
+ * @param {Object} input - Parámetros de entrada
+ * @returns {Object} Estado cognitivo calculado
  */
-let isSystemReady = false;
+export const calculateCognitiveState = (input) => {
+  const { eutimia = 50, vitalidad = 50, focus = 50, creativity = 50 } = input;
+  
+  // Calcular intensidad cognitiva usando fórmula mejorada
+  const cognitiveIntensity = Math.round(
+    (eutimia * 0.3) + 
+    (vitalidad * 0.25) + 
+    (focus * 0.25) + 
+    (creativity * 0.2)
+  );
+  
+  // Determinar estado cognitivo
+  const state = Object.values(COGNITIVE_STATES)
+    .reverse()
+    .find(state => cognitiveIntensity >= state.threshold) || COGNITIVE_STATES.ANALYTICAL;
+  
+  logManager.logDebug('COGNITIVE', `Estado calculado: ${state.name} (intensidad: ${cognitiveIntensity})`);
+  
+  return {
+    intensity: cognitiveIntensity,
+    state: state.name,
+    stateId: state.id,
+    atmosphere: state.atmosphere,
+    factors: { eutimia, vitalidad, focus, creativity }
+  };
+};
+
+/**
+ * @function calculateEutimiaProgression
+ * @description Calcula la progresión de eutimia basada en actividades
+ * @param {Object} activity - Actividad realizada
+ * @param {Object} currentProfile - Perfil actual del usuario
+ * @returns {number} Incremento de eutimia
+ */
+export const calculateEutimiaProgression = (activity, currentProfile) => {
+  const baseValue = activity.eutimiaImpact || 5;
+  const multiplier = PROGRESSION_MULTIPLIERS[currentProfile.type] || PROGRESSION_MULTIPLIERS['Visitante'];
+  
+  let progression = baseValue * multiplier.base;
+  
+  // Bonus por sintonía cognitiva
+  if (activity.cognitiveAlignment === currentProfile.preferredLens) {
+    progression *= (1 + multiplier.cognitiveBonus);
+  }
+  
+  logManager.logDebug('PROGRESSION', `Eutimia calculada: ${progression} (base: ${baseValue}, tipo: ${currentProfile.type})`);
+  
+  return Math.round(progression);
+};
+
+/**
+ * @function calculateVitalityDecay
+ * @description Calcula la degradación natural de vitalidad
+ * @param {number} currentVitality - Vitalidad actual
+ * @param {number} hoursInactive - Horas de inactividad
+ * @returns {number} Vitalidad después del decay
+ */
+export const calculateVitalityDecay = (currentVitality, hoursInactive) => {
+  // Función de decay exponencial suave
+  const decayRate = 0.02; // 2% por hora base
+  const decay = currentVitality * (1 - Math.pow(1 - decayRate, hoursInactive));
+  
+  const newVitality = Math.max(10, Math.round(currentVitality - decay));
+  
+  logManager.logDebug('VITALITY', `Decay aplicado: ${currentVitality} -> ${newVitality} (${hoursInactive}h inactivas)`);
+  
+  return newVitality;
+};
+
+/**
+ * @function predictCognitiveEvolution
+ * @description Predice la evolución cognitiva futura
+ * @param {Object} currentState - Estado actual
+ * @param {Array} plannedActivities - Actividades planificadas
+ * @returns {Object} Predicción de evolución
+ */
+export const predictCognitiveEvolution = (currentState, plannedActivities = []) => {
+  let projectedEutimia = currentState.eutimia;
+  let projectedVitality = currentState.vitalidad;
+  
+  // Simular actividades planificadas
+  plannedActivities.forEach(activity => {
+    projectedEutimia += calculateEutimiaProgression(activity, currentState.profile);
+    projectedVitality = Math.min(100, projectedVitality + (activity.vitalityImpact || 3));
+  });
+  
+  // Aplicar límites
+  projectedEutimia = Math.min(100, Math.max(0, projectedEutimia));
+  projectedVitality = Math.min(100, Math.max(10, projectedVitality));
+  
+  const projectedCognitive = calculateCognitiveState({
+    eutimia: projectedEutimia,
+    vitalidad: projectedVitality,
+    focus: currentState.focus,
+    creativity: currentState.creativity
+  });
+  
+  return {
+    current: currentState,
+    projected: {
+      eutimia: projectedEutimia,
+      vitalidad: projectedVitality,
+      cognitive: projectedCognitive
+    },
+    improvement: projectedCognitive.intensity - currentState.cognitiveIntensity,
+    activities: plannedActivities.length
+  };
+};
+
+// 🚀 FUNCIÓN DE INICIALIZACIÓN MAESTRA
 
 /**
  * @function initializePrunalgoritm
- * @description Inicializa todos los subsistemas core: Logging, Perfiles y Lentes.
- * Orquesta la inicialización completa del sistema cognitivo.
- * @param {Object} config - Configuración opcional del sistema
- * @returns {Promise<boolean>} Estado de inicialización
+ * @description Inicializa todos los subsistemas del core en secuencia optimizada
+ * @returns {Promise<boolean>} Éxito de la inicialización
  */
-export const initializePrunalgoritm = async (config = {}) => {
+export const initializePrunalgoritm = async () => {
   try {
-    // 1. Inicializar el subsistema de logging PRIMERO
-    logManager.initializeLogger(config.logging);
-    logManager.logInfo('SYSTEM', 'Iniciando inicialización del PRUNALGORITM...');
-
-    // 2. Inicializar el subsistema de perfiles
-    logManager.logInfo('SYSTEM', 'Inicializando ProfileManager...');
-    await profileManager.initializeProfileSystem();
-
-    // 3. Inicializar el subsistema de lentes (Atmósfera y Estado Global)
-    logManager.logInfo('SYSTEM', 'Inicializando LensManager...');
-    lensManager.initialize();
-
-    // 4. Inicializar el subsistema de atmósfera visual
-    logManager.logInfo('SYSTEM', 'Inicializando AtmosphereManager...');
-    atmosphereManager.initialize();
-
-    // 5. Orquestación: configurar estado inicial basado en perfil detectado
-    const { isCollaborator, nickname } = profileManager.getCurrentProfile();
-
+    logManager.logInfo('SYSTEM', '🚀 Iniciando PRUNALGORITM - Sistema Operativo Cognitivo v2.1.0');
+    
+    // 1. Verificar dependencias críticas
+    if (!profileManager || !lensManager || !logManager) {
+      throw new Error('Dependencias críticas no disponibles');
+    }
+    
+    // 2. Cargar perfil de usuario
+    logManager.logInfo('SYSTEM', 'Cargando perfil de usuario...');
+    await profileManager.loadUserProfile();
+    
+    const currentProfile = profileManager.getCurrentProfile();
+    if (!currentProfile) {
+      throw new Error('No se pudo cargar el perfil de usuario');
+    }
+    
+    // 3. Configurar logging específico según tipo de usuario
+    const isCollaborator = profileManager.isArchitect() || currentProfile.type === 'Colaborador';
+    const nickname = currentProfile.name || 'Usuario';
+    
     if (isCollaborator) {
       logManager.logInfo('SYSTEM', `Colaborador detectado: ${nickname}. Configurando modo administrador.`);
       
@@ -341,21 +210,32 @@ export const initializePrunalgoritm = async (config = {}) => {
       });
     }
 
+    // 4. Configurar servicios
+    logManager.logInfo('SYSTEM', 'Configurando sistema de servicios...');
+    serviceConfig.configure();
+    
+    // 5. Inicializar router
+    logManager.logInfo('SYSTEM', 'Inicializando sistema de rutas...');
+    routerManager.initialize();
+    
     // 6. Sincronizar atmósfera con el estado de lentes
+    logManager.logInfo('SYSTEM', 'Conectando atmósfera con lentes cognitivas...');
     atmosphereManager.updateAtmosphereFromLens();
 
     // 7. Marcar el sistema como listo
     isSystemReady = true;
+    lastUpdateTimestamp = new Date().toISOString();
     
     // 8. Notificar a los managers que el core está listo
     lensManager.onCoreReady?.(isSystemReady);
     
-    logManager.logInfo('SYSTEM', '✅ Inicialización del PRUNALGORITM completada. Coherencia Sistémica establecida.');
+    logManager.logInfo('SYSTEM', '✅ Inicialización del PRUNALGORITM completada. Coherencia Sistémica establecida con 5 managers.');
     logManager.logDebug('SYSTEM', 'Sistemas activos:', {
       profileManager: profileManager.getCurrentProfile().name,
       lensManager: lensManager.getState().activeLens,
       logManager: logManager.isLoggerReady(),
-      atmosphereManager: atmosphereManager.getActiveAtmosphere()
+      atmosphereManager: atmosphereManager.getActiveAtmosphere(),
+      routerManager: routerManager.getStats()
     });
 
     return true;
@@ -374,6 +254,7 @@ export const initializePrunalgoritm = async (config = {}) => {
 export const getSystemStatus = () => {
   return {
     isReady: isSystemReady,
+    lastUpdate: lastUpdateTimestamp,
     systems: {
       profile: {
         ready: profileManager.getCurrentProfile() !== null,
@@ -394,8 +275,61 @@ export const getSystemStatus = () => {
         ready: atmosphereManager.isReady(),
         currentTheme: atmosphereManager.getActiveAtmosphere(),
         palette: atmosphereManager.getCurrentPalette()
+      },
+      services: {
+        ready: serviceConfig.isConfigured(),
+        environment: serviceConfig.getCurrentEnvironment(),
+        endpoints: Object.keys(serviceConfig.getEndpoints()).length
+      },
+      router: {
+        ready: routerManager.isReady(),
+        currentRoute: routerManager.getCurrentRoute()?.name,
+        historyEntries: routerManager.getStats().historyEntries
       }
     },
     timestamp: new Date().toISOString()
   };
+};
+
+/**
+ * @function updateCognitiveState
+ * @description Actualiza el estado cognitivo del sistema
+ * @param {Object} newFactors - Nuevos factores cognitivos
+ */
+export const updateCognitiveState = (newFactors) => {
+  const cognitiveState = calculateCognitiveState(newFactors);
+  
+  // Actualizar lensManager con el nuevo estado
+  lensManager.setState({
+    cognitiveIntensity: cognitiveState.intensity,
+    activeLens: cognitiveState.atmosphere
+  });
+  
+  // Sincronizar atmósfera
+  atmosphereManager.updateAtmosphereFromLens();
+  
+  logManager.logInfo('COGNITIVE', `Estado cognitivo actualizado: ${cognitiveState.state} (${cognitiveState.intensity})`);
+  
+  lastUpdateTimestamp = new Date().toISOString();
+};
+
+// Exportaciones por defecto
+export default {
+  // Inicialización
+  initializePrunalgoritm,
+  getSystemStatus,
+  
+  // Cálculos cognitivos
+  calculateCognitiveState,
+  calculateEutimiaProgression,
+  calculateVitalityDecay,
+  predictCognitiveEvolution,
+  updateCognitiveState,
+  
+  // Estado
+  isReady: () => isSystemReady,
+  
+  // Constantes
+  COGNITIVE_STATES,
+  PROGRESSION_MULTIPLIERS
 };
