@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import useCognitiveLens from '../../hooks/useCognitiveLens'
 import useVisitorProfile from '../../hooks/useVisitorProfile'
-import prunaversalDictionary from '../../data/prunaversal_dictionary.json'
+import prunaversalDictionary from '../../system-core/schemas/dictionary.json'
 
 /**
  * 🪐 INFO ORBITAL - Portal Semántico Flotante

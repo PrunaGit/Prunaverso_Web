@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import useVisitorProfile from '../../hooks/useVisitorProfile'
-import archetypesData from '../../data/archetypes.json'
+import archetypesData from '../../system-core/schemas/archetypes.json'
 
 /**
  * 🌀 ONBOARDING COGNITIVO - PRUNAVERSO

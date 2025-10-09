@@ -6,10 +6,13 @@
  * - Transiciones entre niveles de consciencia
  * - Algoritmos de vitalidad y eutimia
  * - Mecánicas de evolución del perfil
+ * - Orquestación de sistemas core
  * 
- * @version 1.0.0
+ * @version 2.0.0 - Evolution Build
  * @author Alex Pruna
  */
+
+import profileManager from './profileManager.js';
 
 // 🧠 CONSTANTES DEL SISTEMA COGNITIVO
 export const COGNITIVE_CONSTANTS = {
@@ -26,6 +29,13 @@ export const COGNITIVE_CONSTANTS = {
   VITALIDAD_DECAY: 0.1,
   EUTIMIA_RECOVERY: 0.3,
   CARGA_ACCUMULATION: 0.15
+};
+
+// 🌐 INTEGRACIÓN DE SISTEMAS CORE
+export const CORE_SYSTEMS = {
+  profileManager,
+  // lensManager se agregará en el siguiente paso
+  // achievementSystem ya existe
 };
 
 // 🔄 FUNCIÓN PRINCIPAL DEL PRUNALGORITM
