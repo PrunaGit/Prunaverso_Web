@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-10-09T06:52:24.381Z",
+  "results": [
+    {
+      "route": {
+        "path": "/",
+        "name": "Página Principal"
+      },
+      "success": true,
+      "status": 200
+    },
+    {
+      "route": {
+        "path": "/#/",
+        "name": "Hash Principal"
+      },
+      "success": true,
+      "status": 200
+    },
+    {
+      "route": {
+        "path": "/#/portal",
+        "name": "Portal Hash"
+      },
+      "success": true,
+      "status": 200
+    },
+    {
+      "route": {
+        "path": "/#/player-evolution",
+        "name": "Player Evolution Hash"
+      },
+      "success": true,
+      "status": 200
+    },
+    {
+      "route": {
+        "path": "/#/gdd",
+        "name": "GDD Hash"
+      },
+      "success": true,
+      "status": 200
+    },
+    {
+      "route": {
+        "path": "/#/awakening",
+        "name": "Awakening Hash"
+      },
+      "success": true,
+      "status": 200
+    },
+    {
+      "route": {
+        "path": "/#/dev",
+        "name": "Dev Portal Hash"
+      },
+      "success": true,
+      "status": 200
+    },
+    {
+      "route": {
+        "path": "/portal",
+        "name": "Portal Sin Hash"
+      },
+      "success": false,
+      "status": 404
+    },
+    {
+      "route": {
+        "path": "/player-evolution",
+        "name": "Player Evolution Sin Hash"
+      },
+      "success": false,
+      "status": 404
+    },
+    {
+      "route": {
+        "path": "/gdd",
+        "name": "GDD Sin Hash"
+      },
+      "success": false,
+      "status": 404
+    }
+  ]
+}
